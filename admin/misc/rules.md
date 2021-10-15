@@ -23,7 +23,7 @@ Team Number: 12
 Slack and the github repository associated with our project will be the primary means of communication within our group. All members are expected to check Slack messages regularly on a daily basis and respond to all messages at the end of the day or before a meeting if a team meeting is scheduled that day. 
 
 ## 3) Schedule Meetings
-Team will agree to meet briefly after class and discuss (10-15 minutes) to discuss assignments and tasks that must be completed, if necessary. Team also agrees to attend the weekly group meeting outside of class at ____.
+Team will agree to meet briefly after class and discuss (10-15 minutes) to discuss assignments and tasks that must be completed, if necessary. Team also agrees to attend the weekly group meeting outside of class at 9am on Mondays.
 
 ## 4) General Responsibilities for All Team Members
 - Ask questions (through Slack, in-person) if you are confused or need clarification
