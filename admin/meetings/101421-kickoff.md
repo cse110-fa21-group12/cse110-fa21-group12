@@ -16,6 +16,9 @@
 - Dor
 - Tyler
 
+## Nonpresent Members
+None
+
 ## Agenda
 1. Decide on team name
 2. Decide on team colors and logo
