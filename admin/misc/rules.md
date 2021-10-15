@@ -17,7 +17,7 @@ Team Number: 12
 | Dor Roter        | droter@ucsd.edu    |                  | 
 | Punn Kamolyabutr | pkamolya@ucsd.edu  | (858) 868 - 1569 |
 | Tarek Tarif      | ttarif@ucsd.edu    | (714) 797 - 7305 |
-| Jack Yang        | g2yang@ucsd.edu    | (858) 568-0732   |
+| Jack Yang        | g2yang@ucsd.edu    | (858) 568 - 0732 |
 
 ## 2) Primary Means of Communication and Expectations
 Slack and the github repository associated with our project will be the primary means of communication within our group. All members are expected to check Slack messages regularly on a daily basis and respond to all messages at the end of the day or before a meeting if a team meeting is scheduled that day. 
