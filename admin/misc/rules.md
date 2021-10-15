@@ -2,7 +2,7 @@
 # Team ZEN Contract
 
 ## 1) Group Identification
-Team Name: ZEN
+Team Name: ZEN <br/>
 Team Number: 12
 
 ## Team Member Info:
