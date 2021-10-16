@@ -57,6 +57,14 @@
 - Languages: Persian, and can speak Farsi
 - Hobbies: I love playing basketball, and watching the NBA. In my free time, I also enjoy exploring the outdoors.
 
+### [Tarek Tarif](https://ttarif1.github.io/Github_Pages_Project/)
+
+- Year: Senior
+- Major: Mathematics-Computer Science
+- Minor: Computer Engineering
+- Hometown: Irvine, California
+- Hobbies: Basketball, Gaming, Debating, Traveling, Reading
+
 ### [Tyler He](https://tyhe0165.github.io/cse110/)
 
 - Year: Senior
