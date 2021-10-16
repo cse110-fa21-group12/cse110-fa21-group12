@@ -84,3 +84,4 @@
 - Tolerance for differing viewpoints
 - Be proactive
 - Commitment
+- Honesty
