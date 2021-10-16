@@ -74,3 +74,13 @@
 - Hobbies: Running, shooting pool, video games
 - Random info: Double jointed, can't play instruments, used to compete in jigsaw puzzle tournaments and won once
 
+## Team Values
+
+- Good communication
+- Be respectful to each other and decisions made
+- Open minded to others' ideas
+- Having empathy
+- Kindness
+- Tolerance for differing viewpoints
+- Be proactive
+- Commitment
