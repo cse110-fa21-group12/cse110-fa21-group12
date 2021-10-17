@@ -42,7 +42,7 @@
 - Hometown: Bangkok, Thailand
 - Hobbies: Rugby, basketball, crypto, poker
 
-### [Rajdeep Nag](https://rajdepnag.github.io/GitHub_Pages-/)
+### [Rajdeep Nag](https://rajdepnag.github.io/GitHub_Pages-/)(Team Co-lead)
 
 - Year: Junior
 - Major: Computer Engineering
