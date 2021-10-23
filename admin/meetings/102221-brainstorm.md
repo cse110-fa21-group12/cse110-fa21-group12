@@ -26,7 +26,7 @@
 - Decide on team roles
 
 ## To Do Over the Weekend
-- Every team member create a user persona and user stories
+- Every team member create a user persona and a user story
 
 
 ## New Business to Be Discussed
