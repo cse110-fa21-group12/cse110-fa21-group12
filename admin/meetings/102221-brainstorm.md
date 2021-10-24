@@ -2,7 +2,7 @@
 ## Meeting Purpose: Brainstorming Meeting
 ## Date: 10/22/21 (Friday)
 ## Where: Zoom
-## When: 6:00 -  pm
+## When: 6:00 - 7:15pm
 ## Team Name: ZEN (Team 12)
 
 ## Present Members
