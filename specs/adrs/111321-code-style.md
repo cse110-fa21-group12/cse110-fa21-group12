@@ -36,6 +36,11 @@ Chosen option: Prettier, because it is easy to use for everyone since in is a VS
 * We can use Prettier with all of the languages we are using, which makes styling code very easy
 * It is very quick to use a command with Prettier to format code as we write it
 
+### Negative Consequences
+
+* Sometimes doesn’t work with Live Share
+
+
 ## Links 
 
 * {Prettier Website} {https://prettier.io/} 
