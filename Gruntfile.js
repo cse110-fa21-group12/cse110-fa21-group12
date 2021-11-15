@@ -15,7 +15,7 @@ module.exports = function (grunt) {
         esversion: 6,
       },
     },
-  });*/
+ */ });
 
   // Load the plugin that provides the "jsdoc" task.
   grunt.loadNpmTasks("grunt-jsdoc");
