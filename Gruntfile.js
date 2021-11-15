@@ -7,8 +7,8 @@ module.exports = function (grunt) {
         options: {
           destination: "doc",
         },
-      },
-    },*/
+      },*/
+    },
     jshint: {/*
       all: ["Gruntfile.js", "assets/**/*.js"],
       options: {
