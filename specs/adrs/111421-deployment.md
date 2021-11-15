@@ -1,39 +1,39 @@
 # Use Heroku
 
-* Status: Proposed
-* Deciders: Tyler, Rajdeep, Natalie, Sam, Leland, Punn, Tarek
-* Date: 2021-11-14
+- Status: Proposed
+- Deciders: Tyler, Rajdeep, Natalie, Sam, Leland, Punn, Tarek
+- Date: 2021-11-14
 
 Technical Story: Decide on easy deployment service.
 
 ## Context and Problem Statement
 
-Need to find an easy way to deploy our webapp. It must be applicable to github actions for automated deployment when pull-requests are made. 
+Need to find an easy way to deploy our webapp. It must be applicable to github actions for automated deployment when pull-requests are made.
 
-## Decision Drivers 
+## Decision Drivers
 
-* Easy to implement.
-* Free of cost.
+- Easy to implement.
+- Free of cost.
 
 ## Considered Options
-* Heroku
-* Firebase
-* AWS
-* Azure
 
+- Heroku
+- Firebase
+- AWS
+- Azure
 
 ## Decision Outcome
 
 Chosen option: "Heroku", because it’s been the easiest to use as of now. Is available on github marketplace.
 
-### Positive Consequences 
-*  Allows us to connect to our github repo directly.
+### Positive Consequences
 
-### Negative Consequences 
+- Allows us to connect to our github repo directly.
 
-* Error on deployment as of now.
+### Negative Consequences
 
+- Error on deployment as of now.
 
-## Links 
+## Links
 
-* {Heroku Website} {https://dashboard.heroku.com/apps} 
+- {Heroku Website} {https://dashboard.heroku.com/apps}

@@ -5,11 +5,12 @@
 ## Members
 
 ### [Dor Roter](https://dor-roter.github.io/UCSD-CSE110-A1/)
+
 - Year: Junior
 - Major: Computer Science
-- Languages: Can speak english Hebrew and Spanish 
-- Hometown: Jerusalem, Israel 
-- Hobbies: Running, basketball, traveling 
+- Languages: Can speak english Hebrew and Spanish
+- Hometown: Jerusalem, Israel
+- Hobbies: Running, basketball, traveling
 - Random info: Can play the guitar, served 3 years years in the army
 
 ### [Jack Yang](http://immmjack.github.io/)
@@ -21,6 +22,7 @@
 - Random info: As a fan of Star Wars, I own a light saber and always watch these series with it.
 
 ### [Leland Bove](https://lbove27.github.io/LabWeek1CSE110-LelandBove/)
+
 - Year: Junior
 - Major: Computer Science
 - Hometown: San Carlos, California
