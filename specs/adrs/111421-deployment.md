@@ -1,4 +1,4 @@
-# Use Heroku
+# Use Netlify
 
 - Status: Proposed
 - Deciders: Tyler, Rajdeep, Natalie, Sam, Leland, Punn, Tarek
@@ -24,7 +24,7 @@ Need to find an easy way to deploy our webapp. It must be applicable to github a
 
 ## Decision Outcome
 
-Chosen option: "Heroku", because it’s been the easiest to use as of now. Is available on github marketplace.
+Chosen option: "Netlify", because it’s been the easiest to use as of now. Is available on github marketplace.
 
 ### Positive Consequences
 
@@ -32,8 +32,8 @@ Chosen option: "Heroku", because it’s been the easiest to use as of now. Is av
 
 ### Negative Consequences
 
-- Error on deployment as of now.
+- Error on deployment as of now.Works from their website
 
 ## Links
 
-- {Heroku Website} {https://dashboard.heroku.com/apps}
+- {Heroku Website} {https://www.netlify.com/}
