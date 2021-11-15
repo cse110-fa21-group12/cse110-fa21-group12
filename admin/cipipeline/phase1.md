@@ -57,7 +57,7 @@ If all the above steps are followed then you can autogenerate the documentation 
 
 ## Code Quality via Human Review (Pull Requests)
 
-Have not decided how we want to go about this yet. 
+Have not decided how we want to go about this yet.
 
 ## Unit Tests
 
