@@ -57,7 +57,7 @@ If all the above steps are followed then you can autogenerate the documentation 
 
 ## Code Quality via Human Review (Pull Requests)
 
-After you have finished making your changes locally, sucessfully passed the appropriate linting and documentation generation tasks using Grunt, you can push your changes the remote branch. At this point you can make a pull request. Pull requests have been set up to require manual review from one of your team members before anything can be merged into main. This is to ensure the code quality remains high.
+Have not decided how we want to go about this yet. 
 
 ## Unit Tests
 
