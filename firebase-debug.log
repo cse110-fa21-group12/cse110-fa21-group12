@@ -1,0 +1,189 @@
+[debug] [2021-11-13T05:23:03.530Z] ----------------------------------------------------------------------
+[debug] [2021-11-13T05:23:03.532Z] Command:       C:\Users\rajde\DOWNLO~1\firebase-tools-instant-win.exe C:\Users\rajde\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase init hosting
+[debug] [2021-11-13T05:23:03.533Z] CLI Version:   9.22.0
+[debug] [2021-11-13T05:23:03.533Z] Platform:      win32
+[debug] [2021-11-13T05:23:03.533Z] Node Version:  v12.18.1
+[debug] [2021-11-13T05:23:03.534Z] Time:          Fri Nov 12 2021 21:23:03 GMT-0800 (Pacific Standard Time)
+[debug] [2021-11-13T05:23:03.534Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-13T05:23:03.536Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-11-13T05:23:03.613Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-13T05:23:03.614Z] > authorizing via signed-in user (rnag@ucsd.edu)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\cse110-fa21-group12
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2021-11-13T05:23:03.899Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-11-13T05:23:03.899Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using cse110-team12-create. 
+[debug] [2021-11-13T05:23:08.867Z] > refreshing access token with scopes: []
+[debug] [2021-11-13T05:23:08.867Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-13T05:23:09.057Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Sat, 13 Nov 2021 05:23:08 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-13T05:23:09.082Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cse110-team12-create [none]
+[debug] [2021-11-13T05:23:09.375Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cse110-team12-create 200
+[debug] [2021-11-13T05:23:09.375Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cse110-team12-create {"projectId":"cse110-team12-create","projectNumber":"91507025678","displayName":"CSE110-Team12-Create","name":"projects/cse110-team12-create","resources":{"hostingSite":"cse110-team12-create"},"state":"ACTIVE"}
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-11-13T05:23:34.645Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-11-13T05:23:34.771Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-11-13T05:23:34.772Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.4.1","browserURL":"https://www.gstatic.com/firebasejs/9.4.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.4.1/firebase.tgz"},"live":{"version":"9.4","browserURL":"https://www.gstatic.com/firebasejs/live/9.4/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.4/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.4.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.4.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.4.1/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.4.1/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.4.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.4.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.4.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.4.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.4.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.4.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.4.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.memory.js"}}
+[info] +  Wrote dev/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\cse110-fa21-group12 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=458410881&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-11-13T05:23:35.837Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"fb29bf1994c8698f9e43","redirect_uri":"http://localhost:9005","state":"458410881"}
+[debug] [2021-11-13T05:23:36.185Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Sat, 13 Nov 2021 05:23:36 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"23976b668f3865dcddf4cb1b837b15f5\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"C420:6DB0:1D3759C:3111C16:618F4BD7"}
+[debug] [2021-11-13T05:23:36.195Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-11-13T05:23:36.580Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-11-13T05:23:36.581Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"RajdepNag","id":60721144,"node_id":"MDQ6VXNlcjYwNzIxMTQ0","avatar_url":"https://avatars.githubusercontent.com/u/60721144?v=4","gravatar_id":"","url":"https://api.github.com/users/RajdepNag","html_url":"https://github.com/RajdepNag","followers_url":"https://api.github.com/users/RajdepNag/followers","following_url":"https://api.github.com/users/RajdepNag/following{/other_user}","gists_url":"https://api.github.com/users/RajdepNag/gists{/gist_id}","starred_url":"https://api.github.com/users/RajdepNag/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/RajdepNag/subscriptions","organizations_url":"https://api.github.com/users/RajdepNag/orgs","repos_url":"https://api.github.com/users/RajdepNag/repos","events_url":"https://api.github.com/users/RajdepNag/events{/privacy}","received_events_url":"https://api.github.com/users/RajdepNag/received_events","type":"User","site_admin":false,"name":"Rajdeep Nag","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":10,"public_gists":0,"followers":1,"following":0,"created_at":"2020-02-06T01:06:11Z","updated_at":"2021-11-12T02:43:34Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":36689,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as RajdepNag 
+[info] 
+[debug] [2021-11-13T05:24:07.266Z] >>> [apiv2][query] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/main/actions/secrets/public-key type=owner
+[debug] [2021-11-13T05:24:07.570Z] <<< [apiv2][status] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/main/actions/secrets/public-key 404
+[debug] [2021-11-13T05:24:07.571Z] <<< [apiv2][body] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/main/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-11-13T05:24:11.119Z] >>> [apiv2][query] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key type=owner
+[debug] [2021-11-13T05:24:11.444Z] <<< [apiv2][status] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key 404
+[debug] [2021-11-13T05:24:11.445Z] <<< [apiv2][body] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-13T05:24:39.917Z] >>> [apiv2][query] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key type=owner
+[debug] [2021-11-13T05:24:40.232Z] <<< [apiv2][status] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key 404
+[debug] [2021-11-13T05:24:40.232Z] <<< [apiv2][body] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-13T05:24:55.279Z] >>> [apiv2][query] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/dev/actions/secrets/public-key type=owner
+[debug] [2021-11-13T05:24:55.589Z] <<< [apiv2][status] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/dev/actions/secrets/public-key 404
+[debug] [2021-11-13T05:24:55.589Z] <<< [apiv2][body] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/dev/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-11-13T05:25:22.878Z] >>> [apiv2][query] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key type=owner
+[debug] [2021-11-13T05:25:23.213Z] <<< [apiv2][status] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key 404
+[debug] [2021-11-13T05:25:23.213Z] <<< [apiv2][body] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-13T05:25:43.571Z] >>> [apiv2][query] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key type=owner
+[debug] [2021-11-13T05:25:44.010Z] <<< [apiv2][status] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key 404
+[debug] [2021-11-13T05:25:44.010Z] <<< [apiv2][body] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-13T05:25:52.597Z] >>> [apiv2][query] GET https://api.github.com/repos/(cse110-fa21-group12/cse110-fa21-group12)/actions/secrets/public-key type=owner
+[debug] [2021-11-13T05:25:52.999Z] <<< [apiv2][status] GET https://api.github.com/repos/(cse110-fa21-group12/cse110-fa21-group12)/actions/secrets/public-key 404
+[debug] [2021-11-13T05:25:53.000Z] <<< [apiv2][body] GET https://api.github.com/repos/(cse110-fa21-group12/cse110-fa21-group12)/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-13T05:26:18.692Z] >>> [apiv2][query] GET https://api.github.com/repos/(cse110-fa21-group12/cse110-fa21-group12)/actions/secrets/public-key type=owner
+[debug] [2021-11-13T05:26:19.098Z] <<< [apiv2][status] GET https://api.github.com/repos/(cse110-fa21-group12/cse110-fa21-group12)/actions/secrets/public-key 404
+[debug] [2021-11-13T05:26:19.099Z] <<< [apiv2][body] GET https://api.github.com/repos/(cse110-fa21-group12/cse110-fa21-group12)/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-13T05:26:45.762Z] >>> [apiv2][query] GET https://api.github.com/repos/(cse110-fa21-group12/cse110-fa21-group12)/actions/secrets/public-key type=owner
+[debug] [2021-11-13T05:26:46.186Z] <<< [apiv2][status] GET https://api.github.com/repos/(cse110-fa21-group12/cse110-fa21-group12)/actions/secrets/public-key 404
+[debug] [2021-11-13T05:26:46.186Z] <<< [apiv2][body] GET https://api.github.com/repos/(cse110-fa21-group12/cse110-fa21-group12)/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-13T05:29:29.636Z] >>> [apiv2][query] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key type=owner
+[debug] [2021-11-13T05:29:29.964Z] <<< [apiv2][status] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key 404
+[debug] [2021-11-13T05:29:29.965Z] <<< [apiv2][body] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-14T01:50:16.724Z] >>> [apiv2][query] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key type=owner
+[debug] [2021-11-14T01:50:17.261Z] <<< [apiv2][status] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key 404
+[debug] [2021-11-14T01:50:17.267Z] <<< [apiv2][body] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-14T01:50:20.830Z] >>> [apiv2][query] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key type=owner
+[debug] [2021-11-14T01:50:21.263Z] <<< [apiv2][status] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key 404
+[debug] [2021-11-14T01:50:21.264Z] <<< [apiv2][body] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-14T01:50:39.026Z] >>> [apiv2][query] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key type=owner
+[debug] [2021-11-14T01:50:39.463Z] <<< [apiv2][status] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key 404
+[debug] [2021-11-14T01:50:39.464Z] <<< [apiv2][body] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-14T01:56:00.555Z] ----------------------------------------------------------------------
+[debug] [2021-11-14T01:56:00.558Z] Command:       C:\Users\rajde\DOWNLO~1\firebase-tools-instant-win.exe C:\Users\rajde\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase init hosting
+[debug] [2021-11-14T01:56:00.558Z] CLI Version:   9.22.0
+[debug] [2021-11-14T01:56:00.558Z] Platform:      win32
+[debug] [2021-11-14T01:56:00.558Z] Node Version:  v12.18.1
+[debug] [2021-11-14T01:56:00.559Z] Time:          Sat Nov 13 2021 17:56:00 GMT-0800 (Pacific Standard Time)
+[debug] [2021-11-14T01:56:00.560Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-14T01:56:00.659Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-14T01:56:00.659Z] > authorizing via signed-in user (rnag@ucsd.edu)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\cse110-fa21-group12
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using cse110-team12-create. 
+[debug] [2021-11-14T01:56:27.721Z] > refreshing access token with scopes: []
+[debug] [2021-11-14T01:56:27.723Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-14T01:56:27.901Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 14 Nov 2021 01:56:27 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-14T01:56:27.924Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cse110-team12-create [none]
+[debug] [2021-11-14T01:56:28.196Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cse110-team12-create 200
+[debug] [2021-11-14T01:56:28.196Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cse110-team12-create {"projectId":"cse110-team12-create","projectNumber":"91507025678","displayName":"CSE110-Team12-Create","name":"projects/cse110-team12-create","resources":{"hostingSite":"cse110-team12-create"},"state":"ACTIVE"}
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-11-14T01:57:38.273Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-11-14T01:57:38.953Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-11-14T01:57:38.953Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.4.1","browserURL":"https://www.gstatic.com/firebasejs/9.4.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.4.1/firebase.tgz"},"live":{"version":"9.4","browserURL":"https://www.gstatic.com/firebasejs/live/9.4/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.4/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.4.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.4.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.4.1/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.4.1/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.4.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.4.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.4.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.4.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.4.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.4.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.4.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.memory.js"}}
+[info] +  Wrote cse110-fa21-group12/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\cse110-fa21-group12 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=526977081&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-11-14T01:57:44.805Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"b15dffc139e4f8f2d085","redirect_uri":"http://localhost:9005","state":"526977081"}
+[debug] [2021-11-14T01:57:45.197Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Sun, 14 Nov 2021 01:57:44 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"c17d75a01077c454ddae4af357296e60\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"DF38:0CA7:241E2E9:45A6A6C:61906D18"}
+[debug] [2021-11-14T01:57:45.226Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-11-14T01:57:45.617Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-11-14T01:57:45.617Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"RajdepNag","id":60721144,"node_id":"MDQ6VXNlcjYwNzIxMTQ0","avatar_url":"https://avatars.githubusercontent.com/u/60721144?v=4","gravatar_id":"","url":"https://api.github.com/users/RajdepNag","html_url":"https://github.com/RajdepNag","followers_url":"https://api.github.com/users/RajdepNag/followers","following_url":"https://api.github.com/users/RajdepNag/following{/other_user}","gists_url":"https://api.github.com/users/RajdepNag/gists{/gist_id}","starred_url":"https://api.github.com/users/RajdepNag/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/RajdepNag/subscriptions","organizations_url":"https://api.github.com/users/RajdepNag/orgs","repos_url":"https://api.github.com/users/RajdepNag/repos","events_url":"https://api.github.com/users/RajdepNag/events{/privacy}","received_events_url":"https://api.github.com/users/RajdepNag/received_events","type":"User","site_admin":false,"name":"Rajdeep Nag","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":10,"public_gists":0,"followers":1,"following":0,"created_at":"2020-02-06T01:06:11Z","updated_at":"2021-11-12T02:43:34Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":36689,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as RajdepNag 
+[info] 
+[debug] [2021-11-14T01:58:12.169Z] >>> [apiv2][query] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key type=owner
+[debug] [2021-11-14T01:58:12.477Z] <<< [apiv2][status] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key 404
+[debug] [2021-11-14T01:58:12.478Z] <<< [apiv2][body] GET https://api.github.com/repos/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-14T02:04:16.758Z] >>> [apiv2][query] GET https://api.github.com/repos/RajdepNag/cse110-fa21-group12/actions/secrets/public-key type=owner
+[debug] [2021-11-14T02:04:17.049Z] <<< [apiv2][status] GET https://api.github.com/repos/RajdepNag/cse110-fa21-group12/actions/secrets/public-key 404
+[debug] [2021-11-14T02:04:17.049Z] <<< [apiv2][body] GET https://api.github.com/repos/RajdepNag/cse110-fa21-group12/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-11-14T02:04:25.126Z] >>> [apiv2][query] GET https://api.github.com/repos/RajdepNag/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key type=owner
+[debug] [2021-11-14T02:04:25.405Z] <<< [apiv2][status] GET https://api.github.com/repos/RajdepNag/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key 404
+[debug] [2021-11-14T02:04:25.406Z] <<< [apiv2][body] GET https://api.github.com/repos/RajdepNag/cse110-fa21-group12/cse110-fa21-group12/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
