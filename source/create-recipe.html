@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head> </head>
+  <head> 
+      <link rel="stylesheet" href="style.css">
+      <script src="main.js" type="module"></script>
+  </head>
   <body>
     <header>
       <h1>Create Recipe</h1>
@@ -37,24 +40,27 @@
     </section>
     <section id="ingredients">
       <h2>Ingredients</h2>
+      <div id="ingredients-form">
       <form id="add-ingredient">
-        <input
+       <input
           type="text"
           ,
           id="quantity"
           ,
-          placeholder="Amount of Ingredient"
+          placeholder="Amount"
         />
-        <input type="text" , id="ingredient" , placeholder="Ingredient Name" />
+        <input type="text" , id="ingredient" , placeholder="Ingredient Name" /> 
       </form>
-      <button id="add-ingredient-button">+</button>
+      </div>
+      <button id="add-ingredient-button"> + Add More Ingredients</button>
     </section>
+   
     <section>
       <h2>Directions</h2>
       <form id="enter-directions">
-        <input type="text" id="directions" placeholder="Directions" />
-        <button id="add-directions-button">+</button>
+        <input type="text" id="directions" placeholder="Step 1" />
       </form>
+      <button id="add-directions-button">+ Add More Directions</button>
     </section>
     <section>
         <button id="save-recipe">Save</button>
