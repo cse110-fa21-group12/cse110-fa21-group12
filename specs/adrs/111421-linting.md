@@ -17,9 +17,9 @@ We had to decide on a linter to use in our pipeline in order to help find proble
 * Good documentation
 
 ## Considered Options
-* {JSLint}
-* {ESLint}
-* {standardJS}
+* JSLint
+* ESLint
+* standardJS
 
 ## Decision Outcome
 
