@@ -1,21 +1,21 @@
 module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
-    /*jsdoc: {
-      dist: {
+    jsdoc: {
+     /* dist: {
         src: ["assets/**/*.js"],
         options: {
           destination: "doc",
         },
       },
-    },
-    jshint: {
+    },*/
+    jshint: {/*
       all: ["Gruntfile.js", "assets/**/*.js"],
       options: {
         esversion: 6,
       },
-    },
- */ });
+    },*/
+  });
 
   // Load the plugin that provides the "jsdoc" task.
   grunt.loadNpmTasks("grunt-jsdoc");
