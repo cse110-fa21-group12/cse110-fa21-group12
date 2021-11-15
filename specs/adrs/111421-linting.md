@@ -1,4 +1,4 @@
-# {Use ESLint}
+# Use ESLint
 
 * Status: Accepted
 * Deciders: Natalie, Rajdeep, Sam, Leland, Punn, Tyler
