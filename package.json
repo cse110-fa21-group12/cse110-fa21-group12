@@ -1,19 +1,10 @@
 {
-    "name": "cse110-fa21-group12",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/cse110-fa21-group12/cse110-fa21-group12.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/cse110-fa21-group12/cse110-fa21-group12/issues"
-    },
-    "homepage": "https://github.com/cse110-fa21-group12/cse110-fa21-group12#readme"
+  "name": "temp",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "grunt-contrib-jshint": "^3.1.1",
+    "grunt-jsdoc": "^2.4.1"
+  }
 }
+
