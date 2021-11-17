@@ -25,8 +25,8 @@
 ## Agenda
 
 1. Discuss what has been accomplished (Frameworks, what in the pipeline works, the HTML pages that were started, start of CSS and Javascript files, boilerplate code and server with NodeJS)
-3. Discuss what we didn't accomplish and why (Need to create endpoints, finalize pipeline, backend, functionality with Javascript, login) (We didn't accomplish these things due to not having time because of other classes)
-4. Re-prioritize features (Focus on basic features first, add additional features later if we have time)
+2. Discuss what we didn't accomplish and why (Need to create endpoints, finalize pipeline, backend, functionality with Javascript, login) (We didn't accomplish these things due to not having time because of other classes)
+3. Re-prioritize features (Focus on basic features first, add additional features later if we have time)
 
 ## Unresloved From Last Meeting
 
