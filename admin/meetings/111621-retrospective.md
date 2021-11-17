@@ -37,8 +37,7 @@
 
 ## To Be Discussed Next Meeting
 
-- Get started on Sprint 2 objectives 
-
+- Get started on Sprint 2 objectives
 
 ## Decisions Made & Reasoning
 
