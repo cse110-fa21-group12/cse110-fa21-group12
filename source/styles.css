@@ -43,15 +43,17 @@ h1{
     
 }
 
-#email-input {
-    left: ;
-    heigh
-
-}
-
-img {
+.centeredImage {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 30%;
 }
+
+.profile {
+  background-size: 100px 100px;
+  width: 100px;
+  height: 100px;
+
+}
+
