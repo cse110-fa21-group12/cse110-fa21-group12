@@ -1,7 +1,7 @@
-const addIngredientbutton = document.getElementById("add-ingredient-button");
+const addIngredientButton = document.getElementById("add-ingredient-button");
 const ingredientForm = document.getElementById("ingredients-form");
 
-addIngredientbutton.addEventListener("click", function() {
+addIngredientButton.addEventListener("click", function() {
     const newIngredient = document.createElement("input");
     const newIngredientAmount = document.createElement("input");
     newIngredient.placeholder = "Ingredient Name";
@@ -13,16 +13,20 @@ addIngredientbutton.addEventListener("click", function() {
     ingredientForm.appendChild(document.createElement("br"));
 });
 
+addIngredientButton.click();
+
 const addDirectionsButton = document.getElementById("add-directions-button");
 const directionsForm = document.getElementById("enter-directions");
-var i = 2; 
+var i = 1; 
 
 addDirectionsButton.addEventListener("click", function() {
     const newDirection = document.createElement("input");
-    newDirection.placeholder = "Step" + i;
+    newDirection.placeholder = "Step " + i;
     i++;
     newDirection.setAttribute("id", "directions");
     directionsForm.appendChild(document.createElement("br"));
     directionsForm.appendChild(newDirection);
     directionsForm.appendChild(document.createElement("br"));
 });
+
+addDirectionsButton.click();
