@@ -3,11 +3,19 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="../admin/branding/create_logo_icon.png" type="image/png" />
+    <script src="home.js" type="module"></script>
   </head>
   <body>
     <h1>Home</h1>
     <img src="../admin/branding/create_logo1.png" alt="Logo" class="centeredImage">
-    <button class="dropDown profile" style="background-image: url(media/profile.png);"> </button>
+    <section class="dropDownMenu">
+      <button class="dropDown profile" style="background-image: url(media/profile.png);"> </button>
+      <div class="dropDownList"> 
+        <a href="login.html"> Profile </a>
+        <a href="login.html"> Logout </a>
+        <a href="login.html"> Delete Account </a>
+      </div>
+    </section>
     <label for="recipe-search">Search for recipe</label>
     <input
       type="search"
