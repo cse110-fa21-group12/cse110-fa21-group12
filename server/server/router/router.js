@@ -17,6 +17,7 @@ class Router {
     this._stack = [];
     this._strPath = path;
     this._path = pathToRegex(path);
+    this._isPathAll = (path == ALL);
 
     Methods.forEach((method) => {
       this[method] = (path, fn) => this.__METHOD(path, method, fn);
@@ -118,7 +119,7 @@ class Router {
 
     decodeParams(req, this._path);
     decodeQueries(req);
-    req.__url = savedUrl.replace(this._path, ""); // "cut" into sub-path for sub-routers
+    req.__url = this._isPathAll ? savedUrl : savedUrl.replace(this._path, ""); // "cut" into sub-path for sub-routers
 
     const next = (err) => {
       if (err != null) {

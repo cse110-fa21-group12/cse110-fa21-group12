@@ -13,6 +13,30 @@ class Server extends Router {
   }
 
   /**
+   * Returns a middleware to parse an incoming request as JSON if possible and
+   * attatch to the req.body, else just the body as string.
+   */
+  static get JsonParser() {
+    return (req,res,next) => {
+      let body = '';
+      req.on('data', chunk => {
+        body += chunk.toString();
+      });
+      req.on('end', () => {
+        try {
+          req.body = body ? JSON.parse(body) : {};
+        }
+        catch(err) {
+          console.log(`failed parsing as json - ${err}`)
+          req.body = body;
+        }
+        
+        next();    
+      });
+    };
+  }
+
+  /**
    * create a new server instance
    */
   constructor() {
