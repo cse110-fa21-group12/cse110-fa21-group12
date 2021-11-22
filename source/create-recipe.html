@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="create-recipe-style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="../admin/branding/create_logo_icon.png" type="image/png" />
     <script src="create-recipe.js" type="module"></script>
   </head>
-  <body>
+  <body class="createRecipe">
     <header>
-      <h1>Create Recipe</h1>
+      <h1 class="createRecipe">Create Recipe</h1> 
     </header>
     <section id="recipe-heading">
       <form id="enter-title">
-        <input type="text" , id="title" , placeholder="Title" />
+        <input class='createRecipe' type="text" , id="title" , placeholder="Title" />
       </form>
       <form id="enter-description">
         <input type="text" , id="description" , placeholder="Description" />
       </form>
     </section>
     <section id="enter-picture">
-      <button type="button">Add Picture</button>
+      <form> 
+        <label for="img"> Add Picture </label>
+        <input type="file" accept="image/*">
+      </form>
+      <button class="createRecipe" type="button">Add Picture</button>
     </section>
     <section id="filters">
       <form id="enter-categories">
-        <input type="text" , id="categories" , placeholder="Categories" />
+        <input class="createRecipe type="text" , id="categories" , placeholder="Categories" />
       </form>
       <form id="enter-tags">
-        <input type="text" , id="tags" , placeholder="Tags" />
+        <input class="createRecipe type="text" , id="tags" , placeholder="Tags" />
       </form>
     </section>
     <section id="time">
       <form id="enter-prep-time">
-        <input type="text" , id="prep-time" , placeholder="Preparation Time" />
+        <input class="createRecipe type="text" , id="prep-time" , placeholder="Preparation Time" />
       </form>
       <form id="enter-cook-time">
-        <input type="text" , id="cook-time" , placeholder="Cooking Time" />
+        <input class="createRecipe type="text" , id="cook-time" , placeholder="Cooking Time" />
       </form>
       <form id="enter-total-time">
-        <input type="text" , id="total-time" , placeholder="Total Time" />
+        <input class=createRecipe type="text" , id="total-time" , placeholder="Total Time" />
       </form>
     </section>
     <section id="ingredients">
       <h2>Ingredients</h2>
       <div id="ingredients-form"></div>
-      <button id="add-ingredient-button">+ Add More Ingredients</button>
+      <button class="createRecipe" id="add-ingredient-button">+ Add More Ingredients</button>
     </section>
 
     <section>
       <h2>Directions</h2>
       <form id="enter-directions"></form>
-      <button id="add-directions-button">+ Add More Directions</button>
+      <button class="createRecipe" id="add-directions-button">+ Add More Directions</button>
     </section>
     <section>
       <button id="save-recipe">Save</button>
