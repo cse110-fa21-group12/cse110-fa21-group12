@@ -1,57 +1,170 @@
-html {
-  background-color: #e5e5e5;
-}
-
-* {
-  font-family: "Arial";
-}
-
-h1{
-    text-align: center;
-}
-
-.login-box {
-  background-color: white;
-  border-width: 2px;
-  border-style: solid;
-  border-color: rgb(0, 0, 0);
-
-  margin-left: 20em;
-  margin-right: 20em;
-
-  padding-top: 3em;
-  padding-bottom: 3em;
-  padding-left: 3em;
-  padding-right: 3em;
-
-  position: relative;
-
-  text-align: left;
-  font-size: x-large;
-}
-
-.login-inputs {
-    position: absolute;
-    width: 236px;
-    height: 32px;
-
-    background: rgba(176, 165, 165, 0.29);
-    border: 1px solid rgba(176, 165, 165, 0.37);
-    box-sizing: border-box;
-    backdrop-filter: blur(4px);
-    border-radius: 3px;
-    
-}
-
-#email-input {
-    left: ;
-    heigh
-
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-}
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+ html {
+     background-color: #323c4b;
+ }
+ 
+ body {
+     background-color: #323c4b;
+ }
+ 
+ * {
+     font-family: 'Roboto', sans-serif;
+ }
+ /*h1 {
+     display: block;
+     font-size: 1.5em;
+     margin-top: 0.67em;
+     margin-bottom: 0.67em;
+     font-weight: bold;
+     color: #ffffff;
+     text-align: center;
+ }*/
+ 
+ .login-text {
+     position: relative;
+     /*width: 52px;*/
+     /*height: 19px;*/
+     text-align: center;
+     top: -250px;
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 20px;
+     line-height: 23px;
+     color: #FFFFFF;
+ }
+ 
+ #create-logo {
+     display: block;
+     position: relative;
+     margin-left: auto;
+     margin-right: auto;
+     width: 30%;
+     top: -50px;
+ }
+ 
+ .login-box {
+     vertical-align: middle;
+     background-color: white;
+     top: -200px;
+     position: relative;
+     border-radius: 10px;
+     border-color: #FFFFFF;
+     margin-left: auto;
+     margin-right: auto;
+     width: 350px;
+     height: 400px;
+ }
+ 
+ .google-img {
+     position: relative;
+     z-index: 1;
+     display: block;
+     margin-left: 60px;
+     width: 25px;
+     top: 62.5px;
+ }
+ 
+ .google-signin-btn {
+     position: relative;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     top: 25px;
+     width: 300px;
+     height: 50px;
+     background: #FFFFFF;
+     border: 1px solid #D2C7C7;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 25px;
+     font-style: normal;
+     font-weight: 300;
+     font-size: 18.5px;
+     line-height: 18px;
+     /* identical to box height */
+     color: #4D4C4C;
+ }
+ 
+ .or-line {
+     position: relative;
+     top: 40px;
+     margin-left: auto;
+     height: 20px;
+     text-align: center;
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: 300;
+     font-size: 12.5px;
+     line-height: 12px;
+     color: rgb(112, 103, 103);
+ }
+ 
+ fieldset {
+     /*border-color: #FFFFFF;*/
+     position: relative;
+     top: 10px;
+     border-style: hidden;
+ }
+ 
+ label {
+     position: relative;
+     margin-left: 8px;
+     color: rgb(184, 167, 167);
+     font-style: normal;
+     font-weight: bolder;
+     font-size: 12px;
+ }
+ 
+ .login-inputs {
+     color: rgb(184, 167, 167);
+     position: relative;
+     vertical-align: middle;
+     width: 95%;
+     height: 32px;
+     margin-left: 2.5%;
+     margin-bottom: 20px;
+     margin-top: 5px;
+     background: rgba(176, 165, 165, 0.29);
+     border: 1px;
+     border-color: rgba(176, 165, 165, 0.29);
+     box-sizing: border-box;
+     backdrop-filter: blur(4px);
+     border-radius: 3px;
+ }
+ 
+ .login-button {
+     position: relative;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 185px;
+     height: 41px;
+     top: 0px;
+     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+     border-radius: 1px;
+     background: rgba(98, 123, 159, 0.79);
+     border: 1px solid #627B9F;
+     box-sizing: border-box;
+     backdrop-filter: blur(4px);
+     border-radius: 2px;
+     /*text properties*/
+     color: #FFFFFF;
+     font-style: normal;
+     font-weight: bold;
+     font-size: 13px;
+     line-height: 15px;
+ }
+ 
+ .login-button:hover {
+     background-color: black;
+ }
+ /*#email-input {
+     left: ;
+     heigh
+ }
+ /*img {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 30%;
+ }*/
