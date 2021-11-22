@@ -1,24 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
-  <body>
-    <h1>Home</h1>
-    <img src="../admin/branding/create_logo1.png" alt="Logo">
-    <img src="media/userlogo.png" alt="User profile">
-    <label for="recipe-search">Search for recipe</label>
-    <input
-      type="search"
-      id="recipe-search"
-      name="q"
-      aria-label="Search through recipes"
-    />
 
-    <button>Search</button>
-    
-    <button type="button">My Recipes</button>
-    
-    <button type="button">Shopping List</button>
-    
-    <button type="button">Add Recipe</button>
-  </body>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../admin/branding/create_logo_icon.png" type="image/png" />
+    <script src="home.js" type="module"></script>
+    <!-- Add icon library -->
+    <script src="https://kit.fontawesome.com/b1e4be6678.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!--h1>Home</h1-->
+    <div class="headerBar">
+        <div class="logoHeader">
+            <img src="../admin/branding/create_logo1.png" alt="Logo" class="centeredImage">
+        </div>
+
+        <div class="dropDownMenu">
+            <button onclick="myFunction()" class="dropbtn"><i class="fas fa-user-circle"></i></button>
+            <div id="myDropdown" class="dropDownList">
+                <a href="login.html"> Profile </a>
+                <a href="login.html"> Logout </a>
+                <a href="login.html"> Delete Account </a>
+            </div>
+        </div>
+    </div>
+    <br></br>
+
+
+
+    <script>
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropDownList");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <div class="optionsList">
+        <div class="searchBar">
+            <!--label for="recipe-search">Search for recipe</label>
+            <input type="search" id="recipe-search" name="q" aria-label="Search through recipes" /-->
+
+            <button type="filter"><i class="fas fa-filter"></i></button>
+            <input class="search" type="text" placeholder="  Search for Recipe" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+
+            <!--button>Search</button-->
+        </div>
+
+        <button type="button" onclick="location.href='recipe-list.html'">My Recipes   <i id = "options" class="fas fa-book"></i></button>
+
+        <button type="button" onclick="location.href='shopping-list.html'">Shopping List        <i class="fas fa-shopping-cart"></i></button>
+
+        <button type="button" onclick="location.href='create-recipe.html'">Add Recipe     <i class="fas fa-plus"></i></button>
+    </div>
+</body>
+
 </html>

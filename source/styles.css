@@ -1,170 +1,522 @@
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
- html {
-     background-color: #323c4b;
- }
- 
- body {
-     background-color: #323c4b;
- }
- 
- * {
-     font-family: 'Roboto', sans-serif;
- }
- /*h1 {
-     display: block;
-     font-size: 1.5em;
-     margin-top: 0.67em;
-     margin-bottom: 0.67em;
-     font-weight: bold;
-     color: #ffffff;
-     text-align: center;
- }*/
- 
- .login-text {
-     position: relative;
-     /*width: 52px;*/
-     /*height: 19px;*/
-     text-align: center;
-     top: -250px;
-     font-family: Roboto;
-     font-style: normal;
-     font-weight: 500;
-     font-size: 20px;
-     line-height: 23px;
-     color: #FFFFFF;
- }
- 
- #create-logo {
-     display: block;
-     position: relative;
-     margin-left: auto;
-     margin-right: auto;
-     width: 30%;
-     top: -50px;
- }
- 
- .login-box {
-     vertical-align: middle;
-     background-color: white;
-     top: -200px;
-     position: relative;
-     border-radius: 10px;
-     border-color: #FFFFFF;
-     margin-left: auto;
-     margin-right: auto;
-     width: 350px;
-     height: 400px;
- }
- 
- .google-img {
-     position: relative;
-     z-index: 1;
-     display: block;
-     margin-left: 60px;
-     width: 25px;
-     top: 62.5px;
- }
- 
- .google-signin-btn {
-     position: relative;
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-     top: 25px;
-     width: 300px;
-     height: 50px;
-     background: #FFFFFF;
-     border: 1px solid #D2C7C7;
-     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-     border-radius: 25px;
-     font-style: normal;
-     font-weight: 300;
-     font-size: 18.5px;
-     line-height: 18px;
-     /* identical to box height */
-     color: #4D4C4C;
- }
- 
- .or-line {
-     position: relative;
-     top: 40px;
-     margin-left: auto;
-     height: 20px;
-     text-align: center;
-     font-family: Roboto;
-     font-style: normal;
-     font-weight: 300;
-     font-size: 12.5px;
-     line-height: 12px;
-     color: rgb(112, 103, 103);
- }
- 
- fieldset {
-     /*border-color: #FFFFFF;*/
-     position: relative;
-     top: 10px;
-     border-style: hidden;
- }
- 
- label {
-     position: relative;
-     margin-left: 8px;
-     color: rgb(184, 167, 167);
-     font-style: normal;
-     font-weight: bolder;
-     font-size: 12px;
- }
- 
- .login-inputs {
-     color: rgb(184, 167, 167);
-     position: relative;
-     vertical-align: middle;
-     width: 95%;
-     height: 32px;
-     margin-left: 2.5%;
-     margin-bottom: 20px;
-     margin-top: 5px;
-     background: rgba(176, 165, 165, 0.29);
-     border: 1px;
-     border-color: rgba(176, 165, 165, 0.29);
-     box-sizing: border-box;
-     backdrop-filter: blur(4px);
-     border-radius: 3px;
- }
- 
- .login-button {
-     position: relative;
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-     width: 185px;
-     height: 41px;
-     top: 0px;
-     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-     border-radius: 1px;
-     background: rgba(98, 123, 159, 0.79);
-     border: 1px solid #627B9F;
-     box-sizing: border-box;
-     backdrop-filter: blur(4px);
-     border-radius: 2px;
-     /*text properties*/
-     color: #FFFFFF;
-     font-style: normal;
-     font-weight: bold;
-     font-size: 13px;
-     line-height: 15px;
- }
- 
- .login-button:hover {
-     background-color: black;
- }
- /*#email-input {
-     left: ;
-     heigh
- }
- /*img {
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-     width: 30%;
- }*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+html {
+  background-color: #323c4b;
+}
+
+body {
+  background-color: /* white;*/ #323c4b;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.login-text {
+  position: relative;
+  /*width: 52px;*/
+  /*height: 19px;*/
+  text-align: center;
+  top: -250px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+#create-logo {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  top: -50px;
+}
+
+.login-box {
+  vertical-align: middle;
+  background-color: white;
+  top: -220px;
+  position: relative;
+  border-radius: 10px;
+  border-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  padding-bottom: 50px;
+  /*height: 460px;*/
+}
+
+.google-img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-left: 60px;
+  width: 25px;
+  top: 62.5px;
+}
+
+.google-signin-btn {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 25px;
+  width: 300px;
+  height: 50px;
+  background: #ffffff;
+  border: 1px solid #d2c7c7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18.5px;
+  line-height: 18px;
+  /* identical to box height */
+  color: #4d4c4c;
+}
+
+.google-signin-btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0);
+}
+
+.or-line {
+  position: relative;
+  top: 40px;
+  margin-left: auto;
+  height: 20px;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12.5px;
+  line-height: 12px;
+  color: rgb(112, 103, 103);
+}
+
+fieldset {
+  /*border-color: #FFFFFF;*/
+  position: relative;
+  top: 10px;
+  border-style: hidden;
+}
+
+label {
+  position: relative;
+  margin-left: 8px;
+  color: rgb(184, 167, 167);
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.login-inputs {
+  color: rgb(184, 167, 167);
+  position: relative;
+  vertical-align: middle;
+  width: 90%;
+  height: 45px;
+  margin-left: 2.5%;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  background: rgba(176, 165, 165, 0.29);
+  border: 1px;
+  border-color: rgba(176, 165, 165, 0.29);
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  border-radius: 5px;
+  font-size: 15px;
+  text-indent: 5px;
+}
+
+.login-button {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 185px;
+  height: 41px;
+  top: 0px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 1px;
+  background: rgba(98, 123, 159, 0.79);
+  border: 1px solid #627b9f;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  border-radius: 2px;
+  /*text properties*/
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.new-account {
+  position: relative;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500px;
+  line-height: 10px;
+  color: #ffffff;
+  position: relative;
+  display: block;
+  top: -200px;
+  font-size: 12.5px;
+}
+
+.forgot-password {
+  position: relative;
+  text-align: center;
+}
+
+a[href="create-account.html"] {
+  color: white;
+}
+
+a[href="login.html"] {
+  color: white;
+}
+
+a[href="forgot-password.html"] {
+  color: black;
+}
+
+.login-button:hover {
+  background-color: black;
+}
+
+.headerBar {
+  background-color: #323c4b;
+  /* border-bottom: black 10px;*/
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-top: hidden;
+  border-left: hidden;
+  border-right: hidden;
+  width: 600px;
+  height: 225px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logoHeader {
+  float: left;
+}
+
+.centeredImage {
+  width: 300px;
+}
+
+.dropbtn {
+  /*background-color: #04AA6D;*/
+  background: #323c4b;
+  border: none;
+  color: white;
+  /*padding: 12px 16px;*/
+  font-size: 50px;
+  cursor: pointer;
+  border-radius: 100%;
+  /*top: 400px;*/
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  color: #b1bdcf;
+}
+
+.dropDownMenu {
+  position: relative;
+  float: right;
+  top: 100px;
+  margin-right: 50px;
+  /*display: inline-block;*/
+}
+
+.dropDownList {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  border-radius: 3px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  right: 0;
+  z-index: 1;
+}
+
+.dropDownList a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-color: #323c4b;
+  border-bottom: solid;
+  border-width: thin;
+}
+
+.dropDownMenu a:hover {
+  background-color: rgb(187, 188, 199);
+}
+
+.show {
+  display: block;
+}
+
+.optionsList {
+  width: 500px;
+  position: relative;
+  top: 60%;
+  left: 50%;
+  margin-left: -250px;
+}
+
+.searchBar {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-bottom: 75px;
+}
+
+button[type="submit"] {
+  width: 50px;
+  height: 56px;
+  border: 3px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+button[type="filter"] {
+  width: 50px;
+  height: 56px;
+  border: 3px solid #00b4cc;
+  background-color: white;
+  color: black;
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+  font-size: 30px;
+  text-align: center;
+  border-right: hidden;
+}
+
+button[type="button"] {
+  display: block;
+  margin-bottom: 75px;
+  width: 100%;
+  height: 56px;
+  background-color: white;
+  color: rgb(58, 58, 71);
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 5px 1px #00b4cc;
+  border-color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.search {
+  width: 100%;
+  height: 50px;
+  border: 3px solid #00b4cc;
+  padding: 0px;
+  outline: none;
+  color: #9dbfaf;
+  font-size: 20px;
+}
+
+#options {
+  color: black;
+  font-size: 35px;
+}
+
+h1.shoppingListTitle {
+  text-align: center;
+}
+
+/*recipe-list*/
+
+.myRecipes {
+  position: relative;
+  text-align: center;
+  width: 300px;
+  left: 150px;
+  display: inline;
+  top: 100px;
+  color: white;
+  font-size: 40px;
+}
+
+#book {
+  position: relative;
+  color: white;
+  display: inline;
+  left: 200px;
+  top: 100px;
+  font-size: 60px;
+}
+
+.homeBar {
+  position: relative;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  top: 0px;
+}
+
+.homebtn {
+  color: black;
+  background-color: white;
+  position: absolute;
+  display: inline;
+  width: auto;
+  height: 45px;
+  margin-left: 3%;
+  padding-right: 10px;
+  background-color: white;
+  color: rgb(58, 58, 71);
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 5px 1px #00b4cc;
+  border-color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#sort-select {
+  position: absolute;
+  display: inline;
+  margin-left: 55%;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/*can modify sorting dropdown*/
+
+.recipe-list {
+  vertical-align: middle;
+  background-color: #323c4b;
+  position: relative;
+  top: 100px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 600px;
+  height: 500px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.recipe {
+  color: black;
+  background-color: white;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  width: 95%;
+  margin-left: 20px;
+  height: 200px;
+  position: relative;
+}
+
+.recipe h3 {
+  background: rgba(143, 135, 135, 0.29);
+  height: 30px;
+  width: 100%;
+  text-indent: 5px;
+  color: black;
+  position: absolute;
+  bottom: -15px;
+  backdrop-filter: blur(10px);
+  font-size: 20px;
+  z-index: 1;
+}
+
+.recipe img {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+}
+
+.recipe p.time {
+  position: absolute;
+  top: 10px;
+  z-index: 1;
+  font-size: 20px;
+  color: white;
+}
+
+.recipe p.rating {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  z-index: 1;
+  font-size: 20px;
+  color: white;
+}
+
+.recipebookbtn {
+  width: 600px;
+}
+
+/* Create Recipe Style */
+
+h1.createRecipe {
+  color: black;
+  display: inline;
+}
+
+input.createRecipe {
+  width: 25%;
+}
+
+#quantity {
+  width: 3%;
+}
+
+.ingredient {
+  width: 21.6%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.directions {
+  width: 25.2%;
+  height: 30px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#description {
+  height: 75px;
+  width: 25.2%;
+}
+
+input.createRecipeTitle {
+  width: 25.2%;
+}
+
+body.createRecipe {
+  text-align: center;
+  color: white;
+  display: inline;
+}
+
+button.createRecipe {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

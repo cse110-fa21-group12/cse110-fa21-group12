@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="../admin/branding/create_logo_icon.png"
+      type="image/png"
+    />
+    <script src="shopping-list.js" type="module"></script>
+  </head>
+  <body>
+    <h1 class="shoppingListTitle">My Shopping List</h1>
+    <div class="homeBar">
+      <button class="homebtn" onclick="location.href='home.html'"><i class="fas fa-home"></i> Home </button>
+  </div>
+    <div class="recipe-list">
+      <hr />
+      <div class="shopping">
+        <form id="enter-ingredient">
+            <input type="text" , id="ingredient-quantity" , placeholder="Enter ingredient quantity" />
+            <input type="text" , id="ingredient" , placeholder="Enter new ingredient" />
+            <button id="add-shopping-button" type="button">Add</button>
+          </form>
+        <form id = "shopping-form">
+          <fieldset>
+          </fieldset>
+        </form>
+        <button id="done-button" type="button">Mark as Done</button>
+      </div>
+    </div>
+  </body>
+</html> 
