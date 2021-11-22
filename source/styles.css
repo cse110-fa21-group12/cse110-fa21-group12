@@ -45,7 +45,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 350px;
-    height: 400px;
+    height: 460px;
 }
 
 .google-img {
@@ -145,6 +145,33 @@ label {
     font-weight: bold;
     font-size: 13px;
     line-height: 15px;
+}
+
+.new-account {
+    position: relative;
+    text-align: center;
+    top: -125px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+.forgot-password{
+    text-align: center;
+}
+
+a[href = "create-account.html"]{
+    color:white; 
+}
+
+a[href = "login.html"]{
+    color: white;
+}
+
+a[href = "forgot-password.html"]{
+    color:black; 
 }
 
 .login-button:hover {
@@ -297,10 +324,9 @@ button[type=button] {
 }
 
 input[type=text] {
-    width: 400px;
+    width: 315px;
     height: 50px;
     border: 3px solid #00B4CC;
-    border-right: none;
     padding: 0px;
     outline: none;
     color: #9DBFAF;
