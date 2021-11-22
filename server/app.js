@@ -1,14 +1,16 @@
-const http = require("http");
+const Server = require("./server/server");
+const { port } = require("./config");
+const { routes } = require("./routes/recipe-routes");
 
-const hostname = "127.0.0.1";
-const port = 3000;
+const app = new Server();
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Hello World");
+// const routes = new Server.Router();
+// routes.put("/login/:user", (req, res) => {
+//   res.end(`${req.params.user} is logged in, id=${req.query.id}`);
+// });
+
+app.listen(port, () => {
+  console.log("Express server listning on port " + port);
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.use("/", routes);
