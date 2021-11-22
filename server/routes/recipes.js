@@ -6,7 +6,6 @@ router.put("/recipes/create", addRecipe);
 router.get("/recipes", getRecipes);
 router.get("/recipes/:id", getRecipe);
 
-
 module.exports = {
   routes: router,
 };
