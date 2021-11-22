@@ -481,6 +481,10 @@ input.createRecipe {
 
 }
 
+input.createRecipeTitle {
+    width: 25.2%;
+}
+
 body.createRecipe {
     text-align: center;
     color: white;
