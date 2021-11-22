@@ -311,3 +311,47 @@ input[type=text] {
     color: black;
     font-size: 35px;
 }
+
+/* Create Recipe Style */
+h1.createRecipe {
+    color: black;
+    display: inline;
+}
+
+input.createRecipe {
+    width: 25%;
+}
+
+#quantity {
+    width: 3%;
+}
+
+#ingredient {
+    width: 21.6%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+#directions {
+    width: 25.2%;
+    height: 30px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#description {
+    height: 75px;
+}
+
+body.createRecipe { 
+    text-align: center;
+    color: white; 
+    display: inline;
+    
+}
+
+button.createRecipe {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

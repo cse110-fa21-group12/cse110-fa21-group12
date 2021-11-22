@@ -1,25 +1,22 @@
-html {
-    background-color: #042453;
-}
 
 
-* {
-    font-family:"Arial";
-}
 
-h1 {
+
+
+h1.createRecipe {
     border-style: solid;
     border-width: 2px;
     border-color: black;
     display: inline;
 }
-
+/*
 form:not(#ingredient) {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+*/
 
-input {
+input.createRecipe {
     width: 25%;
 }
 
@@ -46,14 +43,14 @@ input {
     height: 75px;
 }
 
-body { 
+body.createRecipe { 
     text-align: center;
     color: white; 
     display: inline;
     
 }
 
-button {
+button.createRecipe {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
