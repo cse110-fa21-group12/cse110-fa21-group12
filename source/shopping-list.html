@@ -7,31 +7,24 @@
       href="../admin/branding/create_logo_icon.png"
       type="image/png"
     />
+    <script src="shopping-list.js" type="module"></script>
   </head>
   <body>
-    <h1>My Shopping List</h1>
+    <h1 class="shoppingListTitle">My Shopping List</h1>
 
     <div class="recipe-list">
       <hr />
       <div class="shopping">
         <form id="enter-ingredient">
-            <input type="text" , id="ingredent-quantity" , placeholder="Enter ingredient quantity" />
+            <input type="text" , id="ingredient-quantity" , placeholder="Enter ingredient quantity" />
             <input type="text" , id="ingredient" , placeholder="Enter new ingredient" />
-            <button class="add-ingredient-button" type="button">Add</button>
+            <button id="add-shopping-button" type="button">Add</button>
           </form>
-        <form>
+        <form id = "shopping-form">
           <fieldset>
-            <input type="checkbox" id="i" name="i" />
-            <label for="i">{quantity} {ingredient}</label><br />
-            <input type="checkbox" id="i" name="i" />
-            <label for="i">{quantity} {ingredient}</label><br />
-            <input type="checkbox" id="i" name="i" />
-            <label for="i">{quantity} {ingredient}</label><br />
-            <input type="checkbox" id="i" name="i" />
-            <label for="i">{quantity} {ingredient}</label><br />
-            <button class="done-button" type="button">Mark as Done</button>
           </fieldset>
         </form>
+        <button id="done-button" type="button">Mark as Done</button>
       </div>
     </div>
   </body>
