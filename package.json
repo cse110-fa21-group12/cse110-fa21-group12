@@ -3,6 +3,6 @@
     "firebase": "^8.10.0"
   },
   "scripts": {
-    "build": "build script for frontend and server"
+    "build": "build index.html"
   }
 }
