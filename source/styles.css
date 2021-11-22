@@ -38,14 +38,15 @@ body {
 .login-box {
     vertical-align: middle;
     background-color: white;
-    top: -200px;
+    top: -220px;
     position: relative;
     border-radius: 10px;
     border-color: #FFFFFF;
     margin-left: auto;
     margin-right: auto;
     width: 350px;
-    height: 460px;
+    padding-bottom: 50px;
+    /*height: 460px;*/
 }
 
 .google-img {
@@ -115,8 +116,8 @@ label {
     color: rgb(184, 167, 167);
     position: relative;
     vertical-align: middle;
-    width: 20px;
-    height: 32px;
+    width: 90%;
+    height: 45px;
     margin-left: 2.5%;
     margin-bottom: 20px;
     margin-top: 5px;
@@ -126,6 +127,8 @@ label {
     box-sizing: border-box;
     backdrop-filter: blur(4px);
     border-radius: 5px;
+    font-size: 15px;
+    text-indent: 5px;
 }
 
 .login-button {
@@ -154,45 +157,37 @@ label {
 .new-account {
     position: relative;
     text-align: center;
-    top: -125px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500px;
-    line-height: 23px;
+    line-height: 10px;
     color: #FFFFFF;
+    position: relative;
+    display: block;
+    top: -200px;
+    font-size: 12.5px;
 }
 
-.forgot-password{
+.forgot-password {
+    position: relative;
     text-align: center;
 }
 
-a[href = "create-account.html"]{
-    color:white; 
-}
-
-a[href = "login.html"]{
+a[href="create-account.html"] {
     color: white;
 }
 
-a[href = "forgot-password.html"]{
-    color:black; 
+a[href="login.html"] {
+    color: white;
+}
+
+a[href="forgot-password.html"] {
+    color: black;
 }
 
 .login-button:hover {
     background-color: black;
 }
-
-
-/*#email-input {
-    left: ;
-    heigh
-}
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-}*/
 
 .headerBar {
     background-color: #323c4b;
@@ -327,8 +322,8 @@ button[type=button] {
     font-weight: bold;
 }
 
-input[type=text] {
-    width: 315px;
+.search {
+    width: 100%;
     height: 50px;
     border: 3px solid #00B4CC;
     padding: 0px;
@@ -342,7 +337,9 @@ input[type=text] {
     font-size: 35px;
 }
 
-<<<<<<< HEAD
+
+/*recipe-list*/
+
 .myRecipes {
     position: relative;
     text-align: center;
@@ -363,14 +360,92 @@ input[type=text] {
     font-size: 60px;
 }
 
-.sort {
-    top: 200px;
+#sort-select {
+    margin-top: 25px;
+    top: 0px;
     position: relative;
-    margin-left: 100px;
+    margin-left: 55%;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+/*can modify sorting dropdown*/
+
+.recipe-list {
+    vertical-align: middle;
+    background-color: #323c4b;
+    position: relative;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.recipe {
+    color: black;
+    background-color: white;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    width: 95%;
+    margin-left: 20px;
+    height: 200px;
+    position: relative;
+}
+
+.recipe h3 {
+    background: rgba(143, 135, 135, 0.29);
+    height: 30px;
+    width: 100%;
+    text-indent: 5px;
+    color: black;
+    position: absolute;
+    bottom: -15px;
+    backdrop-filter: blur(10px);
+    font-size: 20px;
+    z-index: 1;
+}
+
+.recipe img {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+}
+
+.recipe p.time {
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    font-size: 20px;
+    color: white;
+}
+
+.recipe p.rating {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    z-index: 1;
+    font-size: 20px;
+    color: white;
+}
+
+.recipebookbtn {
     width: 600px;
 }
-=======
+
+
 /* Create Recipe Style */
+
 h1.createRecipe {
     color: black;
     display: inline;
@@ -390,7 +465,6 @@ input.createRecipe {
     margin-bottom: 1rem;
 }
 
-
 #directions {
     width: 25.2%;
     height: 30px;
@@ -402,16 +476,13 @@ input.createRecipe {
     height: 75px;
 }
 
-body.createRecipe { 
+body.createRecipe {
     text-align: center;
-    color: white; 
+    color: white;
     display: inline;
-    
 }
 
 button.createRecipe {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
- 
->>>>>>> 3c4f5ea8fd7313258d48748ec0499bae6fdd4944
