@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require("fs");
 const paramsRegex = /:(\w+)(?=$|\/)/g;
 const queryRegex = /^.*?(?:\?|$)/;
 
@@ -17,8 +17,7 @@ function addProperties(req, res) {
     res.setHeader("Content-Type", "application/json");
     try {
       res.end(JSON.stringify(data));
-    }
-    catch(err) {
+    } catch (err) {
       res.end(String(data));
     }
   };
@@ -36,7 +35,7 @@ function addProperties(req, res) {
   };
 
   res.sendHTML = (path) => {
-    res.writeHead(200, { 'content-type': 'text/html' })
+    res.writeHead(200, { "content-type": "text/html" });
     fs.createReadStream(path).pipe(res);
   };
 }

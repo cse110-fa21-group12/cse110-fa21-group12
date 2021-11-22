@@ -6,14 +6,15 @@ const recipeRoutes = require("./routes/recipes").routes;
 const app = new Server();
 
 // try and parse all incoming requests as jsons
-app.use(Server.JsonParser); 
-
+app.use(Server.JsonParser);
 
 // Use the recipes router for routing for base path
 app.use("/", recipeRoutes);
 
 // serve homepage
-app.get("/", (req, res) => { res.sendHTML("../index.html"); })
+app.get("/", (req, res) => {
+  res.sendHTML("../index.html");
+});
 
 // start the server
 app.listen(port, () => {

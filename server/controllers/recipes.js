@@ -4,15 +4,28 @@ const firebase = require("../db");
 const firestore = firebase.firestore();
 
 /**
- * Validate the parsed recipe json to make sure it is following 
+ * Validate the parsed recipe json to make sure it is following
  * the agreed upon schema
- * @param {object} recipe parsed json (req.body) 
+ * @param {object} recipe parsed json (req.body)
  * @throws {Error} if invalid object
  */
- function validateRecipeJSON(recipe) {
-  const props = ['id', 'title', 'description', 'categories', 'tags', 'preparationTime', 'cookingTime', 'ingredients', 'directions'];
+function validateRecipeJSON(recipe) {
+  const props = [
+    "id",
+    "title",
+    "description",
+    "categories",
+    "tags",
+    "preparationTime",
+    "cookingTime",
+    "ingredients",
+    "directions",
+  ];
 
-  if (typeof recipe !== 'object' || Object.keys(recipe).length != props.length) {
+  if (
+    typeof recipe !== "object" ||
+    Object.keys(recipe).length != props.length
+  ) {
     throw new Error("Invalid recipe JSON format");
   }
 
@@ -25,10 +38,10 @@ const firestore = firebase.firestore();
 
 /**
  * Add a recipe from the req.body to the database
- * @param {Request} req 
- * @param {Response} res 
+ * @param {Request} req
+ * @param {Response} res
  */
-async function addRecipe(req,res) {
+async function addRecipe(req, res) {
   try {
     const recipe = req.body;
     validateRecipeJSON(recipe);
@@ -50,9 +63,9 @@ async function addRecipe(req,res) {
       cookingTime: recipe.cookingTime,
       ingredients: recipe.ingredients,
       directions: recipe.directions,
-      rating: 0 
+      rating: 0,
     });
-  
+
     res.json(true);
   } catch (error) {
     res.json({ error: error.message });
@@ -62,16 +75,16 @@ async function addRecipe(req,res) {
 /**
  * Get all the recipes from the database, allows getting a slice of the data
  * by using the start and end queries. (?start={}&end={})
- * @param {Request} req 
- * @param {Response} res 
+ * @param {Request} req
+ * @param {Response} res
  */
 async function getRecipes(req, res) {
   try {
-    const snapshot = await firebase.firestore().collection('recipes').get();
-    const recipes = snapshot.docs.map(doc => doc.data());
+    const snapshot = await firebase.firestore().collection("recipes").get();
+    const recipes = snapshot.docs.map((doc) => doc.data());
     const start = req.query.start || 0;
-    const end = req.query.end || recipes.length; 
-    
+    const end = req.query.end || recipes.length;
+
     res.json(recipes.slice(start, end));
   } catch (error) {
     res.json({ error: error.message });
@@ -80,17 +93,21 @@ async function getRecipes(req, res) {
 
 /**
  * Get the {:id} recipe from the database
- * @param {Request} req 
- * @param {Response} res 
+ * @param {Request} req
+ * @param {Response} res
  */
 async function getRecipe(req, res) {
   try {
-    const doc = await firebase.firestore().collection('recipes').doc(req.params.id).get()
+    const doc = await firebase
+      .firestore()
+      .collection("recipes")
+      .doc(req.params.id)
+      .get();
 
     if (doc.exists) {
       res.json(doc.data());
     } else {
-      res.json({ error: `Document recipes.${doc} does not exist`});
+      res.json({ error: `Document recipes.${doc} does not exist` });
     }
   } catch (error) {
     res.json({ error: error.message });
@@ -100,5 +117,5 @@ async function getRecipe(req, res) {
 module.exports = {
   addRecipe,
   getRecipes,
-  getRecipe
+  getRecipe,
 };

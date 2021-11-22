@@ -17,21 +17,20 @@ class Server extends Router {
    * attatch to the req.body, else just the body as string.
    */
   static get JsonParser() {
-    return (req,res,next) => {
-      let body = '';
-      req.on('data', chunk => {
+    return (req, res, next) => {
+      let body = "";
+      req.on("data", (chunk) => {
         body += chunk.toString();
       });
-      req.on('end', () => {
+      req.on("end", () => {
         try {
           req.body = body ? JSON.parse(body) : {};
-        }
-        catch(err) {
-          console.log(`failed parsing as json - ${err}`)
+        } catch (err) {
+          console.log(`failed parsing as json - ${err}`);
           req.body = body;
         }
-        
-        next();    
+
+        next();
       });
     };
   }

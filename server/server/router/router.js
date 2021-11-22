@@ -17,7 +17,7 @@ class Router {
     this._stack = [];
     this._strPath = path;
     this._path = pathToRegex(path);
-    this._isPathAll = (path == ALL);
+    this._isPathAll = path == ALL;
 
     Methods.forEach((method) => {
       this[method] = (path, fn) => this.__METHOD(path, method, fn);
