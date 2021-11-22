@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="../admin/branding/create_logo_icon.png" type="image/png" />
-  </head>
-  <body>
-    <h1>My Recipes</h1>
+    <!-- Add icon library -->
+    <script src="https://kit.fontawesome.com/b1e4be6678.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class=headerBar>
+        <h1 class=myRecipes>My Recipes</h1><i id="book" class="fas fa-book"></i>
+    </div>
+
     <select name="sort" id="sort-select">
       <option value="select" disabled selected>Sort By:</option>
       <option value="rating">Best Rating</option>
@@ -13,39 +20,41 @@
       <option value="long-time">Cooking Time (Longest to Shortest)</option>
       <option value="recent">Recently Added</option>
       <option value="alphabet">Alphabetically</option>
+  
     </select>
     <div class="recipe-list">
-      <HR>
-      <div class="recipe">
-        <h3>Recipe name</h3>
-        <img src="" alt="Recipe photo" />
-        <p>Time Taken:</p>
-        <p>Rating</p> 
         <HR>
-      </div>
-      <div class="recipe">
-        <h3>Recipe name</h3>
-        <img src="" alt="Recipe photo" />
-        <p>Time Taken:</p>
-        <p>Rating</p> 
-        <HR>
-      </div>
-      <div class="recipe">
-        <h3>Recipe name</h3>
-        <img src="" alt="Recipe photo" />
-        <p>Time Taken:</p>
-        <p>Rating</p> 
-        <HR>
-      </div>
-      <div class="recipe">
-        <h3>Recipe name</h3>
-        <img src="" alt="Recipe photo" />
-        <p>Time Taken:</p>
-        <p>Rating</p> 
-        <HR>
-      </div>
+        <div class="recipe">
+            <h3>Recipe name</h3>
+            <img src="" alt="Recipe photo" />
+            <p>Time Taken:</p>
+            <p>Rating</p>
+            <HR>
+        </div>
+        <div class="recipe">
+            <h3>Recipe name</h3>
+            <img src="" alt="Recipe photo" />
+            <p>Time Taken:</p>
+            <p>Rating</p>
+            <HR>
+        </div>
+        <div class="recipe">
+            <h3>Recipe name</h3>
+            <img src="" alt="Recipe photo" />
+            <p>Time Taken:</p>
+            <p>Rating</p>
+            <HR>
+        </div>
+        <div class="recipe">
+            <h3>Recipe name</h3>
+            <img src="" alt="Recipe photo" />
+            <p>Time Taken:</p>
+            <p>Rating</p>
+            <HR>
+        </div>
 
     </div>
     <button type="button">Create Recipe</button>
-  </body>
+</body>
+
 </html>
