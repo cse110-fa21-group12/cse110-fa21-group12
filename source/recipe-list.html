@@ -9,10 +9,12 @@
 </head>
 
 <body>
-    <div class=headerBar>
+    <div class="headerBar">
         <h1 class=myRecipes>My Recipes</h1><i id="book" class="fas fa-book"></i>
     </div>
-
+    <div class="homeBar">
+        <button class="homebtn" onclick="location.href='home.html'"><i class="fas fa-home"></i> Home </button>
+    </div>
     <select name="sort" id="sort-select">
       <option value="select" disabled selected>Sort By:</option>
       <option value="rating">Best Rating</option>
@@ -34,27 +36,28 @@
         </div>
         <div class="recipe">
             <img src="media/sample.jpg" alt="Recipe photo" />
-            <p>Time Taken:</p>
-            <p>Rating</p>
+            <p class="time">Time Taken:</p>
+            <p class="rating">Rating</p>
             <h3>Recipe name</h3>
             <!--HR-->
         </div>
         <div class="recipe">
             <img src="media/sample.jpg" alt="Recipe photo" />
-            <p>Time Taken:</p>
-            <p>Rating</p>
+            <p class="time">Time Taken:</p>
+            <p class="rating">Rating</p>
             <h3>Recipe name</h3>
             <!--HR-->
         </div>
         <div class="recipe">
             <img src="media/sample.jpg" alt="Recipe photo" />
-            <p>Time Taken:</p>
-            <p>Rating</p>
+            <p class="time">Time Taken:</p>
+            <p class="rating">Rating</p>
             <h3>Recipe name</h3>
             <!--HR-->
         </div>
 
     </div>
+    <br><br><br><br>
     <div class=optionsList>
         <button type="button" onclick="location.href='create-recipe.html'">Create Recipe    <i class="fas fa-utensils"></i></button>
     </div>
