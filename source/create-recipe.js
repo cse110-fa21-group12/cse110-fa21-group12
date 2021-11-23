@@ -62,7 +62,11 @@ saveRecipeButton.addEventListener('click', () => {
     fetch('http://localhost:8080/recipes/create', {
         method: 'PUT',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
+                'Authorization': 'Bearer key',
         },
         body: JSON.stringify(jsonRecipe),
     })
