@@ -1,6 +1,7 @@
 const Server = require("./server/server");
 const { port } = require("./config");
 const recipeRoutes = require("./routes/recipes").routes;
+const staticRoutes = require("./routes/static").routes;
 
 // Initialize the server
 const app = new Server();
@@ -11,10 +12,8 @@ app.use(Server.JsonParser);
 // Use the recipes router for routing for base path
 app.use("/", recipeRoutes);
 
-// serve homepage
-app.get("/", (req, res) => {
-  res.sendHTML("../index.html");
-});
+// serve static
+app.use("/", staticRoutes);
 
 // start the server
 app.listen(port, () => {

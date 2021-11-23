@@ -1,4 +1,6 @@
 const fs = require("fs");
+const path = require('path');
+
 const paramsRegex = /:(\w+)(?=$|\/)/g;
 const queryRegex = /^.*?(?:\?|$)/;
 
@@ -34,10 +36,25 @@ function addProperties(req, res) {
     return this;
   };
 
-  res.sendHTML = (path) => {
-    res.writeHead(200, { "content-type": "text/html" });
-    fs.createReadStream(path).pipe(res);
-  };
+  res.sendFile = (filePath) => {
+    const ext = path.extname(filePath);
+    switch (ext) {
+      case '.html': res.writeHead(200, { "content-type": "text/html" }); break;
+      case '.png': res.writeHead(200, { "content-type": "image/png" }); break;
+      case '.json': res.writeHead(200, { "content-type": "application/json" }); break;
+      case '.css': res.writeHead(200, { "content-type": "text/css" }); break;
+      case '.js': res.writeHead(200, { "content-type": "text/javascript" }); break;
+    }
+
+    try{
+      fs.createReadStream(filePath).pipe(res);
+    }
+    catch(err) {
+      console.log(err);
+      res.writeHead(status.NOT_FOUND, { "Content-Type": "text/plain" });
+      res.end(`${status.NOT_FOUND} - ${req.url} not found`);
+    }
+  }
 }
 
 /**
