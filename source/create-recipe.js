@@ -35,38 +35,37 @@ addDirectionsButton.click();
 
 const saveRecipeButton = document.getElementById('save-recipe');
 
-//Creating the JSON data to send
-const title = document.getElementById('title').value;
-const description = document.getElementById('description').value;
-const categories = document.getElementById('categories').value;
-const tags = document.getElementById('tags').value;
-const preparationTime = document.getElementById('prep-time').value;
-const cookingTime = document.getElementById('cook-time').value;
-const totalTime = document.getElementById('total-time').value;
-const ingredients = document.getElementsByClassName('ingredient');
-const directions = document.getElementsByClassName('directions');
-
-const jsonRecipe = {
-    "id": title,
-    "title": title,
-    "description": description,
-    "categories": categories,
-    "tags": tags,
-    "preparationTime": preparationTime,
-    "cookingTime": cookingTime,
-    "ingredients": ingredients,
-    "directions": directions,
-}
 
 saveRecipeButton.addEventListener('click', () => {
-    fetch('http://localhost:8080/recipes/create', {
+    //Creating the JSON data to send
+    const title = document.getElementById('title').value;
+    const description = document.getElementById('description').value;
+    const categories = document.getElementById('categories').value;
+    const tags = document.getElementById('tags').value;
+    const preparationTime = document.getElementById('prep-time').value;
+    const cookingTime = document.getElementById('cook-time').value;
+    const totalTime = document.getElementById('total-time').value;
+    const ingredients = document.getElementsByClassName('ingredient');
+    const directions = document.getElementsByClassName('directions');
+
+    const jsonRecipe = {
+        "id": title,
+        "title": title,
+        "description": description,
+        "categories": categories,
+        "tags": tags,
+        "preparationTime": preparationTime,
+        "cookingTime": cookingTime,
+        "ingredients": ingredients,
+        "directions": directions,
+    }
+    fetch('/recipes/create', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
-                'Authorization': 'Bearer key',
+                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT,PATCH',
         },
         body: JSON.stringify(jsonRecipe),
     })
