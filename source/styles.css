@@ -492,13 +492,13 @@ input.createRecipe {
     width: 3%;
 }
 
-#ingredient {
+.ingredient {
     width: 21.6%;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-#directions {
+.directions {
     width: 25.2%;
     height: 30px;
     margin-top: 1rem;
