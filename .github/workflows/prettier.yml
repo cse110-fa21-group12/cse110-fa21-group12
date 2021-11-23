@@ -1,4 +1,4 @@
-name: Prettier
+name: Prettier + HTML Validator
 
 # This action works with pull requests and pushes
 on:
@@ -23,3 +23,5 @@ jobs:
       with:
         # This part is also where you can pass other options, for example:
         prettier_options: --write **/*.{js,md}
+    - name: HTML5 Validator
+      uses: Cyb3r-Jak3/html5validator-action@v7.0.0
