@@ -1,4 +1,4 @@
-const { json } = require("stream/consumers");
+//const { json } = require("stream/consumers");
 
 const addIngredientButton = document.getElementById("add-ingredient-button");
 const ingredientForm = document.getElementById("ingredients-form");
@@ -46,7 +46,7 @@ const totalTime = document.getElementById('total-time').value;
 const ingredients = document.getElementsByClassName('ingredient');
 const directions = document.getElementsByClassName('directions');
 
-const jsonRecipe= {
+const jsonRecipe = {
     "id": title,
     "title": title,
     "description": description,
@@ -58,7 +58,29 @@ const jsonRecipe= {
     "directions": directions,
 }
 
-const jsonRecipeParse = JSON.parse(jsonRecipe);
+saveRecipeButton.addEventListener('click', () => {
+    fetch('http://localhost:8080/recipes/create', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonRecipe),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+});
+
+
+
+
+
+
+//const jsonRecipeParse = JSON.parse(jsonRecipe);
 
 
 
