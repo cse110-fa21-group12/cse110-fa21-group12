@@ -44,6 +44,9 @@ function addProperties(req, res) {
       case '.json': res.writeHead(200, { "content-type": "application/json" }); break;
       case '.css': res.writeHead(200, { "content-type": "text/css" }); break;
       case '.js': res.writeHead(200, { "content-type": "text/javascript" }); break;
+      
+      case '.jpeg': 
+      case '.jpg': res.writeHead(200, { "content-type": "image/jpeg" }); break;
     }
 
     try{
