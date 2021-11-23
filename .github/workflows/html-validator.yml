@@ -10,7 +10,7 @@ jobs:
       - name: Test Files # https://github.com/marketplace/actions/html5-validator
         uses: Cyb3r-Jak3/html5validator-action@v0.4.1
         with:
-          root: .
+          root: source
           log_level: INFO
           css: true
       - uses: actions/upload-artifact@v2
