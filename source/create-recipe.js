@@ -55,7 +55,7 @@ saveRecipeButton.addEventListener('click', () => {
         "categories": categories,
         "tags": tags,
         "preparationTime": preparationTime,
-        "cookingTime": cookingTime,
+        "cookingTime": totalTime,
         "ingredients": ingredients,
         "directions": directions,
     }
@@ -76,6 +76,7 @@ saveRecipeButton.addEventListener('click', () => {
     .catch((error) => {
       console.error('Error:', error);
     });
+    location.href="recipe-list.html"
 });
 
 
