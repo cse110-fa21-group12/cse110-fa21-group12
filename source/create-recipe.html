@@ -19,8 +19,19 @@
     </section>
     <section id="enter-picture">
       <form> 
+        <img id="uploadPreview" style="width: 100px; height: 100px;" />
         <label for="img"> Add Picture </label>
-        <input type="file" accept="image/*">
+        <input id="uploadImage" type="file" onchange="PreviewImage();" />
+        <script type="text/javascript">
+          function PreviewImage() {
+              var oFReader = new FileReader();
+              oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+      
+              oFReader.onload = function (oFREvent) {
+                  document.getElementById("uploadPreview").src = oFREvent.target.result;
+              };
+          };
+      </script>
       </form>
     </section>
     <section id="filters">
