@@ -24,13 +24,20 @@
         <input id="uploadImage" type="file" onchange="PreviewImage();" />
         <script type="text/javascript">
           function PreviewImage() {
+            if(document.getElementById("uploadImage").files[0] != "") {
               var oFReader = new FileReader();
               oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
       
               oFReader.onload = function (oFREvent) {
                   document.getElementById("uploadPreview").src = oFREvent.target.result;
               };
+            }
+            else {
+              //add a placeholder element image so that if no file is chosen it will dislay just the background color?
+              document.getElementById("uploadImage").files[0] = "";
+            }
           };
+          
       </script>
       </form>
     </section>
