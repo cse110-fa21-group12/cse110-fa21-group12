@@ -1,522 +1,700 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 html {
-  background-color: #323c4b;
+    background-color: #323c4b;
 }
 
 body {
-  background-color: /* white;*/ #323c4b;
+    background-color: /* white;*/
+    #323c4b;
 }
 
 * {
-  font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .login-text {
-  position: relative;
-  /*width: 52px;*/
-  /*height: 19px;*/
-  text-align: center;
-  top: -250px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
-  color: #ffffff;
+    position: relative;
+    /*width: 52px;*/
+    /*height: 19px;*/
+    text-align: center;
+    top: -250px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
 }
 
 #create-logo {
-  display: block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-  top: -50px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    top: -50px;
 }
 
 .login-box {
-  vertical-align: middle;
-  background-color: white;
-  top: -220px;
-  position: relative;
-  border-radius: 10px;
-  border-color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-  width: 350px;
-  padding-bottom: 50px;
-  /*height: 460px;*/
+    vertical-align: middle;
+    background-color: white;
+    top: -220px;
+    position: relative;
+    border-radius: 10px;
+    border-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    padding-bottom: 50px;
+    /*height: 460px;*/
 }
 
 .google-img {
-  position: relative;
-  z-index: 1;
-  display: block;
-  margin-left: 60px;
-  width: 25px;
-  top: 62.5px;
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-left: 60px;
+    width: 25px;
+    top: 62.5px;
 }
 
 .google-signin-btn {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  top: 25px;
-  width: 300px;
-  height: 50px;
-  background: #ffffff;
-  border: 1px solid #d2c7c7;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18.5px;
-  line-height: 18px;
-  /* identical to box height */
-  color: #4d4c4c;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 25px;
+    width: 300px;
+    height: 50px;
+    background: #ffffff;
+    border: 1px solid #d2c7c7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18.5px;
+    line-height: 18px;
+    /* identical to box height */
+    color: #4d4c4c;
 }
 
 .google-signin-btn:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0);
 }
 
 .or-line {
-  position: relative;
-  top: 40px;
-  margin-left: auto;
-  height: 20px;
-  text-align: center;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 12.5px;
-  line-height: 12px;
-  color: rgb(112, 103, 103);
+    position: relative;
+    top: 40px;
+    margin-left: auto;
+    height: 20px;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12.5px;
+    line-height: 12px;
+    color: rgb(112, 103, 103);
 }
 
 fieldset {
-  /*border-color: #FFFFFF;*/
-  position: relative;
-  top: 10px;
-  border-style: hidden;
+    /*border-color: #FFFFFF;*/
+    position: relative;
+    top: 10px;
+    border-style: hidden;
 }
 
 label {
-  position: relative;
-  margin-left: 8px;
-  color: rgb(184, 167, 167);
-  font-style: normal;
-  font-weight: bolder;
-  font-size: 12px;
+    position: relative;
+    margin-left: 8px;
+    color: rgb(184, 167, 167);
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 12px;
 }
 
 .login-inputs {
-  color: rgb(184, 167, 167);
-  position: relative;
-  vertical-align: middle;
-  width: 90%;
-  height: 45px;
-  margin-left: 2.5%;
-  margin-bottom: 20px;
-  margin-top: 5px;
-  background: rgba(176, 165, 165, 0.29);
-  border: 1px;
-  border-color: rgba(176, 165, 165, 0.29);
-  box-sizing: border-box;
-  backdrop-filter: blur(4px);
-  border-radius: 5px;
-  font-size: 15px;
-  text-indent: 5px;
+    color: rgb(184, 167, 167);
+    position: relative;
+    vertical-align: middle;
+    width: 90%;
+    height: 45px;
+    margin-left: 2.5%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    background: rgba(176, 165, 165, 0.29);
+    border: 1px;
+    border-color: rgba(176, 165, 165, 0.29);
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    font-size: 15px;
+    text-indent: 5px;
 }
 
 .login-button {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 185px;
-  height: 41px;
-  top: 0px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 1px;
-  background: rgba(98, 123, 159, 0.79);
-  border: 1px solid #627b9f;
-  box-sizing: border-box;
-  backdrop-filter: blur(4px);
-  border-radius: 2px;
-  /*text properties*/
-  color: #ffffff;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 15px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 185px;
+    height: 41px;
+    top: 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 1px;
+    background: rgba(98, 123, 159, 0.79);
+    border: 1px solid #627b9f;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    border-radius: 2px;
+    /*text properties*/
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 15px;
 }
 
 .new-account {
-  position: relative;
-  text-align: center;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500px;
-  line-height: 10px;
-  color: #ffffff;
-  position: relative;
-  display: block;
-  top: -200px;
-  font-size: 12.5px;
+    position: relative;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500px;
+    line-height: 10px;
+    color: #ffffff;
+    position: relative;
+    display: block;
+    top: -200px;
+    font-size: 12.5px;
 }
 
 .forgot-password {
-  position: relative;
-  text-align: center;
+    position: relative;
+    text-align: center;
 }
 
 a[href="create-account.html"] {
-  color: white;
+    color: white;
 }
 
 a[href="login.html"] {
-  color: white;
+    color: white;
 }
 
 a[href="forgot-password.html"] {
-  color: black;
+    color: black;
 }
 
 .login-button:hover {
-  background-color: black;
+    background-color: black;
 }
 
 .headerBar {
-  background-color: #323c4b;
-  /* border-bottom: black 10px;*/
-  border-color: white;
-  border-width: 1px;
-  border-style: solid;
-  border-top: hidden;
-  border-left: hidden;
-  border-right: hidden;
-  width: 600px;
-  height: 225px;
-  margin-left: auto;
-  margin-right: auto;
+    background-color: #323c4b;
+    /* border-bottom: black 10px;*/
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    width: 600px;
+    height: 225px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logoHeader {
-  float: left;
+    float: left;
 }
 
 .centeredImage {
-  width: 300px;
+    width: 300px;
 }
 
 .dropbtn {
-  /*background-color: #04AA6D;*/
-  background: #323c4b;
-  border: none;
-  color: white;
-  /*padding: 12px 16px;*/
-  font-size: 50px;
-  cursor: pointer;
-  border-radius: 100%;
-  /*top: 400px;*/
+    /*background-color: #04AA6D;*/
+    background: #323c4b;
+    border: none;
+    color: white;
+    /*padding: 12px 16px;*/
+    font-size: 50px;
+    cursor: pointer;
+    border-radius: 100%;
+    /*top: 400px;*/
 }
 
 .dropbtn:hover,
 .dropbtn:focus {
-  color: #b1bdcf;
+    color: #b1bdcf;
 }
 
 .dropDownMenu {
-  position: relative;
-  float: right;
-  top: 100px;
-  margin-right: 50px;
-  /*display: inline-block;*/
+    position: relative;
+    float: right;
+    top: 100px;
+    margin-right: 50px;
+    /*display: inline-block;*/
 }
 
 .dropDownList {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  border-radius: 3px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  right: 0;
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    border-radius: 3px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    right: 0;
+    z-index: 1;
 }
 
 .dropDownList a {
-  color: rgb(0, 0, 0);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  border-color: #323c4b;
-  border-bottom: solid;
-  border-width: thin;
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-color: #323c4b;
+    border-bottom: solid;
+    border-width: thin;
 }
 
 .dropDownMenu a:hover {
-  background-color: rgb(187, 188, 199);
+    background-color: rgb(187, 188, 199);
 }
 
 .show {
-  display: block;
+    display: block;
 }
 
 .optionsList {
-  width: 500px;
-  position: relative;
-  top: 60%;
-  left: 50%;
-  margin-left: -250px;
+    width: 500px;
+    position: relative;
+    top: 60%;
+    left: 50%;
+    margin-left: -250px;
 }
 
 .searchBar {
-  display: flex;
-  position: relative;
-  width: 100%;
-  margin-bottom: 75px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-bottom: 75px;
 }
 
 button[type="submit"] {
-  width: 50px;
-  height: 56px;
-  border: 3px solid #00b4cc;
-  background: #00b4cc;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
-  font-size: 30px;
+    width: 50px;
+    height: 56px;
+    border: 3px solid #00b4cc;
+    background: #00b4cc;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    font-size: 30px;
 }
 
 button[type="filter"] {
-  width: 50px;
-  height: 56px;
-  border: 3px solid #00b4cc;
-  background-color: white;
-  color: black;
-  border-radius: 10px 0 0 10px;
-  cursor: pointer;
-  font-size: 30px;
-  text-align: center;
-  border-right: hidden;
+    width: 50px;
+    height: 56px;
+    border: 3px solid #00b4cc;
+    background-color: white;
+    color: black;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    border-right: hidden;
 }
 
 button[type="button"] {
-  display: block;
-  margin-bottom: 75px;
-  width: 100%;
-  height: 56px;
-  background-color: white;
-  color: rgb(58, 58, 71);
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0px 5px 1px #00b4cc;
-  border-color: white;
-  font-size: 25px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 75px;
+    width: 100%;
+    height: 56px;
+    background-color: white;
+    color: rgb(58, 58, 71);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 5px 1px #00b4cc;
+    border-color: white;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .search {
-  width: 100%;
-  height: 50px;
-  border: 3px solid #00b4cc;
-  padding: 0px;
-  outline: none;
-  color: #9dbfaf;
-  font-size: 20px;
+    width: 100%;
+    height: 50px;
+    border: 3px solid #00b4cc;
+    padding: 0px;
+    outline: none;
+    color: #9dbfaf;
+    font-size: 20px;
 }
 
 #options {
-  color: black;
-  font-size: 35px;
+    color: black;
+    font-size: 35px;
 }
 
 h1.shoppingListTitle {
-  text-align: center;
+    text-align: center;
 }
+
 
 /*recipe-list*/
 
 .myRecipes {
-  position: relative;
-  text-align: center;
-  width: 300px;
-  left: 150px;
-  display: inline;
-  top: 100px;
-  color: white;
-  font-size: 40px;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    left: 150px;
+    display: inline;
+    top: 100px;
+    color: white;
+    font-size: 40px;
 }
 
 #book {
-  position: relative;
-  color: white;
-  display: inline;
-  left: 200px;
-  top: 100px;
-  font-size: 60px;
+    position: relative;
+    color: white;
+    display: inline;
+    left: 200px;
+    top: 100px;
+    font-size: 60px;
 }
 
 .homeBar {
-  position: relative;
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  top: 0px;
+    position: relative;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    top: 0px;
 }
 
 .homebtn {
-  color: black;
-  background-color: white;
-  position: absolute;
-  display: inline;
-  width: auto;
-  height: 45px;
-  margin-left: 3%;
-  padding-right: 10px;
-  background-color: white;
-  color: rgb(58, 58, 71);
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0px 5px 1px #00b4cc;
-  border-color: white;
-  font-size: 25px;
-  font-weight: bold;
+    color: black;
+    background-color: white;
+    position: absolute;
+    display: inline;
+    width: auto;
+    height: 45px;
+    margin-left: 3%;
+    padding-right: 10px;
+    background-color: white;
+    color: rgb(58, 58, 71);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 5px 1px #00b4cc;
+    border-color: white;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 #sort-select {
-  position: absolute;
-  display: inline;
-  margin-left: 55%;
-  width: 200px;
-  height: 40px;
-  border-radius: 5px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
+    position: absolute;
+    display: inline;
+    margin-left: 55%;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
 }
+
 
 /*can modify sorting dropdown*/
 
 .recipe-list {
-  vertical-align: middle;
-  background-color: #323c4b;
-  position: relative;
-  top: 100px;
-  margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
-  width: 600px;
-  height: 500px;
-  overflow: hidden;
-  overflow-y: scroll;
+    vertical-align: middle;
+    background-color: #323c4b;
+    position: relative;
+    top: 100px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .recipe {
-  color: black;
-  background-color: white;
-  border-radius: 2px;
-  margin-bottom: 10px;
-  width: 95%;
-  margin-left: 20px;
-  height: 200px;
-  position: relative;
+    color: black;
+    background-color: white;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    width: 95%;
+    margin-left: 20px;
+    height: 200px;
+    position: relative;
+    display:block;
 }
 
 .recipe h3 {
-  background: rgba(143, 135, 135, 0.29);
-  height: 30px;
-  width: 100%;
-  text-indent: 5px;
-  color: black;
-  position: absolute;
-  bottom: -15px;
-  backdrop-filter: blur(10px);
-  font-size: 20px;
-  z-index: 1;
+    background: rgba(143, 135, 135, 0.29);
+    height: 30px;
+    width: 100%;
+    text-indent: 5px;
+    color: black;
+    position: absolute;
+    bottom: -15px;
+    backdrop-filter: blur(10px);
+    font-size: 20px;
+    z-index: 1;
 }
 
 .recipe img {
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  position: absolute;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 118px;
+    object-fit: cover;
+    margin-left: -16px;
+    width: calc(100% + 32px);
 }
 
 .recipe p.time {
-  position: absolute;
-  top: 10px;
-  z-index: 1;
-  font-size: 20px;
-  color: white;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    font-size: 20px;
+    color: white;
 }
 
 .recipe p.rating {
-  position: absolute;
-  top: 30px;
-  right: 10px;
-  z-index: 1;
-  font-size: 20px;
-  color: white;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    z-index: 1;
+    font-size: 20px;
+    color: white;
 }
 
 .recipebookbtn {
-  width: 600px;
+    width: 600px;
 }
+
 
 /* Create Recipe Style */
 
 h1.createRecipe {
-  color: black;
-  display: inline;
+    color: black;
+    display: inline;
 }
 
 input.createRecipe {
-  width: 25%;
+    width: 25%;
 }
 
 #quantity {
-  width: 3%;
+    width: 3%;
 }
 
 .ingredient {
-  width: 21.6%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+    width: 21.6%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .directions {
-  width: 25.2%;
-  height: 30px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+    width: 25.2%;
+    height: 30px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 #description {
-  height: 75px;
-  width: 25.2%;
+    height: 75px;
+    width: 25.2%;
 }
 
 input.createRecipeTitle {
-  width: 25.2%;
+    width: 25.2%;
 }
 
 body.createRecipe {
-  text-align: center;
-  color: white;
-  display: inline;
+    text-align: center;
+    color: white;
+    display: inline;
 }
 
 button.createRecipe {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/*recipe-expand*/
+
+.recipe-expand {
+    position: relative;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleBar {
+    position: relative;
+}
+
+.recipe-title {
+    margin-top: 10%;
+    position: relative;
+    display: inline-block;
+    font-size: 100px;
+    color: white;
+}
+
+.crud-options {
+    left: 40%;
+    display: inline;
+    position: relative;
+}
+
+.crud {
+    width: 50px;
+    height: auto;
+    margin: 1%;
+    padding: 5px;
+    background-color: white;
+    color: rgb(58, 58, 71);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 3px 1px #00b4cc;
+    border-color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.ratings {
+    color: white;
+}
+
+.description {
+    background-color: rgb(227, 240, 245);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.description>p {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.thumbnail {
+    position: relative;
+    margin-left: 300px;
+    aspect-ratio: auto;
+    /*object-fit: cover;
+    overflow: hidden;*/
+    width: 400px;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.summary {
+    background-color: rgb(227, 240, 245);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.summary>p {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.adjust {
+    position: relative;
+    float: right;
+    background: rgba(67, 87, 114, 0.79);
+    border: none;
+    color: black;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 100%;
+    bottom: 60px;
+}
+
+.adjust:hover {
+    color: white;
+}
+
+.ingredients {
+    background-color: rgb(227, 240, 245);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+HR {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+legend {
+    margin-bottom: 2%;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.checklist {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 200;
+    color: black;
+    padding: 10px 5px;
+    height: 37px;
+    position: relative;
+}
+
+.ingrd-to-list {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 225px;
+    height: 50px;
+    top: 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 1px;
+    background: rgba(67, 87, 114, 0.79);
+    border: 1px solid #627b9f;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    border-radius: 2px;
+    /*text properties*/
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 15px;
+}
+
+.ingrd-to-list:hover {
+    background-color: black;
+}
+
+.directions-text {
+    margin-bottom: 2%;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.step {
+    background-color: white;
+    border-radius: 2px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: lightblue;
+    backdrop-filter: blur(4px);
+    padding-left: 10px;
+    padding: 2px;
+    margin-bottom: 15px;
 }

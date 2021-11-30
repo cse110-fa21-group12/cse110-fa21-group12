@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="../admin/branding/create_logo_icon.png" type="image/png" />
     <script src="create-recipe.js" type="module"></script>
-    <Access-Control-Allow-Origin: http://localhost:8080></Access-Control-Allow-Origin:>
   </head>
   <body class="createRecipe">
     <header>
@@ -20,8 +19,26 @@
     </section>
     <section id="enter-picture">
       <form> 
+        <img id="uploadPreview" style="width: 100px; height: 100px;" />
         <label for="img"> Add Picture </label>
-        <input type="file" accept="image/*">
+        <input id="uploadImage" type="file" onchange="PreviewImage();" />
+        <script type="text/javascript">
+          function PreviewImage() {
+            if(document.getElementById("uploadImage").files[0] != "") {
+              var oFReader = new FileReader();
+              oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+      
+              oFReader.onload = function (oFREvent) {
+                  document.getElementById("uploadPreview").src = oFREvent.target.result;
+              };
+            }
+            else {
+              //add a placeholder element image so that if no file is chosen it will dislay just the background color?
+              document.getElementById("uploadImage").files[0] = "";
+            }
+          };
+          
+      </script>
       </form>
     </section>
     <section id="filters">
