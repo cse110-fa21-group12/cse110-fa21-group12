@@ -15,8 +15,9 @@ fetch('/recipes/', {
     const list = document.getElementsByClassName('recipe-list')[0];
 
     //Create recipe card div to append elements to 
-    const initialDiv = document.createElement("div");
+    const initialDiv = document.createElement("a");
     initialDiv.setAttribute('class', 'recipe');
+    initialDiv.href = "recipe.html";
 
     //Create and add cooking time to the recipe card
     const timeTaken = document.createElement('p');
@@ -30,7 +31,7 @@ fetch('/recipes/', {
 
     //Create and add image to the recipe card
 
-    
+
     //Create and add rating to the recipe card
 
 

@@ -433,6 +433,7 @@ h1.shoppingListTitle {
     margin-left: 20px;
     height: 200px;
     position: relative;
+    display:block;
 }
 
 .recipe h3 {
