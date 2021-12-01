@@ -433,7 +433,7 @@ h1.shoppingListTitle {
     margin-left: 20px;
     height: 200px;
     position: relative;
-    display:block;
+    display: block;
 }
 
 .recipe h3 {
@@ -482,13 +482,97 @@ h1.shoppingListTitle {
 
 /* Create Recipe Style */
 
-h1.createRecipe {
-    color: black;
-    display: inline;
+.createRecipe {
+    position: relative;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-input.createRecipe {
-    width: 25%;
+.createRecipeTitle {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.createRecipeTitle img {
+    position: relative;
+    display: inline;
+    width: 100px;
+    top: 20px;
+}
+
+.createRecipeTitle h1 {
+    color: white;
+    display: inline;
+    position: relative;
+    font-size: 60px;
+}
+
+input[type="text"] {
+    text-align: left;
+    width: 500px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-color: lightblue;
+    backdrop-filter: blur(4px);
+    padding: 5px 5px 5px 15px;
+    margin-bottom: 25px;
+    color: black;
+    font-size: 25px;
+}
+
+.center {
+    height: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input {
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    background: #323c4b;
+    left: 50px;
+}
+
+.form-input input {
+    display: none;
+}
+
+.form-input label {
+    display: block;
+    width: 200px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    text-transform: Uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 1px;
+    background: rgba(67, 87, 114, 0.79);
+}
+
+.form-input label:hover {
+    background-color: black;
+}
+
+.form-input img {
+    width: 100%;
+    display: none;
+    margin-bottom: 30px;
 }
 
 #quantity {
@@ -506,21 +590,6 @@ input.createRecipe {
     height: 30px;
     margin-top: 1rem;
     margin-bottom: 1rem;
-}
-
-#description {
-    height: 75px;
-    width: 25.2%;
-}
-
-input.createRecipeTitle {
-    width: 25.2%;
-}
-
-body.createRecipe {
-    text-align: center;
-    color: white;
-    display: inline;
 }
 
 button.createRecipe {
