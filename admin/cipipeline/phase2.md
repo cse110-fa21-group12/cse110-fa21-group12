@@ -85,7 +85,7 @@
 
 > 5.) Unit Testing; if succsessful continue, otherwise return to step 2
 
-> 6.) Pull Request to main branch
+> 6.) Pull Request to branch
 
 > 7.) Have an individual on your team review your code, if there's a problem return to step 2
 
