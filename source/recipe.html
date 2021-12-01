@@ -6,7 +6,7 @@
     <link rel="icon" href="../admin/branding/create_logo_icon.png" type="image/png" />
     <!-- Add icon library -->
     <script src="https://kit.fontawesome.com/b1e4be6678.js" crossorigin="anonymous"></script>
-    <script src="recipe.js"></script>
+    <script src="recipe.js" type="module"></script>
 </head>
 
 <body>
@@ -16,9 +16,9 @@
             <h1 class="recipe-title">{Title}</h1>
             <div class="crud-options">
                 <button class="crud" onclick="location.href='home.html'"><i class="fas fa-home"></i></button>
-                <button class="crud"><i class="fas fa-edit"></i></button>
+                <button id="edit-button" class="crud"><i class="fas fa-edit"></i></button>
                 <button class="crud"><i class="fas fa-share-alt-square"></i></button>
-                <button class="crud"><i class="fas fa-trash-alt"></i></button>
+                <button id="delete-button" class="crud"><i class="fas fa-trash-alt"></i></button>
             </div>
         </div>
         <h2 class="ratings">Rating This need to be in stars like in Lab 6/7</h2>

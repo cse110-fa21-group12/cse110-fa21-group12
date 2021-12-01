@@ -1,3 +1,45 @@
+//Delete recipe functionality
+const deleteButton = document.getElementsByClassName("crud")[3];
+
+deleteButton.addEventListener('click', function() {
+    const id = localStorage.getItem('id');
+    fetch('/recipes/' + id, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT,PATCH',
+        },
+    })
+    //location.href="recipe-list.html"
+});
+
+const editButton = document.getElementById('edit-button');
+
+editButton.addEventListener('click', function() {
+    const id = localStorage.getItem('id');
+    fetch('/recipes/edit', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT,PATCH',
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+});
+
+
+
+//Populates recipe page correctly
 const url = localStorage.getItem('id');
 console.log(url);
 fetch('/recipes/' + url, {
@@ -59,6 +101,9 @@ fetch('/recipes/' + url, {
 .catch((error) => {
   console.error('Error:', error);
 });
+
+
+
 
 
 
