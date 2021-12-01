@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 const URL = "https://zen-recipe-9eb67.web.app/";
 
-describe("Basic user flow for Website", () => {
+describe("Login page", () => {
   // First, visit the login page
   beforeAll(async () => {
     await page.goto(URL);
@@ -22,6 +22,13 @@ describe("Basic user flow for Website", () => {
   it("return to login page from home page", async () => {
     await page.goBack();
     const url = await page.evaluate(() => location.href);
-    expect(url).toMatch("https://zen-recipe-9eb67.web.app/");
+    expect(url).toMatch(URL);
+  });
+
+  it("go back to home page", async () => {
+    await page.goto("https://zen-recipe-9eb67.web.app/home.html");
+    await page.waitForTimeout(300);
+
+    // I try to check some properties for the home page, but I have no idea where to start...
   });
 });
