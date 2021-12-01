@@ -1,5 +1,5 @@
 //Get the original recipe
-const id = id;
+const id = localStorage.getItem('id');
 fetch('/recipes/' + id, {
     method: 'GET',
     headers: {
@@ -12,7 +12,30 @@ fetch('/recipes/' + id, {
 .then(response => response.json())
 .then(data => {
   console.log('Success:', data);
-  
+  const title = document.getElementById('title');
+  title.defaultValue = data.title;
+
+  const description = document.getElementById('description');
+  description.defaultValue = data.description;
+
+  const categories = document.getElementById('categories');
+  categories.defaultValue = data.categories;
+
+  const tags = document.getElementById('tags');
+  tags.defaultValue = data.tags;
+
+  const prepTime = document.getElementById('prep-time');
+  prepTime.defaultValue = data.preparationTime;
+
+  const cookTime = document.getElementById('cook-time');
+  cookTime.defaultValue = data.cookingTime;
+
+  const totalTime = document.getElementById('total-time');
+
+  const ingredientsForm = document.getElementById('ingredients-form');
+
+  const directionsForm = document.getElementById('enter-directionds');
+
 });
 
 
@@ -75,7 +98,7 @@ saveRecipeButton.addEventListener('click', () => {
         "ingredients": ingredients,
         "directions": directions,
     }
-    fetch('/recipes/create', {
+    fetch('/recipes/edit', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -92,5 +115,5 @@ saveRecipeButton.addEventListener('click', () => {
     .catch((error) => {
       console.error('Error:', error);
     });
-    location.href="recipe-list.html"
+    //location.href="recipe-list.html"
 });
