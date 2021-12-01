@@ -17,7 +17,9 @@ fetch('/recipes/', {
     //Create recipe card div to append elements to 
     const initialDiv = document.createElement("a");
     initialDiv.setAttribute('class', 'recipe');
+    initialDiv.setAttribute('id', data[i].title);
     initialDiv.href = "recipe.html";
+   
 
     //Create and add cooking time to the recipe card
     const timeTaken = document.createElement('p');
@@ -41,4 +43,9 @@ fetch('/recipes/', {
 .catch((error) => {
   console.error('Error:', error);
 });
+
+
+
+
+
 

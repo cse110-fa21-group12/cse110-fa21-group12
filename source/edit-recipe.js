@@ -1,5 +1,22 @@
-//const { json } = require("stream/consumers");
+//Get the original recipe
+const id = id;
+fetch('/recipes/' + id, {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT,PATCH',
+    },
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+  
+});
 
+
+//Ingredients Button
 const addIngredientButton = document.getElementById("add-ingredient-button");
 const ingredientForm = document.getElementById("ingredients-form");
 
@@ -15,11 +32,10 @@ addIngredientButton.addEventListener("click", function() {
     ingredientForm.appendChild(document.createElement("br"));
 });
 
-addIngredientButton.click();
-
+//Directions Button
 const addDirectionsButton = document.getElementById("add-directions-button");
 const directionsForm = document.getElementById("enter-directions");
-var i = 1; 
+
 
 addDirectionsButton.addEventListener("click", function() {
     const newDirection = document.createElement("input");
@@ -31,8 +47,8 @@ addDirectionsButton.addEventListener("click", function() {
     directionsForm.appendChild(document.createElement("br"));
 });
 
-addDirectionsButton.click();
 
+//Save recipe 
 const saveRecipeButton = document.getElementById('save-recipe');
 
 
@@ -78,18 +94,3 @@ saveRecipeButton.addEventListener('click', () => {
     });
     location.href="recipe-list.html"
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
