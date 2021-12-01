@@ -24,26 +24,6 @@
         </form>
     </section>
     <section id="enter-picture">
-        <!--form>
-            <img id="uploadPreview" />
-            <label for="img"> Add Picture </label>
-            <input id="uploadImage" type="file" onchange="PreviewImage();" />
-            <script type="text/javascript">
-                function PreviewImage() {
-                    if (document.getElementById("uploadImage").files[0] != "") {
-                        var oFReader = new FileReader();
-                        oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
-
-                        oFReader.onload = function(oFREvent) {
-                            document.getElementById("uploadPreview").src = oFREvent.target.result;
-                        };
-                    } else {
-                        //add a placeholder element image so that if no file is chosen it will dislay just the background color?
-                        document.getElementById("uploadImage").files[0] = "";
-                    }
-                };
-              </script>
-        </form-->
         <div class="center">
             <div class="form-input">
                 <div class="preview">
@@ -64,6 +44,8 @@
             }
         </script>
     </section>
+    <br>
+
     <section id="filters">
         <form id="enter-categories">
             <input type="text" , id="categories" , placeholder="Categories" />
@@ -86,13 +68,13 @@
     <section id="ingredients">
         <h2>Ingredients</h2>
         <div id="ingredients-form"></div>
-        <button class="createRecipe" id="add-ingredient-button">+ Add More Ingredients</button>
+        <button class="createRecipebtn" id="add-ingredient-button"><i class="fas fa-plus"></i></button>
     </section>
 
-    <section>
+    <section id="directions">
         <h2>Directions</h2>
         <form id="enter-directions"></form>
-        <button class="createRecipe" id="add-directions-button">+ Add More Directions</button>
+        <button class="createRecipebtn" id="add-directions-button"><i class="fas fa-plus"></i></button>
     </section>
     <section>
         <button id="save-recipe">Save</button>
