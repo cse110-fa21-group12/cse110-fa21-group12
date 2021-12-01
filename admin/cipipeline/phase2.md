@@ -1,61 +1,61 @@
 # CI/CD Pipeline Phase 2
 
-## Summary:
+## Summary
 
     This file is a detailed overview of our CI/CD pipeline that has been implemented for this project.
 
-## Pipeline Diagram:
+## Pipeline Diagram
 
 ![Build Pipeline Diagram](./phase2.png)
 
 ---
 
-# Current Status:
+## Current Status
 
-> ## What is Functional?
+> ### What is Functional?
 >
 > The following components are currently functional:
 >
-> > ### Linting and Formatting
+> > #### Linting and Formatting
 > >
 > > - ESLint & Prettier
 > >
-> > ### Code Coverage Reporting:
+> > #### Code Coverage Reporting
 > >
 > > - Codacy Analysis
 > > - HTML5 Validator
 > >
-> > ### Documentation generation
+> > #### Documentation generation
 > >
 > > - Automated generation via JSDoc
 > >
-> > ### Unit Testing integration
+> > #### Unit Testing integration
 > >
 > > - Unit Tests for pull requests via Jest
 > >
-> > ### Human Code Quality Review
+> > #### Human Code Quality Review
 > >
 > > - Peer review for each pull request
 > >
-> > ### Deployment
+> > #### Deployment
 > >
 > > - Deploy using Firebase/Heroku
 
-> ## What is in Progress?
+> ### What is in Progress?
 >
 > The following components are in Progress:
 >
-> > ### Deployment
+> > #### Deployment
 > >
 > > - Fix Firebase/Heroku Deployment issue when combining frontend and backend.
 
-> ## What is Planned?
+> ### What is Planned?
 >
-> > ### Code Minification
+> > #### Code Minification
 > >
 > > - Implement using Auto Minify
 
-# Descriptions for Implemented Functions:
+## Descriptions for Implemented Functions
 
 > **Linting and Formattting:**
 >
@@ -73,7 +73,7 @@
 >
 > > - Deployment is currently being run through Firebase.
 
-# CI/CD Pipeline workflow summary:
+## CI/CD Pipeline workflow summary
 
 > 1.) Members are assigned tasks to complete locally on seperate branch from main.
 
