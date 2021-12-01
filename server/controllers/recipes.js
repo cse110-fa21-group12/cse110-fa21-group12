@@ -2,39 +2,20 @@
 
 const firebase = require("../db");
 const firestore = firebase.firestore();
+const { validateJSON } = require('./utils')
 
-/**
- * Validate the parsed recipe json to make sure it is following
- * the agreed upon schema
- * @param {object} recipe parsed json (req.body)
- * @throws {Error} if invalid object
- */
-function validateRecipeJSON(recipe) {
-  const props = [
-    "id",
-    "title",
-    "description",
-    "categories",
-    "tags",
-    "preparationTime",
-    "cookingTime",
-    "ingredients",
-    "directions",
-  ];
+const RECIPE_PROPS = [
+  "id",
+  "title",
+  "description",
+  "categories",
+  "tags",
+  "preparationTime",
+  "cookingTime",
+  "ingredients",
+  "directions",
+];
 
-  if (
-    typeof recipe !== "object" ||
-    Object.keys(recipe).length != props.length
-  ) {
-    throw new Error("Invalid recipe JSON format");
-  }
-
-  for (const prop of props) {
-    if (!recipe.hasOwnProperty(prop)) {
-      throw new Error("Invalid recipe JSON format");
-    }
-  }
-}
 
 /**
  * Add a recipe from the req.body to the database
@@ -44,7 +25,7 @@ function validateRecipeJSON(recipe) {
 async function addRecipe(req, res) {
   try {
     const recipe = req.body;
-    validateRecipeJSON(recipe);
+    validateJSON(RECIPE_PROPS, recipe);
 
     const recipeRef = firestore.collection("recipes").doc(String(recipe.id));
     const doc = await recipeRef.get();
@@ -114,8 +95,72 @@ async function getRecipe(req, res) {
   }
 }
 
+/**
+ * Get the {:id} recipe from the database
+ * @param {Request} req
+ * @param {Response} res
+ */
+ async function editRecipe(req, res) {
+  try {
+    const recipe = req.body;
+    validateJSON(RECIPE_PROPS, recipe);
+
+    const recipeRef = firestore.collection("recipes").doc(String(recipe.id));
+    const doc = await recipeRef.get();
+    if (!doc.exists) {
+      res.json({ error: `Recipe '${recipe.id}' does not exists` });
+      return;
+    }
+
+    const originalRecipe = doc.data();
+    try {
+      await recipeRef.delete();
+      recipeRef.set({
+        id: recipe.id,
+        title: recipe.title,
+        description: recipe.description,
+        categories: recipe.categories,
+        tags: recipe.tags,
+        preparationTime: recipe.preparationTime,
+        cookingTime: recipe.cookingTime,
+        ingredients: recipe.ingredients,
+        directions: recipe.directions,
+        rating: 0,
+      });
+    }
+    catch(err) { // failed delete and update -> return to original before exiting
+      recipeRef.set(originalRecipe);
+      throw err;
+    }
+
+    res.json(true);
+  } catch (error) {
+    res.json({ error: error.message });
+  }
+}
+
+/**
+ * Get the {:id} recipe from the database
+ * @param {Request} req
+ * @param {Response} res
+ */
+ async function deleteRecipe(req, res) {
+  try {
+    await firebase
+      .firestore()
+      .collection("recipes")
+      .doc(req.params.id)
+      .delete();
+    res.json(true);
+  } catch (error) {
+    res.json({ error: error.message });
+  }
+}
+
 module.exports = {
   addRecipe,
   getRecipes,
   getRecipe,
+  deleteRecipe,
+  editRecipe
 };
