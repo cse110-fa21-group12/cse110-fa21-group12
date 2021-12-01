@@ -48,6 +48,7 @@ saveRecipeButton.addEventListener('click', () => {
     const ingredients = document.getElementsByClassName('ingredient');
     const directions = document.getElementsByClassName('directions');
 
+
     const jsonRecipe = {
         "id": title,
         "title": title,
@@ -55,7 +56,7 @@ saveRecipeButton.addEventListener('click', () => {
         "categories": categories,
         "tags": tags,
         "preparationTime": preparationTime,
-        "cookingTime": totalTime,
+        "cookingTime": cookingTime,
         "ingredients": ingredients,
         "directions": directions,
     }

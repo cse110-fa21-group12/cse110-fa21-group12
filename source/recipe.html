@@ -29,9 +29,9 @@
         </div>
         <img class="thumbnail" src="media/sample.jpg" alt="Recipe photo" />
         <div class="summary">
-            <p>Preparation Time:</p>
-            <p>Cook time:</p>
-            <p>Total Time:</p>
+            <p id="prep-time">Preparation Time:</p>
+            <p id="cook-time">Cook time:</p>
+            <p id="total-time">Total Time:</p>
             <p>Servings:</p>
             <button class="adjust"><i class="fas fa-expand-alt"></i></button>
         </div>
@@ -39,7 +39,7 @@
         <legend>Ingredients</legend>
         <div class="ingredients">
             <form>
-                <fieldset>
+                <fieldset id="ingredientsBox">
 
                     <input type="checkbox" id="i" name="i" />
                     <label class="checklist" for="i">{quantity} {ingredient}</label><br />
@@ -56,6 +56,9 @@
         </div>
         <HR>
         <h2 class="directions-text">Directions</h2>
+        <section id="directions">
+
+        
         <div class="step">
 
 
@@ -81,6 +84,7 @@
             <p>Instructions</p>
 
         </div>
+    </section>
     </div>
 
 </body>

@@ -15,10 +15,15 @@ fetch('/recipes/', {
     const list = document.getElementsByClassName('recipe-list')[0];
 
     //Create recipe card div to append elements to 
-    const initialDiv = document.createElement("a");
+    const initialDiv = document.createElement("div");
     initialDiv.setAttribute('class', 'recipe');
     initialDiv.setAttribute('id', data[i].title);
     initialDiv.href = "recipe.html";
+    initialDiv.addEventListener('click', function(event) {
+      localStorage.setItem('id', data[i].title);
+      window.location = 'recipe.html';
+    });
+    
    
 
     //Create and add cooking time to the recipe card
