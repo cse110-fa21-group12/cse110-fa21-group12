@@ -94,7 +94,7 @@ saveRecipeButton.addEventListener('click', () => {
         "categories": categories,
         "tags": tags,
         "preparationTime": preparationTime,
-        "cookingTime": totalTime,
+        "cookingTime": cookingTime,
         "ingredients": ingredients,
         "directions": directions
     }
