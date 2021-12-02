@@ -3,37 +3,15 @@ const deleteButton = document.getElementsByClassName("crud")[3];
 
 
 deleteButton.addEventListener('click', function() {
-    let jsonDelete;
     const id = localStorage.getItem('id');
-    fetch('/recipes/' + id, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT,PATCH',
-        },
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
-      jsonDelete = {
-
-      }
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-    
     fetch('/recipes/' + id, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Headers': 'Content-Type',
-            'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT,PATCH',
+            'Access-Control-Allow-Methods': 'DELETE,GET,POST,OPTIONS,PUT,PATCH',
         },
-        body: JSON.stringify(jsonDelete),
     })
     .then(response => response.json())
     .then(data => {
@@ -42,7 +20,7 @@ deleteButton.addEventListener('click', function() {
     .catch((error) => {
       console.error('Error:', error);
     });
-    //location.href="recipe-list.html"
+    location.href="recipe-list.html";
 });
 
 const editButton = document.getElementById('edit-button');

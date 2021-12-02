@@ -96,7 +96,7 @@ saveRecipeButton.addEventListener('click', () => {
         "preparationTime": preparationTime,
         "cookingTime": totalTime,
         "ingredients": ingredients,
-        "directions": directions,
+        "directions": directions
     }
     fetch('/recipes/edit', {
         method: 'PUT',
@@ -115,5 +115,5 @@ saveRecipeButton.addEventListener('click', () => {
     .catch((error) => {
       console.error('Error:', error);
     });
-    //location.href="recipe-list.html"
+    location.href="recipe-list.html"
 });
