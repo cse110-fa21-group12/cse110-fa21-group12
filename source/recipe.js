@@ -3,8 +3,28 @@ const deleteButton = document.getElementsByClassName("crud")[3];
 
 
 deleteButton.addEventListener('click', function() {
+    let jsonDelete;
     const id = localStorage.getItem('id');
-    console.log(id);
+    fetch('/recipes/' + id, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT,PATCH',
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+      jsonDelete = {
+
+      }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+    
     fetch('/recipes/' + id, {
         method: 'DELETE',
         headers: {
@@ -13,6 +33,11 @@ deleteButton.addEventListener('click', function() {
             'Access-Control-Allow-Headers': 'Content-Type',
             'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT,PATCH',
         },
+        body: JSON.stringify(jsonDelete),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -29,9 +54,9 @@ editButton.addEventListener('click', function() {
 
 
 //Populates recipe page correctly
-const url = localStorage.getItem('id');
-console.log(url);
-fetch('/recipes/' + url, {
+const id = localStorage.getItem('id');
+console.log(id);
+fetch('/recipes/' + id, {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
@@ -61,7 +86,8 @@ fetch('/recipes/' + url, {
   for(let i = 0; i < data.ingredients.length; i++) {
     const newIngredient = document.createElement('input');
     newIngredient.setAttribute('type', 'checkbox');
-    newIngredient.setAttribute('id', 'i');
+    newIngredient.setAttribute('id', data.ingredients[i]);
+    //newIngredient.setAttribute('value') (set value to be ingredient quantity)
     newIngredient.setAttribute('name', 'i');
     const newLabel = document.createElement('label');
     newLabel.setAttribute('class', 'checklist');

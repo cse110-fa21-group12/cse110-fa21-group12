@@ -13,6 +13,9 @@ addIngredientButton.addEventListener("click", function() {
     ingredientForm.appendChild(newIngredientAmount);
     ingredientForm.appendChild(newIngredient);
     ingredientForm.appendChild(document.createElement("br"));
+})
+.catch((error) => {
+    console.error('Error:', error);
 });
 
 addIngredientButton.click();
