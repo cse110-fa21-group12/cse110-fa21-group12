@@ -791,12 +791,15 @@ h1.shoppingListTitle {
     height: auto;
 }
 
-#shopping-form>input {
+#shopping-form>label {
     font-size: 20px;
+    color: black;
 }
 
 #done-button {
-    margin-bottom: 1%;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
     width: auto;
     padding-left: 5px;
     padding-right: 5px;
