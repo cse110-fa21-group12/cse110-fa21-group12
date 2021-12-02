@@ -11,6 +11,6 @@
     "firebase": "^8.10.0"
   },
   "scripts": {
-    "build": "build index.html"
+    "start": "cd server && npm start"
   }
 }
