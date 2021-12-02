@@ -75,13 +75,6 @@ doneButton.addEventListener("click", function() {
         if(ingredients[i].type == 'checkbox'){
             if(ingredients[i].checked){
                 console.log("in");
-                let quantity;
-                if(isNaN(ingredients[i].value)){
-                    quantity = ingredients[i].value;
-                }
-                else{
-                    quantity = parseInt(ingredients[i].value);
-                }
                 jsonToDelete = {
                     "name": ingredients[i].id,
                     "quantity": ingredients[i].value
