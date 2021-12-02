@@ -641,7 +641,7 @@ h1.shoppingListTitle {
 }
 
 .createRecipebtn {
-    margin-top: 30px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -681,6 +681,127 @@ h1.shoppingListTitle {
 
 #save-recipe:hover {
     background: black;
+}
+
+
+/*shopping list*/
+
+.shoppingListTitle {
+    position: relative;
+    text-align: center;
+    width: 300px;
+    left: 100px;
+    display: inline;
+    top: 100px;
+    color: white;
+    font-size: 40px;
+}
+
+#cart {
+    position: relative;
+    color: white;
+    display: inline;
+    left: 150px;
+    top: 100px;
+    font-size: 60px;
+}
+
+.vertical-center {
+    position: relative;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    top: 0px;
+}
+
+.homebtn2 {
+    color: black;
+    background-color: white;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: auto;
+    height: 45px;
+    padding-right: 10px;
+    background-color: white;
+    color: rgb(58, 58, 71);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 5px 1px #00b4cc;
+    border-color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.shopping-qty {
+    text-align: left;
+    width: 25%;
+    display: inline;
+    height: 30px;
+    border-radius: 2px;
+    background-color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-color: lightblue;
+    backdrop-filter: blur(4px);
+    padding: 5px 5px 5px 15px;
+    margin-bottom: 25px;
+    color: black;
+    font-size: 20px;
+}
+
+.shopping-item {
+    text-align: left;
+    width: 55%;
+    margin-left: 10%;
+    display: inline;
+    height: 30px;
+    border-radius: 2px;
+    background-color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-color: lightblue;
+    backdrop-filter: blur(4px);
+    padding: 5px 5px 5px 15px;
+    margin-bottom: 25px;
+    color: black;
+    font-size: 20px;
+}
+
+.shopping-list {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#shopping-form {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: 10px;
+    width: 600px;
+    height: auto;
+}
+
+#shopping-form>input {
+    font-size: 20px;
+}
+
+#done-button {
+    margin-bottom: 1%;
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
