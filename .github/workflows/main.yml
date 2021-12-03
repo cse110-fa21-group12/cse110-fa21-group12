@@ -1,23 +1,17 @@
-name: Node.js CI
+name: Deploy
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v1
+      - uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          node-version: '12.x'
-      - name: Install dependencies
-        run: npm ci
-      - run: npm run build --if-present
-      - run: npm test
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "cre-ate-recipe"
+          heroku_email: "pkamolya@ucsd.edu"
