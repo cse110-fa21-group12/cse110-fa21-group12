@@ -1,19 +1,19 @@
 const puppeteer = require("puppeteer");
-const URL = "https://zen-recipe-9eb67.web.app/";
+const URL = "https://cre-ate-recipe.herokuapp.com/source/index.html";
 
 describe("Login page", () => {
   // First, visit the login page
   beforeAll(async () => {
     await page.goto(URL);
+    await page.waitForTimeout(500);
   });
-  await page.waitForTimeout(500);
 
   it("login by placeholder value", async () => {
-    await page.waitForSelector("#email-input");
-    await page.type("#email-input", "example@gmail.com");
+    // await page.waitForSelector("#email-input");
+    // await page.type("#email-input", "example@gmail.com");
 
-    await page.waitForSelector("password-input", { visible: true });
-    await page.type("password-input", "test_pwd");
+    // await page.waitForSelector("password-input", { visible: true });
+    // await page.type("password-input", "test_pwd");
 
     await page.waitForSelector("#login-button");
     await page.click("#login-button");
