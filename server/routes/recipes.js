@@ -1,5 +1,11 @@
 const Server = require("../server/server");
-const { addRecipe, getRecipes, getRecipe, deleteRecipe, editRecipe } = require("../controllers/recipes");
+const {
+  addRecipe,
+  getRecipes,
+  getRecipe,
+  deleteRecipe,
+  editRecipe,
+} = require("../controllers/recipes");
 
 const router = new Server.Router();
 router.put("/recipes/create", addRecipe);

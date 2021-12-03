@@ -2,7 +2,7 @@
 
 const firebase = require("../db");
 const firestore = firebase.firestore();
-const { validateJSON } = require('./utils')
+const { validateJSON } = require("./utils");
 
 const RECIPE_PROPS = [
   "id",
@@ -15,7 +15,6 @@ const RECIPE_PROPS = [
   "ingredients",
   "directions",
 ];
-
 
 /**
  * Add a recipe from the req.body to the database
@@ -100,7 +99,7 @@ async function getRecipe(req, res) {
  * @param {Request} req
  * @param {Response} res
  */
- async function editRecipe(req, res) {
+async function editRecipe(req, res) {
   try {
     const recipe = req.body;
     validateJSON(RECIPE_PROPS, recipe);
@@ -127,8 +126,8 @@ async function getRecipe(req, res) {
         directions: recipe.directions,
         rating: 0,
       });
-    }
-    catch(err) { // failed delete and update -> return to original before exiting
+    } catch (err) {
+      // failed delete and update -> return to original before exiting
       recipeRef.set(originalRecipe);
       throw err;
     }
@@ -144,7 +143,7 @@ async function getRecipe(req, res) {
  * @param {Request} req
  * @param {Response} res
  */
- async function deleteRecipe(req, res) {
+async function deleteRecipe(req, res) {
   try {
     await firebase
       .firestore()
@@ -162,5 +161,5 @@ module.exports = {
   getRecipes,
   getRecipe,
   deleteRecipe,
-  editRecipe
+  editRecipe,
 };
