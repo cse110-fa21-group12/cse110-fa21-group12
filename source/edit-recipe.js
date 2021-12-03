@@ -49,7 +49,6 @@ fetch("/recipes/" + id, {
     for(let i = 0; i < data.directions.length; i++) {
         const newDirection = document.createElement("input");
         newDirection.defaultValue = data.directions[i];
-        i++;
         newDirection.setAttribute("class", "directions");
         directionsForm.appendChild(document.createElement("br"));
         directionsForm.appendChild(newDirection);
@@ -105,6 +104,7 @@ saveRecipeButton.addEventListener("click", () => {
       ingredientsArray[i] = ingredients[i].value;
   }
   const directions = document.getElementsByClassName("directions");
+  
 
   const directionsArray = [];
   for(let i = 0; i < directions.length; i++) {
