@@ -36,9 +36,8 @@
 
 - Start working on final video
 
-
-
 ## Decisions Made & Reasoning
+
 -Nothing
 
 ## The meeting finished at 8:30pm
