@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="../admin/branding/create_logo_icon.png" type="image/png" />
-    <script src="create-recipe.js" type="module"></script>
+    <script src="edit-recipe.js" type="module"></script>
     <!-- Add icon library -->
     <script src="https://kit.fontawesome.com/b1e4be6678.js" crossorigin="anonymous"></script>
 
@@ -13,14 +13,14 @@
 <body class="createRecipe">
     <div class="createRecipeTitle">
         <img alt="bowl-icon" src="media/create_logo_icon.png" />
-        <h1>Create Recipe</h1>
+        <h1>Edit Recipe</h1>
     </div>
     <section>
         <form id="enter-title">
-            <input type="text" , class="input-field" , id="title" , placeholder="Title" />
+            <input type="text" , id="title"  />
         </form>
         <form id="enter-description">
-            <input type="text" , class="input-field" , id="description" , placeholder="Description" />
+            <input type="text" , id="description" />
         </form>
     </section>
     <section id="enter-picture">
@@ -48,21 +48,21 @@
 
     <section id="filters">
         <form id="enter-categories">
-            <input type="text" , class="input-field" , id="categories" , placeholder="Categories" />
+            <input type="text" , id="categories"  />
         </form>
         <form id="enter-tags">
-            <input type="text" , class="input-field" , id="tags" , placeholder="Tags" />
+            <input type="text" , id="tags"  />
         </form>
     </section>
     <section id="time">
         <form id="enter-prep-time">
-            <input type="text" , class="input-field" , id="prep-time" , placeholder="Preparation Time" />
+            <input type="text" , id="prep-time" />
         </form>
         <form id="enter-cook-time">
-            <input type="text" , class="input-field" , id="cook-time" , placeholder="Cooking Time" />
+            <input type="text" , id="cook-time" />
         </form>
         <form id="enter-total-time">
-            <input type="text" , class="input-field" , id="total-time" , placeholder="Total Time" />
+            <input type="text" , id="total-time" />
         </form>
     </section>
     <section id="ingredients">

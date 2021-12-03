@@ -1,0 +1,11 @@
+{
+  "name": "cre-ate-backend",
+  "version": "0.1.0",
+  "dependencies": {
+    "firebase": "^8.10.0"
+  },
+  "scripts": {
+    "build": "build index.html",
+    "start": "node app.js"
+  }
+}

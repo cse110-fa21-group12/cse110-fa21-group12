@@ -1,60 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
-  <body>
-    <h1>Recipe Page</h1>
-    <div class="options">
-      <button type="button">Edit</button>
-      <button type="button">Share</button>
-      <button type="button">Delete</button>
-    </div>
-    <h2>Description</h2>
-    <img src="" alt="Recipe photo" />
-    <div class="summary">
-      <p>Preparation Time:</p>
-      <p>Cook time:</p>
-      <p>Total Time:</p>
-      <p>Servings:</p>
-      <button type="button">Adjust</button>
-    </div>
-    <div class="ingredients">
-      <form>
-        <fieldset>
-          <legend>Ingredients</legend>
-          <input type="checkbox" id="i" name="i" />
-          <label for="i">{quantity} {ingredient}</label><br />
-          <input type="checkbox" id="i" name="i" />
-          <label for="i">{quantity} {ingredient}</label><br />
-          <input type="checkbox" id="i" name="i" />
-          <label for="i">{quantity} {ingredient}</label><br />
-          <input type="checkbox" id="i" name="i" />
-          <label for="i">{quantity} {ingredient}</label><br />
-          <button class="favorite styled" type="button">
-            Add To Shopping List
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../admin/branding/create_logo_icon.png" type="image/png" />
+    <!-- Add icon library -->
+    <script src="https://kit.fontawesome.com/b1e4be6678.js" crossorigin="anonymous"></script>
+    <script src="recipe.js" type="module"></script>
+</head>
+
+<body>
+    <!--h1>Recipe Page</h1-->
+    <div class="recipe-expand">
+        <div class="titleBar">
+            <h1 class="recipe-title">{Title}</h1>
+            <div class="crud-options">
+                <button class="crud" onclick="location.href='home.html'"><i class="fas fa-home"></i></button>
+                <button id="edit-button" class="crud"><i class="fas fa-edit"></i></button>
+                <button class="crud"><i class="fas fa-share-alt-square"></i></button>
+                <button id="delete-button" class="crud"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+        <h2 class="ratings">Rating This need to be in stars like in Lab 6/7</h2>
+        <HR>
+        <legend>Description</legend>
+        <div class="description">
+            <p>{Description}Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+        </div>
+        <img class="thumbnail" src="media/sample.jpg" alt="Recipe photo" />
+        <div class="summary">
+            <p id="prep-time">Preparation Time:</p>
+            <p id="cook-time">Cook time:</p>
+            <p id="total-time">Total Time:</p>
+            <p>Servings:</p>
+            <button class="adjust"><i class="fas fa-expand-alt"></i></button>
+        </div>
+        <HR>
+        <legend>Ingredients</legend>
+        <div class="ingredients">
+            <form>
+                <fieldset id="ingredientsBox">
+
+                    <input type="checkbox" id="i" name="i" />
+                    <label class="checklist" for="i">{quantity} {ingredient}</label><br />
+                    <input type="checkbox" id="i" name="i" />
+                    <label class="checklist" for="i">{quantity} {ingredient}</label><br />
+                    <input type="checkbox" id="i" name="i" />
+                    <label class="checklist" for="i">{quantity} {ingredient}</label><br />
+                    <input type="checkbox" id="i" name="i" />
+                    <label class="checklist" for="i">{quantity} {ingredient}</label><br />
+                    <button class="ingrd-to-list" onclick="location.href='shopping-list.html'">Add To Shopping List
           </button>
-        </fieldset>
-      </form>
-    </div>
-    <div class="directions">
-        <div class="step">
-            <h3>Step 1</h3>
-            <p>Instructions</p>
+                </fieldset>
+            </form>
         </div>
-        <div class="directions">
+        <HR>
+        <h2 class="directions-text">Directions</h2>
+        <section id="directions">
+
+
             <div class="step">
-                <h3>Step 2</h3>
+
+
+                <h3>Step 1 <i class="fas fa-utensils"></i></h3>
                 <p>Instructions</p>
+
             </div>
-        <div class="directions">
-        <div class="step">
-            <h3>Step 3</h3>
-            <p>Instructions</p>
-        </div>
-        <div class="directions">
+
             <div class="step">
-                <h3>Step 4</h3>
+                <h3>Step 2 <i class="fas fa-utensils"></i></h3>
                 <p>Instructions</p>
+
             </div>
+
+            <div class="step">
+                <h3>Step 3 <i class="fas fa-utensils"></i></h3>
+                <p>Instructions</p>
+
+            </div>
+
+            <div class="step">
+                <h3>Step 4 <i class="fas fa-utensils"></i></h3>
+                <p>Instructions</p>
+
+            </div>
+        </section>
     </div>
-  </body>
+
+</body>
+
 </html>
