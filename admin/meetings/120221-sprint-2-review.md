@@ -38,6 +38,7 @@
 - Retrospective
 
 ## Decisions Made & Reasoning
+
 - Frontend will fix images
 - Frontend is doing sort
 - Frontend and backend is doing search
