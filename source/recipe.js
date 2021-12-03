@@ -57,7 +57,7 @@ fetch("/recipes/" + id, {
 
     const totalTime = document.getElementById("total-time");
 
-    const ingredientsBox = document.getElementById("ingredientsBox");
+    const ingredientsBox = document.getElementById("ingredientsCheckboxes");
     for (let i = 0; i < data.ingredients.length; i++) {
       const newIngredient = document.createElement("input");
       newIngredient.setAttribute("type", "checkbox");
@@ -76,15 +76,19 @@ fetch("/recipes/" + id, {
 
     const directions = document.getElementById("directions");
     for (let j = 1; j < data.directions.length + 1; j++) {
+      const stepDiv = document.createElement('div');
+      stepDiv.setAttribute('class', 'step');
       const header = document.createElement("h3");
       header.innerHTML = "Step " + j;
       const icon = document.createElement("i");
       icon.setAttribute("class", "fas fa-utensils");
       header.appendChild(icon);
       const instruction = document.createElement("p");
-      instruction.innerHTML = data.directions[j];
-      directions.appendChild(header);
-      directions.appendChild(instruction);
+      instruction.innerHTML = data.directions[j - 1];
+      //header.appendChild(icon);
+      stepDiv.appendChild(header);
+      stepDiv.appendChild(instruction);
+      directions.appendChild(stepDiv);
     }
   })
   .catch((error) => {
