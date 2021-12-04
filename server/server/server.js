@@ -64,8 +64,8 @@ class Server extends Router {
 
   /**
    * Handle an incoming request
-   * @param {Request} req 
-   * @param {Response} res 
+   * @param {Request} req
+   * @param {Response} res
    */
   handler(req, res) {
     if (!req) return;
@@ -90,7 +90,7 @@ class Server extends Router {
    * @param {function} callback callback for when server is listening (or err)
    * @returns {http.Server}
    */
-   listen(port, callback) {
+  listen(port, callback) {
     const handler = (req, res) => {
       addProperties(req, res);
 

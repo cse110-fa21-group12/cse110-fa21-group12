@@ -1,3 +1,4 @@
+
 const fs = require('fs').promises;
 const path = require('path');
 
@@ -12,14 +13,14 @@ const BASE_DIR = path.join(__dirname, "../../");
 
 /**
  * check if the given path is to a valid, readable file
- * @param {string} filePath 
+ * @param {string} filePath
  */
 async function validateFile(filePath) {
-    await fs.access(filePath)
-    const stat = await fs.stat(filePath);
-    if (!stat.isFile()) {
-        throw "Not Found";
-    }
+  await fs.access(filePath);
+  const stat = await fs.stat(filePath);
+  if (!stat.isFile()) {
+    throw "Not Found";
+  }
 }
 
 router.use((req,res,next)=>{

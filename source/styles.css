@@ -14,15 +14,18 @@ body {
 
 .login-text {
     position: relative;
-    /*width: 52px;*/
-    /*height: 19px;*/
+    display: block;
+    width: auto;
+    height: auto;
     text-align: center;
-    top: -250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 2rem;
+    line-height: 2rem;
     color: #ffffff;
 }
 
@@ -31,31 +34,33 @@ body {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-    top: -50px;
+    margin-top: auto;
+    width: 30rem;
+    height: 17.5rem;
+    object-fit: cover;
 }
 
 .login-box {
-    vertical-align: middle;
     background-color: white;
-    top: -220px;
     position: relative;
-    border-radius: 10px;
+    border-radius: 1rem;
     border-color: #ffffff;
+    margin-top: 0%;
+    margin-bottom: 2%;
     margin-left: auto;
     margin-right: auto;
-    width: 350px;
-    padding-bottom: 50px;
-    /*height: 460px;*/
+    width: 25rem;
+    height: auto;
+    padding-bottom: 1%;
 }
 
 .google-img {
     position: relative;
     z-index: 1;
     display: block;
-    margin-left: 60px;
-    width: 25px;
-    top: 62.5px;
+    margin-left: 15%;
+    width: 2rem;
+    top: 3rem;
 }
 
 .google-signin-btn {
@@ -63,53 +68,52 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    top: 25px;
-    width: 300px;
-    height: 50px;
+    margin-top: auto;
+    width: 90%;
+    height: 4rem;
     background: #ffffff;
-    border: 1px solid #d2c7c7;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
+    border: 0.1rem solid #d2c7c7;
+    box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    border-radius: 2.5rem;
     font-style: normal;
     font-weight: 300;
-    font-size: 18.5px;
-    line-height: 18px;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     /* identical to box height */
     color: #4d4c4c;
 }
 
 .google-signin-btn:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0);
+    box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0);
 }
 
 .or-line {
     position: relative;
-    top: 40px;
+    margin-top: 5%;
     margin-left: auto;
-    height: 20px;
+    height: 2.5%;
     text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
-    font-size: 12.5px;
-    line-height: 12px;
+    font-size: 1rem;
+    line-height: 1.2rem;
     color: rgb(112, 103, 103);
 }
 
 fieldset {
     /*border-color: #FFFFFF;*/
     position: relative;
-    top: 10px;
     border-style: hidden;
 }
 
 label {
     position: relative;
-    margin-left: 8px;
+    margin-left: 0.8rem;
     color: rgb(184, 167, 167);
     font-style: normal;
     font-weight: bolder;
-    font-size: 12px;
+    font-size: 1rem;
 }
 
 .login-inputs {
@@ -117,18 +121,18 @@ label {
     position: relative;
     vertical-align: middle;
     width: 90%;
-    height: 45px;
+    height: 2.5rem;
     margin-left: 2.5%;
-    margin-bottom: 20px;
-    margin-top: 5px;
+    margin-bottom: 2rem;
+    margin-top: 1%;
     background: rgba(176, 165, 165, 0.29);
-    border: 1px;
+    border: 0.1rem;
     border-color: rgba(176, 165, 165, 0.29);
     box-sizing: border-box;
-    backdrop-filter: blur(4px);
-    border-radius: 5px;
-    font-size: 15px;
-    text-indent: 5px;
+    backdrop-filter: blur(0.4rem);
+    border-radius: 0.25rem;
+    font-size: 1.25rem;
+    text-indent: 0.5rem;
 }
 
 .login-button {
@@ -136,22 +140,22 @@ label {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 185px;
-    height: 41px;
+    width: 15rem;
+    height: 3rem;
     top: 0px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 1px;
+    border-radius: .1rem;
     background: rgba(98, 123, 159, 0.79);
-    border: 1px solid #627b9f;
+    border: 0.1rem solid #627b9f;
     box-sizing: border-box;
-    backdrop-filter: blur(4px);
-    border-radius: 2px;
+    backdrop-filter: blur(0.4rem);
+    border-radius: 0.2rem;
     /*text properties*/
     color: #ffffff;
     font-style: normal;
     font-weight: bold;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .new-account {
@@ -162,9 +166,7 @@ label {
     font-weight: 500px;
     line-height: 10px;
     color: #ffffff;
-    position: relative;
     display: block;
-    top: -200px;
     font-size: 12.5px;
 }
 
@@ -754,7 +756,7 @@ h1.shoppingListTitle {
     font-size: 20px;
 }
 
-.shopping-item {
+.shopping-itpx {
     text-align: left;
     width: 55%;
     margin-left: 10%;
@@ -787,13 +789,23 @@ h1.shoppingListTitle {
     background-color: lightblue;
     border-radius: 5px;
     padding: 10px;
-    width: 600px;
+    width: 90%;
     height: auto;
 }
 
+#shopping-form:pxpty {
+    display: none;
+}
+
 #shopping-form>label {
-    font-size: 20px;
+    font-size: 25px;
     color: black;
+    margin-left: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 25px;
+    transform: scale(1.5);
 }
 
 #done-button {
@@ -879,6 +891,108 @@ h1.shoppingListTitle {
     width: 400px;
     padding: 20px;
     vertical-align: middle;
+}
+
+.summary {
+    background-color: rgb(227, 240, 245);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.summary>p {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.adjust {
+    position: relative;
+    float: right;
+    background: rgba(67, 87, 114, 0.79);
+    border: none;
+    color: black;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 100%;
+    bottom: 60px;
+}
+
+.adjust:hover {
+    color: white;
+}
+
+.ingredients {
+    background-color: rgb(227, 240, 245);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+HR {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+legend {
+    margin-bottom: 2%;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.checklist {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 200;
+    color: black;
+    padding: 10px 5px;
+    height: 37px;
+    position: relative;
+}
+
+.ingrd-to-list {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 225px;
+    height: 50px;
+    top: 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 1px;
+    background: rgba(67, 87, 114, 0.79);
+    border: 1px solid #627b9f;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    border-radius: 2px;
+    /*text properties*/
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 15px;
+}
+
+.ingrd-to-list:hover {
+    background-color: black;
+}
+
+.directions-text {
+    margin-bottom: 2%;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.step {
+    background-color: white;
+    border-radius: 2px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: lightblue;
+    backdrop-filter: blur(4px);
+    padding-left: 10px;
+    padding: 2px;
+    margin-bottom: 15px;
 }
 
 .summary {

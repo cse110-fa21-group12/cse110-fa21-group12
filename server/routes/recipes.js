@@ -2,6 +2,7 @@ const Server = require("../server/server");
 const { addRecipe, getRecipes, getRecipe, deleteRecipe, editRecipe } = require("../controllers/recipes");
 const auth = require('../auth/auth');
 
+
 const router = new Server.Router();
 router.put("/recipes/create", auth.verifyToken, addRecipe);
 router.get("/recipes", getRecipes);
