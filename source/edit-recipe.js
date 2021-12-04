@@ -143,3 +143,4 @@ saveRecipeButton.addEventListener("click", () => {
   setTimeout(1000);
   location.href = "recipe-list.html";
 });
+ 
