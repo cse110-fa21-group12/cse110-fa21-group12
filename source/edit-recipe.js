@@ -139,5 +139,7 @@ saveRecipeButton.addEventListener("click", () => {
     .catch((error) => {
       console.error("Error:", error);
     });
+
+  setTimeout(1000);
   location.href = "recipe-list.html";
 });
