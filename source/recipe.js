@@ -56,6 +56,7 @@ fetch('/recipes/' + url, {
   cookTime.innerHTML = 'Cook Time: ' + data.cookingTime;
 
   const totalTime = document.getElementById('total-time');
+  //totalTime.innerHTML = 'Total Time: ' + data.totalTime;
   
   const ingredientsBox = document.getElementById('ingredientsBox');
   for(let i = 0; i < data.ingredients.length; i++) {
