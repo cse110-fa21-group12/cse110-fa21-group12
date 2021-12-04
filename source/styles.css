@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Aleo:wght@700&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 html {
     background-color: #323c4b;
 }
@@ -13,6 +14,80 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+#create-logo {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    width: 30rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.starting-page {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: auto;
+    margin: 1% 1% 5% 1%;
+}
+
+@media (max-width:1000px) {
+    .starting-page {
+        display: flex;
+        flex-direction: column;
+        margin: 1% 1% 1% 1%;
+    }
+}
+
+
+/*.login-box {
+        width: 50%;
+    }*/
+
+.info {
+    height: auto;
+    padding: 3em 7.5em 3em 7.5em;
+    margin: 0 1% 0 10%;
+    background-color: white;
+}
+
+.login-section {
+    position: relative;
+    margin: 2em 1em 0 1em;
+    height: auto;
+}
+
+.info-heading {
+    font-family: 'Aleo', sans-serif;
+    font-size: 3em;
+    color: black;
+    border: hidden;
+    border-bottom: solid;
+    border-bottom-width: 0.1em;
+    border-color: yellow;
+    display: inline-block;
+    position: relative;
+}
+
+@media (max-width:1000px) {
+    .info {
+        padding: 1%;
+        margin: 0;
+    }
+}
+
+.info-content {
+    font-family: 'Varela Round', sans-serif;
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 1.6em;
+    font-weight: 100;
+    color: hsl(357, 12%, 42%);
+}
+
 .login-text {
     position: relative;
     display: block;
@@ -21,40 +96,37 @@ body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
+    margin-bottom: 2%;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.25rem;
     color: #ffffff;
-}
-
-#create-logo {
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    width: 30rem;
-    height: 17.5rem;
-    object-fit: cover;
 }
 
 .login-box {
     background-color: white;
-    position: relative;
+    /*position: relative;*/
     border-radius: 1rem;
     border-color: #ffffff;
-    margin-top: 0%;
-    margin-bottom: 2%;
+    /*margin-top: 0%;
+    margin-bottom: 2%;*/
     margin-left: auto;
     margin-right: auto;
-    width: 25rem;
+    width: 22.5em;
     height: auto;
-    padding-bottom: 1%;
+    padding: 5% 1% 5% 1%;
 }
 
+.login-box:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.9));
+    transition: all 0.2s ease;
+    transform: scale(1.01);
+}
+
+
+/*
 .google-img {
     position: relative;
     z-index: 1;
@@ -80,14 +152,14 @@ body {
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.5rem;
-    /* identical to box height */
-    color: #4d4c4c;
-}
+    /* identical to box height 
 
+color: #4d4c4c;
+
+}
 .google-signin-btn:hover {
     box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0);
 }
-
 .or-line {
     position: relative;
     margin-top: 5%;
@@ -101,10 +173,10 @@ body {
     line-height: 1.2rem;
     color: rgb(112, 103, 103);
 }
+*/
 
 fieldset {
-    /*border-color: #FFFFFF;*/
-    position: relative;
+    /*position: relative;*/
     border-style: hidden;
 }
 
@@ -132,7 +204,7 @@ label {
     box-sizing: border-box;
     backdrop-filter: blur(0.4rem);
     border-radius: 0.25rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     text-indent: 0.5rem;
 }
 
@@ -141,8 +213,8 @@ label {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 15rem;
-    height: 3rem;
+    width: 15em;
+    height: 3em;
     top: 0px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: .1rem;
@@ -161,6 +233,7 @@ label {
 
 .new-account {
     position: relative;
+    margin-top: 5%;
     text-align: center;
     font-family: Roboto;
     font-style: normal;
@@ -168,13 +241,15 @@ label {
     line-height: 10px;
     color: #ffffff;
     display: block;
-    font-size: 12.5px;
+    font-size: 0.75rem;
 }
 
+
+/*
 .forgot-password {
     position: relative;
     text-align: center;
-}
+}*/
 
 a[href="create-account.html"] {
     color: white;
@@ -184,9 +259,12 @@ a[href="login.html"] {
     color: white;
 }
 
+
+/*
 a[href="forgot-password.html"] {
     color: black;
 }
+*/
 
 .login-button:hover {
     background-color: black;
