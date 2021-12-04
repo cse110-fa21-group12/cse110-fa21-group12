@@ -26,14 +26,14 @@ function addProperties(req, res) {
 
   res.sendStatus = (statusCode) => {
     const body = statuses[statusCode] || String(statusCode);
-    this.statusCode = statusCode;
-    this.type("txt");
-    return this.send(body);
+    res.statusCode = statusCode;
+    res.type("txt");
+    return res.end(body);
   };
 
   res.status = (statusCode) => {
-    this.statusCode = statusCode;
-    return this;
+    res.statusCode = statusCode;
+    return res;
   };
 
   res.sendFile = (filePath) => {
