@@ -33,13 +33,32 @@ fetch("/recipes/" + id, {
     const totalTime = document.getElementById("total-time");
 
     const ingredientsForm = document.getElementById("ingredients-form");
+    for (let i = 0; i < data.ingredients.length; i++) {
+      const newIngredient = document.createElement("input");
+      const newIngredientAmount = document.createElement("input");
+      newIngredient.defaultValue = data.ingredients[i];
+      newIngredient.setAttribute("class", "ingredient");
+      newIngredientAmount.setAttribute("id", "quantity");
+      newIngredientAmount.placeholder = "Amount";
+      ingredientsForm.appendChild(newIngredientAmount);
+      ingredientsForm.appendChild(newIngredient);
+      ingredientsForm.appendChild(document.createElement("br"));
+    }
 
-    const directionsForm = document.getElementById("enter-directionds");
+    const directionsForm = document.getElementById("enter-directions");
+    for (let i = 0; i < data.directions.length; i++) {
+      const newDirection = document.createElement("input");
+      newDirection.defaultValue = data.directions[i];
+      newDirection.setAttribute("class", "directions");
+      directionsForm.appendChild(document.createElement("br"));
+      directionsForm.appendChild(newDirection);
+      directionsForm.appendChild(document.createElement("br"));
+    }
   });
 
 //Ingredients Button
 const addIngredientButton = document.getElementById("add-ingredient-button");
-const ingredientForm = document.getElementById("ingredients-form");
+const ingredientsForm = document.getElementById("ingredients-form");
 
 addIngredientButton.addEventListener("click", function () {
   const newIngredient = document.createElement("input");
@@ -48,19 +67,19 @@ addIngredientButton.addEventListener("click", function () {
   newIngredient.setAttribute("class", "ingredient");
   newIngredientAmount.setAttribute("id", "quantity");
   newIngredientAmount.placeholder = "Amount";
-  ingredientForm.appendChild(newIngredientAmount);
-  ingredientForm.appendChild(newIngredient);
-  ingredientForm.appendChild(document.createElement("br"));
+  ingredientsForm.appendChild(newIngredientAmount);
+  ingredientsForm.appendChild(newIngredient);
+  ingredientsForm.appendChild(document.createElement("br"));
 });
 
 //Directions Button
 const addDirectionsButton = document.getElementById("add-directions-button");
 const directionsForm = document.getElementById("enter-directions");
-
+let j = 0;
 addDirectionsButton.addEventListener("click", function () {
   const newDirection = document.createElement("input");
-  newDirection.placeholder = "Step " + i;
-  i++;
+  newDirection.placeholder = "New Step";
+  j++;
   newDirection.setAttribute("class", "directions");
   directionsForm.appendChild(document.createElement("br"));
   directionsForm.appendChild(newDirection);
@@ -80,7 +99,16 @@ saveRecipeButton.addEventListener("click", () => {
   const cookingTime = document.getElementById("cook-time").value;
   const totalTime = document.getElementById("total-time").value;
   const ingredients = document.getElementsByClassName("ingredient");
+  const ingredientsArray = [];
+  for (let i = 0; i < ingredients.length; i++) {
+    ingredientsArray[i] = ingredients[i].value;
+  }
   const directions = document.getElementsByClassName("directions");
+
+  const directionsArray = [];
+  for (let i = 0; i < directions.length; i++) {
+    directionsArray[i] = directions[i].value;
+  }
 
   const jsonRecipe = {
     id: title,
@@ -90,8 +118,8 @@ saveRecipeButton.addEventListener("click", () => {
     tags: tags,
     preparationTime: preparationTime,
     cookingTime: cookingTime,
-    ingredients: ingredients,
-    directions: directions,
+    ingredients: ingredientsArray,
+    directions: directionsArray,
   };
   fetch("/recipes/edit", {
     method: "PUT",
@@ -110,5 +138,7 @@ saveRecipeButton.addEventListener("click", () => {
     .catch((error) => {
       console.error("Error:", error);
     });
+
+  setTimeout(1000);
   location.href = "recipe-list.html";
 });

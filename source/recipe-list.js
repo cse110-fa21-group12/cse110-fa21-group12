@@ -26,7 +26,7 @@ fetch("/recipes/", {
 
       //Create and add cooking time to the recipe card
       const timeTaken = document.createElement("p");
-      timeTaken.innerHTML = "Time taken: " + data[i].cookingTime;
+      timeTaken.innerHTML = "Time taken: " + data[i].cookingTime; //change to totalTime
       initialDiv.appendChild(timeTaken);
 
       //Create and add recipe name to the recipe card
