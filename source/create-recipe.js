@@ -47,17 +47,15 @@ saveRecipeButton.addEventListener("click", () => {
   const ingredients = document.getElementsByClassName("ingredient");
 
   const ingredientsArray = [];
-  for(let i = 0; i < ingredients.length; i++) {
-      ingredientsArray[i] = ingredients[i].value;
+  for (let i = 0; i < ingredients.length; i++) {
+    ingredientsArray[i] = ingredients[i].value;
   }
   const directions = document.getElementsByClassName("directions");
 
   const directionsArray = [];
-  for(let i = 0; i < directions.length; i++) {
-      directionsArray[i] = directions[i].value;
+  for (let i = 0; i < directions.length; i++) {
+    directionsArray[i] = directions[i].value;
   }
-
-  
 
   const jsonRecipe = {
     id: title,
@@ -71,7 +69,7 @@ saveRecipeButton.addEventListener("click", () => {
     ingredients: ingredientsArray,
     directions: directionsArray,
   };
-  
+
   fetch("/recipes/create", {
     method: "PUT",
     headers: {
@@ -89,8 +87,6 @@ saveRecipeButton.addEventListener("click", () => {
     .catch((error) => {
       console.error("Error:", error);
     });
-    setTimeout(1000);
-    location.href = "recipe-list.html";
-  
+  setTimeout(1000);
+  location.href = "recipe-list.html";
 });
- 
