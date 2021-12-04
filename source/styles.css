@@ -412,7 +412,7 @@ h1.shoppingListTitle {
 /*can modify sorting dropdown*/
 
 .recipe-list {
-    vertical-align: middle;
+    /*vertical-align: middle;
     background-color: #323c4b;
     position: relative;
     top: 100px;
@@ -423,11 +423,25 @@ h1.shoppingListTitle {
     width: 600px;
     height: 500px;
     overflow: hidden;
+    overflow-y: scroll;*/
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    height: ;
+    margin-top: 150px;
+    max-width: 1200px;
+    max-height: 1200px;
+    row-gap: 30px;
+    width: 100%;
+    overflow: hidden;
     overflow-y: scroll;
 }
 
 .recipe {
-    color: black;
+    /*color: black;
     background-color: white;
     border-radius: 2px;
     margin-bottom: 10px;
@@ -435,46 +449,63 @@ h1.shoppingListTitle {
     margin-left: 20px;
     height: 200px;
     position: relative;
-    display: block;
+    display: block;*/
+    align-items: center;
+    border: 1px solid rgb(223, 225, 229);
+    border-radius: 4px;
+    display: grid;
+    grid-template-rows: 300px 25px 25px 25px;
+    height: 450px;
+    row-gap: 15px;
+    padding: 0 0 30px 0;
+    width: 350px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: all 0.2s ease;
+    top: 0px;
+}
+
+.recipe:hover {
+    border-radius: 8px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+    transition: all 0.2s ease;
+    top: -10px;
 }
 
 .recipe h3 {
     background: rgba(143, 135, 135, 0.29);
-    height: 30px;
-    width: 100%;
     text-indent: 5px;
     color: black;
-    position: absolute;
     bottom: -15px;
-    backdrop-filter: blur(10px);
     font-size: 20px;
     z-index: 1;
 }
 
-.recipe img {
+.recipe>img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/*.recipe img {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     height: 118px;
     object-fit: cover;
     margin-left: -16px;
     width: calc(100% + 32px);
-}
+}*/
 
 .recipe p.time {
-    position: absolute;
-    top: 10px;
-    z-index: 1;
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
 .recipe p.rating {
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    z-index: 1;
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
 .recipebookbtn {
