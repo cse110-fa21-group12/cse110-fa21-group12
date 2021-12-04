@@ -36,6 +36,7 @@ async function addRecipe(req, res) {
 
     recipeRef.set({
       id: recipe.id,
+      creator: req.user,
       title: recipe.title,
       description: recipe.description,
       categories: recipe.categories,
@@ -102,6 +103,7 @@ async function getRecipe(req, res) {
  */
  async function editRecipe(req, res) {
   try {
+    const user = req.user;
     const recipe = req.body;
     validateJSON(RECIPE_PROPS, recipe);
 
@@ -113,6 +115,10 @@ async function getRecipe(req, res) {
     }
 
     const originalRecipe = doc.data();
+    if (originalRecipe.creator != user) {
+      return res.json({ error: "Cannot delete recipe of another creator."})
+    }
+    
     try {
       await recipeRef.delete();
       recipeRef.set({
@@ -146,6 +152,13 @@ async function getRecipe(req, res) {
  */
  async function deleteRecipe(req, res) {
   try {
+    const user = req.user;
+    const recipeRef =  await firebase.firestore().collection("recipes").doc(req.params.id).get();
+    const recipe = recipeRef.data();
+    if (recipe.creator != user) {
+      return res.json({ error: "Cannot delete recipe of another creator."})
+    }
+
     await firebase
       .firestore()
       .collection("recipes")

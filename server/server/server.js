@@ -12,6 +12,26 @@ class Server extends Router {
     return Router;
   }
 
+  static get CookiesParser() {
+    return (req, res, next) => {
+        try{
+          const list = {};
+          const rc = req.headers.cookie;
+      
+          rc && rc.split(';').forEach(function( cookie ) {
+              var parts = cookie.split('=');
+              list[parts.shift().trim()] = decodeURI(parts.join('='));
+          });
+      
+          req.cookies = list;
+          next();
+        }      
+        catch(err) {
+          next(err);
+        }
+    };
+  }
+
   /**
    * Returns a middleware to parse an incoming request as JSON if possible and
    * attatch to the req.body, else just the body as string.

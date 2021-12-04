@@ -8,7 +8,8 @@
     "grunt-jsdoc": "^2.4.1"
   },
   "dependencies": {
-    "firebase": "^8.10.0"
+    "firebase": "^8.10.0",
+    "jsonwebtoken": "^8.5.1"
   },
   "scripts": {
     "start": "cd server && npm start"

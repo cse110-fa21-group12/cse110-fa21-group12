@@ -20,9 +20,9 @@ class Router {
     this._isPathAll = path == ALL;
 
     Methods.forEach((method) => {
-      this[method] = (path, fn) => this.__METHOD(path, method, fn);
+      this[method] = (path, ...fn) => this.__METHOD(path, method, fn);
     });
-    this["all"] = (path, fn) => this.__METHOD(path, ALL, fn);
+    this["all"] = (path, ...fn) => this.__METHOD(path, ALL, fn);
   }
 
   /**
@@ -82,7 +82,26 @@ class Router {
    * @param {function[]} fns recieving (req, res)
    * @returns {BaseRouter} for chaining
    */
-  __METHOD(path, method, fn) {
+  __METHOD(path, method, middlewares) {
+    // prepare args - support for "overloading"
+    if (!middlewares.length) {
+      throw new TypeError("Use require at least one middleware");
+    }
+    middlewares = Array.isArray(middlewares) ? middlewares.flat() : [middlewares];
+
+    for (let middleware of middlewares) {
+      if (middleware instanceof Router) {
+        this._stack.push(middleware);
+        continue;
+      }
+      if (typeof middleware !== "function") {
+        throw new TypeError("Middleware must be a function");
+      }
+      this._stack.push(new Layer(path, middleware, method.toLocaleLowerCase()));
+    }
+    return this;
+
+
     if (typeof fn !== "function") {
       throw new TypeError("callback must be a function");
     }
