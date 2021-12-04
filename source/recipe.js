@@ -75,15 +75,18 @@ fetch('/recipes/' + url, {
 
   const directions = document.getElementById('directions');
   for(let j = 1; j < data.directions.length + 1; j++) {
+    const stepDiv = document.createElement('div');
+    stepDiv.setAttribute('class', 'step');
     const header = document.createElement('h3');
     header.innerHTML = 'Step ' + j;
     const icon = document.createElement('i');
     icon.setAttribute('class', 'fas fa-utensils');
     header.appendChild(icon);
     const instruction = document.createElement('p');
-    instruction.innerHTML = data.directions[j];
-    directions.appendChild(header);
-    directions.appendChild(instruction);
+    instruction.innerHTML = data.directions[j - 1];
+    stepDiv.appendChild(header);
+    stepDiv.appendChild(instruction);
+    directions.appendChild(stepDiv);
   }
   
 })

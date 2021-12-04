@@ -58,7 +58,7 @@ fetch("/recipes/" + id, {
 
 //Ingredients Button
 const addIngredientButton = document.getElementById("add-ingredient-button");
-const ingredientForm = document.getElementById("ingredients-form");
+const ingredientsForm = document.getElementById("ingredients-form");
 
 addIngredientButton.addEventListener("click", function () {
   const newIngredient = document.createElement("input");
