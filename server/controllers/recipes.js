@@ -12,6 +12,7 @@ const RECIPE_PROPS = [
   "tags",
   "preparationTime",
   "cookingTime",
+  "totalTime",
   "ingredients",
   "directions",
 ];
@@ -42,6 +43,7 @@ async function addRecipe(req, res) {
       tags: recipe.tags,
       preparationTime: recipe.preparationTime,
       cookingTime: recipe.cookingTime,
+      totalTime: recipe.totalTime,
       ingredients: recipe.ingredients,
       directions: recipe.directions,
       rating: 0,
