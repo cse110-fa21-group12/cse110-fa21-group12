@@ -2,27 +2,28 @@
   "name": "temp",
   "version": "0.1.0",
   "devDependencies": {
-    "eslint": "^8.2.0",
-    "grunt": "^1.4.1",
-    "grunt-contrib-jshint": "^3.1.1",
-    "grunt-jsdoc": "^2.4.1", 
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
     "babel-jest": "^27.3.1",
+    "eslint": "^8.2.0",
+    "grunt": "^1.4.1",
+    "grunt-contrib-jshint": "^3.1.1",
+    "grunt-jsdoc": "^2.4.1",
     "jest": "^27.3.1",
     "jest-puppeteer": "^6.0.0",
     "puppeteer": "^11.0.0"
   },
   "dependencies": {
     "firebase": "^8.10.0",
+    "formidable": "^2.0.1",
     "jsonwebtoken": "^8.5.1"
   },
   "scripts": {
-    "start": "cd server && npm start", 
+    "start": "cd server && npm start",
     "test": "jest"
-  }, 
+  },
   "jest": {
-    "preset": "jest-puppeteer", 
+    "preset": "jest-puppeteer",
     "verbose": true
   }
 }

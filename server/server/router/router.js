@@ -87,7 +87,9 @@ class Router {
     if (!middlewares.length) {
       throw new TypeError("Use require at least one middleware");
     }
-    middlewares = Array.isArray(middlewares) ? middlewares.flat() : [middlewares];
+    middlewares = Array.isArray(middlewares)
+      ? middlewares.flat()
+      : [middlewares];
 
     for (let middleware of middlewares) {
       if (middleware instanceof Router) {
@@ -100,7 +102,6 @@ class Router {
       this._stack.push(new Layer(path, middleware, method.toLocaleLowerCase()));
     }
     return this;
-
 
     if (typeof fn !== "function") {
       throw new TypeError("callback must be a function");
