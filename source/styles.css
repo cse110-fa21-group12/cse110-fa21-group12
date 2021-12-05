@@ -290,6 +290,8 @@ a[href="forgot-password.html"] {
     margin: auto auto auto 10%;
     grid-column-start: 1;
     grid-column-end: 2;
+    position: relative;
+    display: inline-block;
 }
 
 .optionsbtn {
@@ -332,28 +334,34 @@ a[href="forgot-password.html"] {
     margin: auto 20% auto auto;
     grid-column-start: 3;
     grid-column-end: 4;
+    position: relative;
+    display: inline-block;
 }
 
 .dropDownList {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
+    background-color: #323c4b;
+    width: 12em;
+    overflow: hidden;
     border-radius: 3px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    right: 0;
     z-index: 1;
+    top: 4em;
+    right: -4em;
 }
 
 .dropDownList a {
     color: rgb(0, 0, 0);
-    padding: 12px 16px;
+    background-color: white;
+    padding: 12px 16px 12px 16px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-bottom: 0.2em;
+    line-height: 2em;
+    font-size: 20px;
     text-decoration: none;
     display: block;
-    border-color: #323c4b;
-    border-bottom: solid;
-    border-width: thin;
 }
 
 .dropDownMenu a:hover {
@@ -361,39 +369,87 @@ a[href="forgot-password.html"] {
 }
 
 .show {
-    display: block;
+    display: inline-block;
 }
 
-.optionsList {
-    width: 500px;
+.menuList {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    overflow: hidden;
+    width: 25em;
+    border-radius: 3px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 4em;
+}
+
+.menuList a {
+    /*color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 12px 16px 12px 16px;
+    border-radius: 3px;
+    margin-bottom: 0.2em;
+    line-height: 2em;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;*/
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    padding: 1em 2em 1em 2em;
+    background-color: white;
+    color: rgb(58, 58, 71);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 5px 1px #00b4cc;
+    border-color: rgb(179, 171, 171);
+    border-width: 1px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menuList a:last-of-type {
+    margin-bottom: 5px;
+}
+
+.optionsMenu a:hover {
+    background-color: rgb(187, 188, 199);
+}
+
+.show {
+    display: inline-block;
+}
+
+.toggleDiv {
     position: relative;
-    top: 60%;
-    left: 50%;
-    margin-left: -250px;
+    display: block;
+    margin: 1% auto auto auto;
+    width: 50%;
 }
 
 .searchBar {
-    display: flex;
-    position: relative;
     width: 100%;
-    margin-bottom: 75px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    margin: 0 auto 0 auto;
 }
 
-button[type="submit"] {
-    width: 50px;
-    height: 56px;
-    border: 3px solid #00b4cc;
-    background: #00b4cc;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 10px 10px 0;
-    cursor: pointer;
-    font-size: 30px;
+.toggleDiv #createRecipe {
+    width: 25%;
+    margin: 0 auto 2% auto;
+}
+
+.filter-button {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 2.2em;
 }
 
 button[type="filter"] {
-    width: 50px;
-    height: 56px;
+    width: 2em;
+    height: 100%;
     border: 3px solid #00b4cc;
     background-color: white;
     color: black;
@@ -402,6 +458,28 @@ button[type="filter"] {
     font-size: 30px;
     text-align: center;
     border-right: hidden;
+}
+
+.search-bar {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.search-button {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+button[type="submit"] {
+    width: 2em;
+    height: 100%;
+    border: 3px solid #00b4cc;
+    background: #00b4cc;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    font-size: 30px;
 }
 
 button[type="button"] {
