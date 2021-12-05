@@ -1,6 +1,7 @@
 "use strict";
 
 const firebase = require("../db");
+const { filter } = require("../server/utils/methods");
 const firestore = firebase.firestore();
 const { validateJSON } = require("./utils");
 
@@ -139,7 +140,7 @@ async function editRecipe(req, res) {
 }
 
 /**
- * Get the {:id} recipe from the database
+ * Delete the {:id} recipe from the database
  * @param {Request} req
  * @param {Response} res
  */
@@ -156,10 +157,48 @@ async function deleteRecipe(req, res) {
   }
 }
 
+/**
+ * Get all the recipes from the database with a name that match the {:search}. It also allows one
+ * to specify that start/end (slice).
+ * @param {Request} req
+ * @param {Response} res
+ */
+async function searchRecipes(req, res) {
+  try {
+    const snapshot = await firebase.firestore().collection("recipes").get();
+    const recipes = snapshot.docs.map((doc) => doc.data());
+    const filteredRecipes = recipes.filter((recipe) => {
+      // Checks tags and checks name
+      if (!recipe.tags) {
+        return recipe.title
+          .toLowerCase()
+          .includes(req.params.search.toLowerCase());
+      } else {
+        return (
+          recipe.tags.includes(req.params.search.toLowerCase()) ||
+          recipe.title.toLowerCase().includes(req.params.search.toLowerCase())
+        );
+      }
+    });
+
+    if (filteredRecipes.length == 0) {
+      res.json("No Recipes Found");
+    } else {
+      const start = req.query.start || 0;
+      const end = req.query.end || filteredRecipes.length;
+
+      res.json(filteredRecipes.slice(start, end));
+    }
+  } catch (error) {
+    res.json({ error: error.message });
+  }
+}
+
 module.exports = {
   addRecipe,
   getRecipes,
   getRecipe,
   deleteRecipe,
   editRecipe,
+  searchRecipes,
 };
