@@ -1,11 +1,10 @@
-
-const fs = require('fs').promises;
-const path = require('path');
+const fs = require("fs").promises;
+const path = require("path");
 
 const Server = require("../server/server");
-const config = require('../config');
+const config = require("../config");
 const status = require("../server/utils/status");
-const auth = require('../auth/auth');
+const auth = require("../auth/auth");
 
 const router = new Server.Router();
 
@@ -23,23 +22,25 @@ async function validateFile(filePath) {
   }
 }
 
-router.use((req,res,next)=>{
-    const extname =  path.extname(req.url);
-    if (!extname || extname != '.html' || config.noAuth.has(req.url)) {
-        return next();
+router.use(
+  (req, res, next) => {
+    const extname = path.extname(req.url);
+    if (!extname || extname != ".html" || config.noAuth.has(req.url)) {
+      return next();
     }
     auth.verifyToken(req, res, next);
-}, async (req, res, next) => {
+  },
+  async (req, res, next) => {
     try {
-        const filePath = path.join(BASE_DIR,req.url);
-        await validateFile(filePath);
-        res.sendFile(filePath);
+      const filePath = path.join(BASE_DIR, req.url);
+      await validateFile(filePath);
+      res.sendFile(filePath);
+    } catch (err) {
+      res.writeHead(status.NOT_FOUND, { "Content-Type": "text/plain" });
+      res.end(`${status.NOT_FOUND} - ${req.url} not found`);
     }
-    catch(err) {
-        res.writeHead(status.NOT_FOUND, { "Content-Type": "text/plain" });
-        res.end(`${status.NOT_FOUND} - ${req.url} not found`);
-    }
-});
+  }
+);
 
 module.exports = {
   routes: router,

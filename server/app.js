@@ -1,6 +1,6 @@
 const Server = require("./server/server");
 const config = require("./config");
-const auth = require('./auth/auth');
+const auth = require("./auth/auth");
 
 const recipeRoutes = require("./routes/recipes").routes;
 const staticRoutes = require("./routes/static").routes;
@@ -34,7 +34,7 @@ app.use("/", staticRoutes);
 //     }
 //     catch(err) {}
 //   }
-  
+
 //   if (req.user) {
 //     res.sendFile("/source/home.html");
 //   }

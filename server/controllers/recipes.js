@@ -1,8 +1,8 @@
 "use strict";
-const fs = require('fs/promises');
-const crypto = require('crypto');
-const formidable = require('formidable');
-const path = require('path');
+const fs = require("fs/promises");
+const crypto = require("crypto");
+const formidable = require("formidable");
+const path = require("path");
 const firebase = require("../db");
 const storage = firebase.storage();
 const firestore = firebase.firestore();
@@ -21,10 +21,10 @@ const RECIPE_PROPS = [
   "directions",
 ];
 
-const ALLOWED_TYPES = new Set(['image/png', 'image/jpeg']);
-const DEFAULT_IMG = '/source/media/sample.jpg';
-const IMG_BASE_FOLDER = '/images';
-const MAX_FILE_SIZE = 10 * (1024*1024); // 10MB
+const ALLOWED_TYPES = new Set(["image/png", "image/jpeg"]);
+const DEFAULT_IMG = "/source/media/sample.jpg";
+const IMG_BASE_FOLDER = "/images";
+const MAX_FILE_SIZE = 10 * (1024 * 1024); // 10MB
 
 /**
  * Upload the provided local file to the firestore storage bucket
@@ -42,7 +42,9 @@ async function uploadImage(file) {
 
   const ext = path.extname(file.originalFilename);
 
-  const storeName = `${IMG_BASE_FOLDER}/${Date.now()}_${path.basename(file.originalFilename).replace(/\.[^/.]+$/, "")}${ext}`;
+  const storeName = `${IMG_BASE_FOLDER}/${Date.now()}_${path
+    .basename(file.originalFilename)
+    .replace(/\.[^/.]+$/, "")}${ext}`;
   const storageRef = firebase.storage().ref();
   const fileRef = storageRef.child(storeName);
   await fileRef.put(await fs.readFile(file.filepath), metadata);
@@ -153,12 +155,12 @@ async function editRecipe(req, res) {
 
     const originalRecipe = doc.data();
     if (originalRecipe.creator != user) {
-      return res.json({ error: "Cannot delete recipe of another creator."})
+      return res.json({ error: "Cannot delete recipe of another creator." });
     }
 
     const img = req.files ? req.files.img : null;
     const imgUrl = img ? await uploadImage(img) : DEFAULT_IMG;
-    
+
     try {
       await recipeRef.delete();
       recipeRef.set({
@@ -196,10 +198,14 @@ async function editRecipe(req, res) {
 async function deleteRecipe(req, res) {
   try {
     const user = req.user;
-    const recipeRef =  await firebase.firestore().collection("recipes").doc(req.params.id).get();
+    const recipeRef = await firebase
+      .firestore()
+      .collection("recipes")
+      .doc(req.params.id)
+      .get();
     const recipe = recipeRef.data();
     if (recipe.creator != user) {
-      return res.json({ error: "Cannot delete recipe of another creator."})
+      return res.json({ error: "Cannot delete recipe of another creator." });
     }
 
     await firebase
