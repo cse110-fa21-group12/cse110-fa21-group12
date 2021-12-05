@@ -2,7 +2,8 @@
   "name": "cre-ate-backend",
   "version": "0.1.0",
   "dependencies": {
-    "firebase": "^8.10.0"
+    "firebase": "^8.10.0",
+    "jsonwebtoken": "^8.5.1"
   },
   "scripts": {
     "build": "build index.html",
