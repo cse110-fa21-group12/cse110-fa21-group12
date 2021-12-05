@@ -40,7 +40,7 @@ fetch("/recipes/", {
             //Create and add cooking time to the recipe card
             const timeTaken = document.createElement("p");
             timeTaken.setAttribute("class", "recipe-time");
-            timeTaken.innerHTML = '<i class="fas fa-clock">  ' + data[i].cookingTime; //change to totalTime
+            timeTaken.innerHTML = '<i class="fas fa-clock">  ' + data[i].totalTime; 
             initialDiv.appendChild(timeTaken);
 
 
