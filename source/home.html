@@ -13,12 +13,20 @@
 <body>
     <!--h1>Home</h1-->
     <div class="headerBar">
+        <div class="optionsMenu">
+            <button onclick="myFunction()" class="optionsbtn"><i class="fas fa-bars"></i></button>
+            <div id="myDropdown" class="dropDownList">
+                <a href="login.html"> Profile </a>
+                <a href="login.html"> Logout </a>
+                <a href="login.html"> Delete Account </a>
+            </div>
+        </div>
         <div class="logoHeader">
-            <img src="../admin/branding/create_logo1.png" alt="Logo" class="centeredImage">
+            <!--img src="../admin/branding/create_logo1.png" alt="Logo"-->
         </div>
 
         <div class="dropDownMenu">
-            <button onclick="myFunction()" class="dropbtn"><i class="fas fa-user-circle"></i></button>
+            <button onclick="myFunction()" class="optionsbtn"><i class="far fa-user"></i></i></button>
             <div id="myDropdown" class="dropDownList">
                 <a href="login.html"> Profile </a>
                 <a href="login.html"> Logout </a>

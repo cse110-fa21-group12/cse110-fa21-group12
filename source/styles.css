@@ -27,35 +27,22 @@ body {
 
 .starting-page {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     width: 100%;
     height: auto;
     margin: 1% 1% 5% 1%;
 }
 
-@media (max-width:1000px) {
-    .starting-page {
-        display: flex;
-        flex-direction: column;
-        margin: 1% 1% 1% 1%;
-    }
-}
-
-
-/*.login-box {
-        width: 50%;
-    }*/
-
 .info {
     height: auto;
     padding: 3em 7.5em 3em 7.5em;
-    margin: 0 1% 0 10%;
+    margin: 0 10% 0 10%;
     background-color: white;
 }
 
 .login-section {
     position: relative;
-    margin: 2em 1em 0 1em;
+    margin: 2em 10em 0 1em;
     height: auto;
 }
 
@@ -69,13 +56,6 @@ body {
     border-color: yellow;
     display: inline-block;
     position: relative;
-}
-
-@media (max-width:1000px) {
-    .info {
-        padding: 1%;
-        margin: 0;
-    }
 }
 
 .info-content {
@@ -123,6 +103,24 @@ body {
     filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.9));
     transition: all 0.2s ease;
     transform: scale(1.01);
+}
+
+@media (max-width:1000px) {
+    .starting-page {
+        grid-template-columns: 100%;
+        margin: 0%;
+    }
+    .info {
+        margin: 1em;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 1em;
+    }
+    .login-section {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin: 2em 1em 0 1em;
+    }
 }
 
 
@@ -233,7 +231,7 @@ label {
 
 .new-account {
     position: relative;
-    margin-top: 5%;
+    margin-top: 2%;
     text-align: center;
     font-family: Roboto;
     font-style: normal;
@@ -270,52 +268,70 @@ a[href="forgot-password.html"] {
     background-color: black;
 }
 
+
+/*home page*/
+
 .headerBar {
+    display: grid;
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    grid-template-columns: 30% 40% 30%;
     background-color: #323c4b;
-    /* border-bottom: black 10px;*/
+    border-style: hidden;
+    border-bottom: solid;
     border-color: white;
-    border-width: 1px;
-    border-style: solid;
-    border-top: hidden;
-    border-left: hidden;
-    border-right: hidden;
-    width: 600px;
-    height: 225px;
-    margin-left: auto;
-    margin-right: auto;
+    border-width: 0.2px;
+}
+
+.optionsMenu {
+    margin: auto auto auto 10%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.optionsbtn {
+    width: auto;
+    height: auto;
+    padding: 10% 100% 10% 100%;
+    background-color: white;
+    color: rgb(58, 58, 71);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 3px 1px #00b4cc;
+    border-color: white;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .logoHeader {
-    float: left;
+    margin: 2% auto auto auto;
+    height: 10em;
+    width: 75%;
+    background-image: url(../admin/branding/create_logo1.png);
+    background-size: cover;
+    background-position: center center;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
-.centeredImage {
-    width: 300px;
-}
-
-.dropbtn {
-    /*background-color: #04AA6D;*/
-    background: #323c4b;
-    border: none;
-    color: white;
-    /*padding: 12px 16px;*/
-    font-size: 50px;
-    cursor: pointer;
-    border-radius: 100%;
-    /*top: 400px;*/
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-    color: #b1bdcf;
+.logoHeader>img {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 10rem;
+    object-fit: cover;
+    border: hidden;
 }
 
 .dropDownMenu {
-    position: relative;
-    float: right;
-    top: 100px;
-    margin-right: 50px;
-    /*display: inline-block;*/
+    margin: auto 20% auto auto;
+    grid-column-start: 3;
+    grid-column-end: 4;
 }
 
 .dropDownList {
