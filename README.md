@@ -8,4 +8,10 @@
 
 ### Project: Recipe Manager
 
+<<<<<<< HEAD
 ### Short Description of the Project: We will be creating a recipe manager that will allow users to create new recipes, read previously created recipes, update old recipes, and delete them.
+=======
+### Short Description of the Project: We will be creating a recipe manager that will allow users to create new recipes, read previously created recipes, update old recipes, and delete them.
+
+s
+>>>>>>> de7e657d9f20cd8bd6511fadd1d99aca07f9685f
