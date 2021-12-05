@@ -38,6 +38,10 @@ class Server extends Router {
    */
   static get JsonParser() {
     return (req, res, next) => {
+      if (req.headers['content-type'] != 'application/json') {
+        return next();
+      }
+
       let body = "";
       req.on("data", (chunk) => {
         body += chunk.toString();
