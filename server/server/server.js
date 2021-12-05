@@ -3,6 +3,8 @@ const Router = require("./router/router");
 const status = require("./utils/status");
 const { addProperties } = require("./utils/util");
 
+const formidable = require('formidable');
+
 /**
  * @public
  */
@@ -10,6 +12,32 @@ class Server extends Router {
   /** export the Router class */
   static get Router() {
     return Router;
+  }
+
+  static get FormDataParser() {
+    return (req, res, next) => {
+        try{
+          const form = new formidable.IncomingForm();
+
+          form.parse(req, async (err, fields, files) => {
+            if (err) {
+              return next(err);
+            }
+
+            req.files = files;
+            if (fields.hasOwnProperty('json')) {
+              req.body = JSON.parse(fields.json)
+            }
+            else {
+              req.body = fields;
+            }
+            next();
+          });
+        }      
+        catch(err) {
+          next(err);
+        }
+    };
   }
 
   static get CookiesParser() {
