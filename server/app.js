@@ -1,14 +1,29 @@
-const http = require("http");
+const Server = require("./server/server");
+const { port } = require("./config");
+const recipeRoutes = require("./routes/recipes").routes;
+const staticRoutes = require("./routes/static").routes;
+const shoppingListRoutes = require("./routes/shoppingList").routes;
 
-const hostname = "127.0.0.1";
-const port = 3000;
+// Initialize the server
+const app = new Server();
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Hello World");
+// TODO: authenticate
+app.use((req, res, next) => {
+  req.user = "user0";
+  next();
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+// try and parse all incoming requests as jsons
+app.use(Server.JsonParser);
+
+// Use the recipes router for routing for base path
+app.use("/", recipeRoutes);
+app.use("/", shoppingListRoutes);
+
+// serve static
+app.use("/", staticRoutes);
+
+// start the server
+app.listen(process.env.PORT || port, () => {
+  console.log("Server listning on port " + port);
 });

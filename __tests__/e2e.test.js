@@ -1,5 +1,7 @@
+const puppeteer = require("puppeteer");
+
 describe("Google", () => {
-  beforeAll(() => {
+  beforeAll(async () => {
     await page.goto("http://google.com");
   });
   it("It should display Google", async () => {

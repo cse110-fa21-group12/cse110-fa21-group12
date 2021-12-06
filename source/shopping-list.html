@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="../admin/branding/create_logo_icon.png" type="image/png" />
+    <script src="shopping-list.js" type="module"></script>
+    <!-- Add icon library -->
+    <script src="https://kit.fontawesome.com/b1e4be6678.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="headerBar">
+        <h1 class="shoppingListTitle">My Shopping List</h1><i id="cart" , class="fas fa-shopping-cart"></i>
+
+    </div>
+
+    <div class="vertical-center">
+        <button class="homebtn2" onclick="location.href='home.html'"><i class="fas fa-home"></i> Home </button>
+    </div>
+    <div class="shopping-list">
+        <form id="enter-ingredient">
+            <input type="text" , class="shopping-qty" , id="ingredient-quantity" , placeholder="Quantity" />
+            <input type="text" , class="shopping-item" , id="ingredient" , placeholder="Ingredient" />
+            <button class="createRecipebtn" , id="add-shopping-button"><i class="fas fa-plus"></i></button>
+        </form>
+        <form id="shopping-form">
+            <fieldset>
+            </fieldset>
+
+        </form>
+        <button id="done-button" type="button">Mark as Done</button>
+
+    </div>
+</body>
+
+</html>
