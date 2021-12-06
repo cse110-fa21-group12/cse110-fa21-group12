@@ -30,13 +30,13 @@ body {
     grid-template-columns: 60% 40%;
     width: 100%;
     height: auto;
-    margin: 1% 1% 5% 1%;
+    margin: 1% 1% 5%;
 }
 
 .info {
     height: auto;
-    padding: 3em 7.5em 3em 7.5em;
-    margin: 0 10% 0 10%;
+    padding: 3em 7.5em;
+    margin: 0 10%;
     background-color: white;
 }
 
@@ -95,7 +95,7 @@ body {
     margin-right: auto;
     width: 22.5em;
     height: auto;
-    padding: 5% 1% 5% 1%;
+    padding: 5% 1%;
 }
 
 .login-box:hover {
@@ -119,7 +119,7 @@ body {
     .login-section {
         grid-row-start: 2;
         grid-row-end: 3;
-        margin: 2em 1em 0 1em;
+        margin: 2em 1em 0;
     }
 }
 
@@ -213,8 +213,8 @@ label {
     margin-right: auto;
     width: 15em;
     height: 3em;
-    top: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: 0;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: .1rem;
     background: rgba(98, 123, 159, 0.79);
     border: 0.1rem solid #627b9f;
@@ -297,7 +297,7 @@ a[href="forgot-password.html"] {
 .optionsbtn {
     width: auto;
     height: auto;
-    padding: 10% 100% 10% 100%;
+    padding: 10% 100%;
     background-color: white;
     color: rgb(58, 58, 71);
     text-align: center;
@@ -309,7 +309,7 @@ a[href="forgot-password.html"] {
 }
 
 .logoHeader {
-    margin: 2% auto auto auto;
+    margin: 2% auto auto;
     height: 10em;
     width: 75%;
     background-image: url(../admin/branding/create_logo1.png);
@@ -345,7 +345,7 @@ a[href="forgot-password.html"] {
     width: 12em;
     overflow: hidden;
     border-radius: 3px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
     top: 4em;
     right: -4em;
@@ -354,7 +354,7 @@ a[href="forgot-password.html"] {
 .dropDownList a {
     color: rgb(0, 0, 0);
     background-color: white;
-    padding: 12px 16px 12px 16px;
+    padding: 12px 16px;
     text-decoration: none;
     border-radius: 3px;
     margin-bottom: 0.2em;
@@ -379,7 +379,7 @@ a[href="forgot-password.html"] {
     overflow: hidden;
     width: 25em;
     border-radius: 3px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
     top: 4em;
 }
@@ -397,12 +397,12 @@ a[href="forgot-password.html"] {
     display: block;
     text-decoration: none;
     margin-bottom: 1em;
-    padding: 1em 2em 1em 2em;
+    padding: 1em 2em;
     background-color: white;
     color: rgb(58, 58, 71);
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 5px 1px #00b4cc;
+    box-shadow: 0 5px 1px #00b4cc;
     border-color: rgb(179, 171, 171);
     border-width: 1px;
     font-size: 25px;
@@ -424,7 +424,7 @@ a[href="forgot-password.html"] {
 .toggleDiv {
     position: relative;
     display: block;
-    margin: 1% auto auto auto;
+    margin: 1% auto auto;
     width: 50%;
 }
 
@@ -433,12 +433,12 @@ a[href="forgot-password.html"] {
     height: auto;
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
 }
 
 .toggleDiv #createRecipe {
     width: 25%;
-    margin: 0 auto 2% auto;
+    margin: 0 auto 2%;
 }
 
 .filter-button {
@@ -491,7 +491,7 @@ button[type="button"] {
     color: rgb(58, 58, 71);
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 5px 1px #00b4cc;
+    box-shadow: 0 5px 1px #00b4cc;
     border-color: white;
     font-size: 25px;
     font-weight: bold;
@@ -501,7 +501,7 @@ button[type="button"] {
     width: 100%;
     height: 50px;
     border: 3px solid #00b4cc;
-    padding: 0px;
+    padding: 0;
     outline: none;
     color: #9dbfaf;
     font-size: 20px;
@@ -522,7 +522,7 @@ h1.shoppingListTitle {
 .myRecipes {
     position: relative;
     display: block;
-    margin: 2% auto 2% auto;
+    margin: 2% auto;
     text-align: center;
 }
 
@@ -563,7 +563,7 @@ h1.shoppingListTitle {
     color: rgb(58, 58, 71);
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 5px 1px #00b4cc;
+    box-shadow: 0 5px 1px #00b4cc;
     border-color: white;
     font-size: 1.5em;
     font-weight: bold;
@@ -581,7 +581,7 @@ h1.shoppingListTitle {
     color: rgb(58, 58, 71);
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 5px 1px #00b4cc;
+    box-shadow: 0 5px 1px #00b4cc;
     border-color: white;
     font-size: 1.5em;
     font-weight: bold;
@@ -592,7 +592,7 @@ h1.shoppingListTitle {
     display: inline;
     width: 75%;
     height: 2.25em;
-    box-shadow: 0px 5px 1px #00b4cc;
+    box-shadow: 0 5px 1px #00b4cc;
     border-radius: 5px;
     padding: 0.2em 0.6em 0.2em 0.2em;
     font-size: 1.25em;
@@ -764,7 +764,7 @@ h1.shoppingListTitle {
     text-transform: Uppercase;
     font-weight: 600;
     cursor: pointer;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 1px;
     background: rgba(67, 87, 114, 0.79);
 }
@@ -844,19 +844,19 @@ h1.shoppingListTitle {
 }
 
 .createRecipebtn {
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     display: block;
     width: 50px;
     height: 40px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     background-color: white;
     color: rgb(58, 58, 71);
     text-align: center;
     border-radius: 3px;
-    box-shadow: 0px 5px 1px #00b4cc;
+    box-shadow: 0 5px 1px #00b4cc;
     border-color: white;
     font-size: 15px;
     font-weight: bold;
@@ -878,7 +878,7 @@ h1.shoppingListTitle {
     font-size: auto;
     font-weight: bold;
     cursor: pointer;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     background: #00b4cc;
 }
 
@@ -916,7 +916,7 @@ h1.shoppingListTitle {
     margin-right: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    top: 0px;
+    top: 0;
 }
 
 .homebtn2 {
@@ -934,7 +934,7 @@ h1.shoppingListTitle {
     color: rgb(58, 58, 71);
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 5px 1px #00b4cc;
+    box-shadow: 0 5px 1px #00b4cc;
     border-color: white;
     font-size: 25px;
     font-weight: bold;
@@ -1157,8 +1157,8 @@ legend {
     margin-right: auto;
     width: 225px;
     height: 50px;
-    top: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: 0;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 1px;
     background: rgba(67, 87, 114, 0.79);
     border: 1px solid #627b9f;
@@ -1259,8 +1259,8 @@ legend {
     margin-right: auto;
     width: 225px;
     height: 50px;
-    top: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: 0;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 1px;
     background: rgba(67, 87, 114, 0.79);
     border: 1px solid #627b9f;
