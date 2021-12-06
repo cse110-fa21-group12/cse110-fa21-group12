@@ -13,7 +13,7 @@ jobs:
       - name: Auto Minify
         uses: nizarmah/auto-minify@v2.1.1
         with:
-          directory: ./
+          directory: './'
           output: './minify'
           maxdepth: 3
       - name: Auto committing minified files
