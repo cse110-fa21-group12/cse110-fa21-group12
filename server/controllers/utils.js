@@ -1,6 +1,6 @@
 exports.validateJSON = (props, obj) => {
   if (typeof obj !== "object" || Object.keys(obj).length != props.length) {
-    throw new Error("Invalid recipe JSON format");
+    throw new Error("Invalid JSON format");
   }
 
   for (const prop of props) {

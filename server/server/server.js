@@ -3,6 +3,8 @@ const Router = require("./router/router");
 const status = require("./utils/status");
 const { addProperties } = require("./utils/util");
 
+const formidable = require("formidable");
+
 /**
  * @public
  */
@@ -12,12 +14,60 @@ class Server extends Router {
     return Router;
   }
 
+  static get FormDataParser() {
+    return (req, res, next) => {
+      try {
+        const form = new formidable.IncomingForm();
+
+        form.parse(req, async (err, fields, files) => {
+          if (err) {
+            return next(err);
+          }
+
+          req.files = files;
+          if (fields.hasOwnProperty("json")) {
+            req.body = JSON.parse(fields.json);
+          } else {
+            req.body = fields;
+          }
+          next();
+        });
+      } catch (err) {
+        next(err);
+      }
+    };
+  }
+
+  static get CookiesParser() {
+    return (req, res, next) => {
+      try {
+        const list = {};
+        const rc = req.headers.cookie;
+
+        rc &&
+          rc.split(";").forEach(function (cookie) {
+            let parts = cookie.split("=");
+            list[parts.shift().trim()] = decodeURI(parts.join("="));
+          });
+
+        req.cookies = list;
+        next();
+      } catch (err) {
+        next(err);
+      }
+    };
+  }
+
   /**
    * Returns a middleware to parse an incoming request as JSON if possible and
    * attatch to the req.body, else just the body as string.
    */
   static get JsonParser() {
     return (req, res, next) => {
+      if (req.headers["content-type"] != "application/json") {
+        return next();
+      }
+
       let body = "";
       req.on("data", (chunk) => {
         body += chunk.toString();

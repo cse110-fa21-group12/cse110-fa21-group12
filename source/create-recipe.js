@@ -65,7 +65,7 @@ saveRecipeButton.addEventListener("click", () => {
     tags: tags,
     preparationTime: preparationTime,
     cookingTime: cookingTime,
-    //totalTime: totalTime,
+    totalTime: totalTime,
     ingredients: ingredientsArray,
     directions: directionsArray,
   };
