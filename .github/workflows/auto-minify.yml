@@ -1,0 +1,14 @@
+name: Auto Minify
+
+on: ["push"]
+
+jobs:
+  auto-minify:
+    name: Auto-Minify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@main
+
+      - name: Auto Minify
+        uses: nizarmah/auto-minify@v2.1.1
