@@ -2,40 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login to your CREATE page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
-
 <body>
-    <img id="create-logo" src="../admin/branding/create_logo1.png" alt="Logo">
+    <img id="create-logo" src="../admin/branding/create_logo1.png" alt="Logo" />
 
-    <h1 class="login-text">Login</h1>
-
-
-    <div class="login-box">
-        <img class="google-img" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png">
-        <button class="google-signin-btn"> Login with Google </button>
-        <h4 class="or-line">--------------------------------OR-------------------------------</h4>
-        <form>
-            <fieldset>
-
-                <label for="email">EMAIL</label><br>
-                <input type="text" id="email-input" class="login-inputs" placeholder="example@gmail.com"><br>
-                <label for="password">PASSWORD</label><br>
-                <input type="text" id="password-input" class="login-inputs" placeholder="Password"> <br>
-            </fieldset>
-        </form>
-        <button class="login-button">Login With Email</button>
-        <div id="forgotPass">
-            <a ref="">
+    <section class="starting-page">
+        <div class="info">
+            <h2 class="info-heading">What is CREATE?</h2>
+            <p class="info-content">We’re all busy people. We know how hard it is to find the time to cook tasty homemade meals, let alone figure out what to cook, what ingredients to buy, and how much. With CREATE, we hope to ease some of this stress for you. By creating a free account, you can have a place to add your own recipes and discover new, awesome recipes from other users.  It’s easy to search and filter recipes to find the perfect meal that fits your mood and requirements. Also take advantage of our shopping list feature, which helps you keep track of what ingredients (and how much) you need to buy on your next grocery outing. Go ahead and sign up. You’ll thank us later.
+            </p>
         </div>
-        <div class="newAcc">
+        <div class="login-section">
 
+            <h1 class="login-text">Login</h1>
+
+            <div class="login-box">
+                <!--img
+        class="google-img"
+        alt="Google sign-in"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+      />
+      <button class="google-signin-btn">Login with Google</button>
+      <h4 class="or-line">
+        --------------------------------OR-------------------------------
+      </h4-->
+                <form>
+                    <fieldset>
+                        <label for="email">EMAIL</label><br />
+                        <input type="text" id="email-input" class="login-inputs" placeholder="example@gmail.com" /><br />
+                        <label for="password">PASSWORD</label><br />
+                        <input type="text" id="password-input" class="login-inputs" placeholder="Password" />
+                        <br />
+                    </fieldset>
+                </form>
+                <button onclick="location.href='home.html'" class="login-button">
+        Login With Email</button><br />
+                <!--div class="forgot-password">
+        <a href="forgot-password.html"> Forgot Password </a>
+            </div-->
+            </div>
+            <div class="new-account">
+                <h2 class="no-acc-text">Don't have an account?</h2>
+                <a href="create-account.html"> Create Account </a>
+            </div>
         </div>
-    </div>
+    </section>
 </body>
 
-</html>>
+</html>
