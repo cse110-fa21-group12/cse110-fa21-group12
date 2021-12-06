@@ -5,6 +5,7 @@ const {
   getRecipe,
   deleteRecipe,
   editRecipe,
+  searchRecipes,
 } = require("../controllers/recipes");
 const auth = require("../auth/auth");
 
@@ -24,6 +25,8 @@ router.put(
 router.get("/recipes", getRecipes);
 router.get("/recipes/:id", getRecipe);
 router.delete("/recipes/:id", auth.verifyToken, deleteRecipe);
+router.put("/recipes/edit", editRecipe);
+router.get("/search/:search", searchRecipes);
 
 module.exports = {
   routes: router,

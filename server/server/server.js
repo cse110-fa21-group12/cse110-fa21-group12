@@ -46,7 +46,7 @@ class Server extends Router {
 
         rc &&
           rc.split(";").forEach(function (cookie) {
-            var parts = cookie.split("=");
+            let parts = cookie.split("=");
             list[parts.shift().trim()] = decodeURI(parts.join("="));
           });
 

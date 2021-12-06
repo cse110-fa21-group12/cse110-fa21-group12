@@ -31,6 +31,7 @@ fetch("/recipes/" + id, {
     cookTime.defaultValue = data.cookingTime;
 
     const totalTime = document.getElementById("total-time");
+    totalTime.defaultValue = data.totalTime;
 
     const ingredientsForm = document.getElementById("ingredients-form");
     for (let i = 0; i < data.ingredients.length; i++) {

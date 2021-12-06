@@ -27,35 +27,22 @@ body {
 
 .starting-page {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     width: 100%;
     height: auto;
-    margin: 1% 1% 5% 1%;
+    margin: 1% 1% 5%;
 }
-
-@media (max-width:1000px) {
-    .starting-page {
-        display: flex;
-        flex-direction: column;
-        margin: 1% 1% 1% 1%;
-    }
-}
-
-
-/*.login-box {
-        width: 50%;
-    }*/
 
 .info {
     height: auto;
-    padding: 3em 7.5em 3em 7.5em;
-    margin: 0 1% 0 10%;
+    padding: 3em 7.5em;
+    margin: 0 10%;
     background-color: white;
 }
 
 .login-section {
     position: relative;
-    margin: 2em 1em 0 1em;
+    margin: 2em 10em 0 1em;
     height: auto;
 }
 
@@ -69,13 +56,6 @@ body {
     border-color: yellow;
     display: inline-block;
     position: relative;
-}
-
-@media (max-width:1000px) {
-    .info {
-        padding: 1%;
-        margin: 0;
-    }
 }
 
 .info-content {
@@ -115,7 +95,7 @@ body {
     margin-right: auto;
     width: 22.5em;
     height: auto;
-    padding: 5% 1% 5% 1%;
+    padding: 5% 1%;
 }
 
 .login-box:hover {
@@ -123,6 +103,24 @@ body {
     filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.9));
     transition: all 0.2s ease;
     transform: scale(1.01);
+}
+
+@media (max-width:1000px) {
+    .starting-page {
+        grid-template-columns: 100%;
+        margin: 0%;
+    }
+    .info {
+        margin: 1em;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 1em;
+    }
+    .login-section {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin: 2em 1em 0;
+    }
 }
 
 
@@ -215,8 +213,8 @@ label {
     margin-right: auto;
     width: 15em;
     height: 3em;
-    top: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: 0;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: .1rem;
     background: rgba(98, 123, 159, 0.79);
     border: 0.1rem solid #627b9f;
@@ -233,7 +231,7 @@ label {
 
 .new-account {
     position: relative;
-    margin-top: 5%;
+    margin-top: 2%;
     text-align: center;
     font-family: Roboto;
     font-style: normal;
@@ -270,74 +268,100 @@ a[href="forgot-password.html"] {
     background-color: black;
 }
 
+
+/*home page*/
+
 .headerBar {
+    display: grid;
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    grid-template-columns: 30% 40% 30%;
     background-color: #323c4b;
-    /* border-bottom: black 10px;*/
+    border-style: hidden;
+    border-bottom: solid;
     border-color: white;
-    border-width: 1px;
-    border-style: solid;
-    border-top: hidden;
-    border-left: hidden;
-    border-right: hidden;
-    width: 600px;
-    height: 225px;
-    margin-left: auto;
-    margin-right: auto;
+    border-width: 0.2px;
+}
+
+.optionsMenu {
+    margin: auto auto auto 10%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    position: relative;
+    display: inline-block;
+}
+
+.optionsbtn {
+    width: auto;
+    height: auto;
+    padding: 10% 100%;
+    background-color: white;
+    color: rgb(58, 58, 71);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 3px 1px #00b4cc;
+    border-color: white;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .logoHeader {
-    float: left;
+    margin: 2% auto auto;
+    height: 10em;
+    width: 75%;
+    background-image: url(../admin/branding/create_logo1.png);
+    background-size: cover;
+    background-position: center center;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
-.centeredImage {
-    width: 300px;
-}
-
-.dropbtn {
-    /*background-color: #04AA6D;*/
-    background: #323c4b;
-    border: none;
-    color: white;
-    /*padding: 12px 16px;*/
-    font-size: 50px;
-    cursor: pointer;
-    border-radius: 100%;
-    /*top: 400px;*/
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-    color: #b1bdcf;
+.logoHeader>img {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 10rem;
+    object-fit: cover;
+    border: hidden;
 }
 
 .dropDownMenu {
+    margin: auto 20% auto auto;
+    grid-column-start: 3;
+    grid-column-end: 4;
     position: relative;
-    float: right;
-    top: 100px;
-    margin-right: 50px;
-    /*display: inline-block;*/
+    display: inline-block;
 }
 
 .dropDownList {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
+    background-color: #323c4b;
+    width: 12em;
+    overflow: hidden;
     border-radius: 3px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    right: 0;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
+    top: 4em;
+    right: -4em;
 }
 
 .dropDownList a {
     color: rgb(0, 0, 0);
+    background-color: white;
     padding: 12px 16px;
     text-decoration: none;
+    border-radius: 3px;
+    margin-bottom: 0.2em;
+    line-height: 2em;
+    font-size: 20px;
+    text-decoration: none;
     display: block;
-    border-color: #323c4b;
-    border-bottom: solid;
-    border-width: thin;
 }
 
 .dropDownMenu a:hover {
@@ -345,39 +369,87 @@ a[href="forgot-password.html"] {
 }
 
 .show {
-    display: block;
+    display: inline-block;
 }
 
-.optionsList {
-    width: 500px;
+.menuList {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    overflow: hidden;
+    width: 25em;
+    border-radius: 3px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 4em;
+}
+
+.menuList a {
+    /*color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 12px 16px 12px 16px;
+    border-radius: 3px;
+    margin-bottom: 0.2em;
+    line-height: 2em;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;*/
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    padding: 1em 2em;
+    background-color: white;
+    color: rgb(58, 58, 71);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 1px #00b4cc;
+    border-color: rgb(179, 171, 171);
+    border-width: 1px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menuList a:last-of-type {
+    margin-bottom: 5px;
+}
+
+.optionsMenu a:hover {
+    background-color: rgb(187, 188, 199);
+}
+
+.show {
+    display: inline-block;
+}
+
+.toggleDiv {
     position: relative;
-    top: 60%;
-    left: 50%;
-    margin-left: -250px;
+    display: block;
+    margin: 1% auto auto;
+    width: 50%;
 }
 
 .searchBar {
-    display: flex;
-    position: relative;
     width: 100%;
-    margin-bottom: 75px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    margin: 0 auto;
 }
 
-button[type="submit"] {
-    width: 50px;
-    height: 56px;
-    border: 3px solid #00b4cc;
-    background: #00b4cc;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 10px 10px 0;
-    cursor: pointer;
-    font-size: 30px;
+.toggleDiv #createRecipe {
+    width: 25%;
+    margin: 0 auto 2%;
+}
+
+.filter-button {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 2.2em;
 }
 
 button[type="filter"] {
-    width: 50px;
-    height: 56px;
+    width: 2em;
+    height: 100%;
     border: 3px solid #00b4cc;
     background-color: white;
     color: black;
@@ -386,6 +458,28 @@ button[type="filter"] {
     font-size: 30px;
     text-align: center;
     border-right: hidden;
+}
+
+.search-bar {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.search-button {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+button[type="submit"] {
+    width: 2em;
+    height: 100%;
+    border: 3px solid #00b4cc;
+    background: #00b4cc;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    font-size: 30px;
 }
 
 button[type="button"] {
@@ -397,7 +491,7 @@ button[type="button"] {
     color: rgb(58, 58, 71);
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 5px 1px #00b4cc;
+    box-shadow: 0 5px 1px #00b4cc;
     border-color: white;
     font-size: 25px;
     font-weight: bold;
@@ -407,7 +501,7 @@ button[type="button"] {
     width: 100%;
     height: 50px;
     border: 3px solid #00b4cc;
-    padding: 0px;
+    padding: 0;
     outline: none;
     color: #9dbfaf;
     font-size: 20px;
@@ -427,64 +521,82 @@ h1.shoppingListTitle {
 
 .myRecipes {
     position: relative;
+    display: block;
+    margin: 2% auto;
     text-align: center;
-    width: 300px;
-    left: 150px;
-    display: inline;
-    top: 100px;
+}
+
+.myRecipes>h1 {
+    font-size: 50px;
     color: white;
-    font-size: 40px;
+    display: inline;
+    margin-right: 1em;
 }
 
 #book {
     position: relative;
     color: white;
     display: inline;
-    left: 200px;
-    top: 100px;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .homeBar {
     position: relative;
-    width: 600px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    column-gap: 5%;
+    width: 50%;
+    height: 2em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    top: 0px;
+}
+
+.homeBar>button {
+    color: black;
+    background-color: white;
+    position: relative;
+    display: inline;
+    width: 75%;
+    height: 2em;
+    padding: 0.2em 0.6em 0.2em 0.2em;
+    background-color: white;
+    color: rgb(58, 58, 71);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 1px #00b4cc;
+    border-color: white;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .homebtn {
     color: black;
     background-color: white;
-    position: absolute;
+    position: relative;
     display: inline;
     width: auto;
-    height: 45px;
-    margin-left: 3%;
-    padding-right: 10px;
+    height: 2em;
+    padding: 0.2em 0.6em 0.2em 0.2em;
     background-color: white;
     color: rgb(58, 58, 71);
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 5px 1px #00b4cc;
+    box-shadow: 0 5px 1px #00b4cc;
     border-color: white;
-    font-size: 25px;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
 #sort-select {
-    position: absolute;
+    position: relative;
     display: inline;
-    margin-left: 55%;
-    width: 200px;
-    height: 40px;
+    width: 75%;
+    height: 2.25em;
+    box-shadow: 0 5px 1px #00b4cc;
     border-radius: 5px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
+    padding: 0.2em 0.6em 0.2em 0.2em;
+    font-size: 1.25em;
+    font-weight: bold;
 }
 
 
@@ -492,18 +604,17 @@ h1.shoppingListTitle {
 
 .recipe-list {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    column-gap: 45px;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 80%;
+    column-gap: 5%;
     display: flex;
     flex-wrap: wrap;
     height: auto;
-    margin-top: 150px;
-    max-width: 1110px;
-    max-height: 600px;
-    row-gap: 30px;
-    width: 100%;
-    padding: 15px;
+    margin-top: 5%;
+    /*max-width: 100%;*/
+    row-gap: 2em;
+    padding: 1em;
     overflow: visible;
     overflow-y: scroll;
 }
@@ -512,12 +623,11 @@ h1.shoppingListTitle {
     align-items: center;
     border-radius: 1px;
     display: grid;
-    grid-template-rows: 275px 100px 20px 20px;
+    grid-template-rows: 17.5em 5em 1.5em 1.5em;
     height: auto;
-    row-gap: 10px;
-    padding-bottom: 15px;
-    margin-right: 10px;
-    width: 325px;
+    row-gap: 0.5em;
+    padding-bottom: 1em;
+    width: 23em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: white;
     transition: all 0.2s ease;
@@ -569,7 +679,7 @@ h1.shoppingListTitle {
 }
 
 .recipebookbtn {
-    width: 600px;
+    width: 5em;
 }
 
 
@@ -654,7 +764,7 @@ h1.shoppingListTitle {
     text-transform: Uppercase;
     font-weight: 600;
     cursor: pointer;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 1px;
     background: rgba(67, 87, 114, 0.79);
 }
@@ -734,19 +844,19 @@ h1.shoppingListTitle {
 }
 
 .createRecipebtn {
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     display: block;
     width: 50px;
     height: 40px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     background-color: white;
     color: rgb(58, 58, 71);
     text-align: center;
     border-radius: 3px;
-    box-shadow: 0px 5px 1px #00b4cc;
+    box-shadow: 0 5px 1px #00b4cc;
     border-color: white;
     font-size: 15px;
     font-weight: bold;
@@ -768,7 +878,7 @@ h1.shoppingListTitle {
     font-size: auto;
     font-weight: bold;
     cursor: pointer;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     background: #00b4cc;
 }
 
@@ -806,7 +916,7 @@ h1.shoppingListTitle {
     margin-right: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    top: 0px;
+    top: 0;
 }
 
 .homebtn2 {
@@ -824,7 +934,7 @@ h1.shoppingListTitle {
     color: rgb(58, 58, 71);
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 5px 1px #00b4cc;
+    box-shadow: 0 5px 1px #00b4cc;
     border-color: white;
     font-size: 25px;
     font-weight: bold;
@@ -1047,8 +1157,8 @@ legend {
     margin-right: auto;
     width: 225px;
     height: 50px;
-    top: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: 0;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 1px;
     background: rgba(67, 87, 114, 0.79);
     border: 1px solid #627b9f;
@@ -1149,8 +1259,8 @@ legend {
     margin-right: auto;
     width: 225px;
     height: 50px;
-    top: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: 0;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 1px;
     background: rgba(67, 87, 114, 0.79);
     border: 1px solid #627b9f;
