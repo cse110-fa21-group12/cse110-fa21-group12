@@ -22,4 +22,3 @@ jobs:
           repository: 'minified'
           commit_message: "Github Action: Auto Minified JS and CSS files"
           branch: ${{ github.ref }}     
- 
