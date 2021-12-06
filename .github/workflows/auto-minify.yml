@@ -8,17 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
 
       - name: Auto Minify
         uses: nizarmah/auto-minify@v2.1.1
         with:
-          directory: './'
-          output: './minify'
           maxdepth: 3
-      - name: Auto committing minified files
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          repository: './minify'
-          commit_message: "Github Action: Auto Minified JS and CSS files"
-           branch: ${{ github.ref }}
+
