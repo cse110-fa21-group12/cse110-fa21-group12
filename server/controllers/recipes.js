@@ -1,10 +1,7 @@
 "use strict";
 const fs = require("fs/promises");
-const crypto = require("crypto");
-const formidable = require("formidable");
 const path = require("path");
 const firebase = require("../db");
-const storage = firebase.storage();
 const firestore = firebase.firestore();
 const { validateJSON } = require("./utils");
 

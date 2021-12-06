@@ -7,6 +7,11 @@ const USER_PROPS = ["email", "password"];
 
 const CREDS_PROPS = ["email", "password"];
 
+/**
+ * Sign the user up based on the passed json, and sign in
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function signup(req, res) {
   try {
     const user = req.body; // email, password,....
@@ -33,6 +38,11 @@ async function signup(req, res) {
   }
 }
 
+/**
+ * Sign the user in based on credentials, add session cookie and send token back
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function signin(req, res) {
   try {
     const creds = req.body; // email, password,....
@@ -57,6 +67,11 @@ async function signin(req, res) {
   }
 }
 
+/**
+ * respond with the current user's data
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function getUser(req, res) {
   try {
     const user = req.user;
@@ -71,6 +86,11 @@ async function getUser(req, res) {
   }
 }
 
+/**
+ * Remove the current user
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function remove(req, res) {
   try {
     const user = req.user;

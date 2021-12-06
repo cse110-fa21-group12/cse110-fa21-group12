@@ -58,6 +58,11 @@ async function removeItem(req, res) {
   }
 }
 
+/**
+ * Respond with the shopping list of the current user
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function getList(req, res) {
   try {
     const user = req.user;
