@@ -70,15 +70,18 @@ saveRecipeButton.addEventListener("click", () => {
     directions: directionsArray,
   };
 
+  const stringJson = JSON.stringify(jsonRecipe);
+  
+  const image = document.getElementById('file-ip-1');
+  
+
+  const formDataRecipe = new FormData();
+  formDataRecipe.append('json', stringJson);
+  formDataRecipe.append('img', image.value);
+
   fetch("/recipes/create", {
     method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT,PATCH",
-    },
-    body: JSON.stringify(jsonRecipe),
+    body: formDataRecipe,
   })
     .then((response) => response.json())
     .then((data) => {
@@ -87,6 +90,6 @@ saveRecipeButton.addEventListener("click", () => {
     .catch((error) => {
       console.error("Error:", error);
     });
-  setTimeout(1000);
+  setTimeout(10000);
   location.href = "recipe-list.html";
 });

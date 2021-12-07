@@ -119,18 +119,23 @@ saveRecipeButton.addEventListener("click", () => {
     tags: tags,
     preparationTime: preparationTime,
     cookingTime: cookingTime,
+    totalTime: totalTime,
     ingredients: ingredientsArray,
     directions: directionsArray,
   };
+
+  const stringJson = JSON.stringify(jsonRecipe);
+  
+  const image = document.getElementById('file-ip-1');
+  
+
+  const formDataRecipe = new FormData();
+  formDataRecipe.append('json', stringJson);
+  formDataRecipe.append('img', image.value);
+
   fetch("/recipes/edit", {
     method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT,PATCH",
-    },
-    body: JSON.stringify(jsonRecipe),
+    body: formDataRecipe,
   })
     .then((response) => response.json())
     .then((data) => {
