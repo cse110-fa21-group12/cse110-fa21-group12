@@ -8,7 +8,7 @@ addIngredientButton.addEventListener("click", function () {
   const newIngredientAmount = document.createElement("input");
   newIngredient.placeholder = "Ingredient Name";
   newIngredient.setAttribute("class", "ingredient");
-  newIngredientAmount.setAttribute("id", "quantity");
+  newIngredientAmount.setAttribute("class", "quantity");
   newIngredientAmount.placeholder = "Amount";
   ingredientForm.appendChild(newIngredientAmount);
   ingredientForm.appendChild(newIngredient);
@@ -45,10 +45,11 @@ saveRecipeButton.addEventListener("click", () => {
   const cookingTime = document.getElementById("cook-time").value;
   const totalTime = document.getElementById("total-time").value;
   const ingredients = document.getElementsByClassName("ingredient");
+  const amounts = document.getElementsByClassName("quantity");
 
   const ingredientsArray = [];
   for (let i = 0; i < ingredients.length; i++) {
-    ingredientsArray[i] = ingredients[i].value;
+    ingredientsArray[i] = [amounts[i].value, ingredients[i].value];
   }
   const directions = document.getElementsByClassName("directions");
 
