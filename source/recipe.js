@@ -61,14 +61,18 @@ fetch("/recipes/" + url, {
     const totalTime = document.getElementById("total-time");
     totalTime.innerHTML = "Total Time: " + data.totalTime;
 
-
     //Populate ingredients for spoonacular recipes since format is different
-    if(data.creator == "spoonacular"){
+    if (data.creator == "spoonacular") {
       const ingredientsArray = data.ingredients;
-      for(let i = 0; i < ingredientsArray.length; i++){
+      for (let i = 0; i < ingredientsArray.length; i++) {
         //const ingredient = ingredientsArray[i].split(" ", 1);
-        const quantity = ingredientsArray[i].substr(0, ingredientsArray[i].indexOf(' '));
-        const name = ingredientsArray[i].substr(ingredientsArray[i].indexOf(' ')+1); 
+        const quantity = ingredientsArray[i].substr(
+          0,
+          ingredientsArray[i].indexOf(" ")
+        );
+        const name = ingredientsArray[i].substr(
+          ingredientsArray[i].indexOf(" ") + 1
+        );
         const newIngredient = document.createElement("input");
         newIngredient.setAttribute("type", "checkbox");
         newIngredient.setAttribute("id", name);
@@ -77,10 +81,7 @@ fetch("/recipes/" + url, {
         const newLabel = document.createElement("label");
         newLabel.setAttribute("class", "checklist");
         newLabel.setAttribute("for", "i");
-        newLabel.innerHTML =
-          quantity +
-          " " +
-          name;
+        newLabel.innerHTML = quantity + " " + name;
         const br = document.createElement("br");
         ingredientsBox.appendChild(newIngredient);
         ingredientsBox.appendChild(newLabel);
@@ -89,14 +90,17 @@ fetch("/recipes/" + url, {
     }
 
     //Populate ingredients for user recipes
-    else{
+    else {
       const arrayIngredientsKeys = Object.keys(data.ingredients);
       const ingredientsBox = document.getElementById("ingredientsBox");
       for (let i = 0; i < arrayIngredientsKeys.length; i++) {
         const newIngredient = document.createElement("input");
         newIngredient.setAttribute("type", "checkbox");
         newIngredient.setAttribute("id", arrayIngredientsKeys[i]);
-        newIngredient.setAttribute("value", data.ingredients[arrayIngredientsKeys[i]]);
+        newIngredient.setAttribute(
+          "value",
+          data.ingredients[arrayIngredientsKeys[i]]
+        );
         newIngredient.setAttribute("name", "i");
         const newLabel = document.createElement("label");
         newLabel.setAttribute("class", "checklist");
@@ -111,8 +115,6 @@ fetch("/recipes/" + url, {
         ingredientsBox.appendChild(br);
       }
     }
-
-  
 
     const directions = document.getElementById("directions");
     for (let j = 1; j < data.directions.length + 1; j++) {
