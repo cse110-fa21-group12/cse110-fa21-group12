@@ -67,7 +67,10 @@ fetch("/recipes/" + url, {
       const newIngredient = document.createElement("input");
       newIngredient.setAttribute("type", "checkbox");
       newIngredient.setAttribute("id", arrayIngredientsKeys[i]);
-      newIngredient.setAttribute("value", data.ingredients[arrayIngredientsKeys[i]]);
+      newIngredient.setAttribute(
+        "value",
+        data.ingredients[arrayIngredientsKeys[i]]
+      );
       newIngredient.setAttribute("name", "i");
       const newLabel = document.createElement("label");
       newLabel.setAttribute("class", "checklist");
@@ -135,7 +138,7 @@ addButton.addEventListener("click", function () {
         });
     }
   }
-  if(updated==true){
+  if (updated == true) {
     alert("Your shopping list has been updated!");
   }
 });
