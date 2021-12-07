@@ -71,13 +71,12 @@ saveRecipeButton.addEventListener("click", () => {
   };
 
   const stringJson = JSON.stringify(jsonRecipe);
-  
-  const image = document.getElementById('file-ip-1');
-  
+
+  const image = document.getElementById("file-ip-1");
 
   const formDataRecipe = new FormData();
-  formDataRecipe.append('json', stringJson);
-  formDataRecipe.append('img', image.value);
+  formDataRecipe.append("json", stringJson);
+  formDataRecipe.append("img", image.value);
 
   fetch("/recipes/create", {
     method: "PUT",
