@@ -79,9 +79,9 @@ saveRecipeButton.addEventListener("click", () => {
     tagsArray[i] = tags[i].value;
   }
 
-  const ingredientsArray = new Map();
+  const ingredientsArray = {}; 
   for (let i = 0; i < ingredients.length; i++) {
-    ingredientsArray.set(amounts[i].value, ingredients[i].value);
+    ingredientsArray[ingredients[i].value] = amounts[i].value;
   }
   const directions = document.getElementsByClassName("directions");
 
@@ -119,10 +119,11 @@ saveRecipeButton.addEventListener("click", () => {
     .then((data) => {
       console.log("Success:", data);
       localStorage.setItem("id", title);
+      setTimeout(1000);
       window.location = "recipe.html";
     })
     .catch((error) => {
       console.error("Error:", error);
     });
-  setTimeout(10000);
+  
 });

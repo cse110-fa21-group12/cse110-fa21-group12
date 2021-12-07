@@ -61,8 +61,9 @@ fetch("/recipes/" + url, {
     const totalTime = document.getElementById("total-time");
     totalTime.innerHTML = "Total Time: " + data.totalTime;
 
+    const arrayIngredientsKeys = Object.keys(data.ingredients);
     const ingredientsBox = document.getElementById("ingredientsBox");
-    for (let i = 0; i < data.ingredients.length; i++) {
+    for (let i = 0; i < arrayIngredientsKeys.length; i++) {
       const newIngredient = document.createElement("input");
       newIngredient.setAttribute("type", "checkbox");
       newIngredient.setAttribute("id", data.ingredients[i]);
@@ -70,7 +71,7 @@ fetch("/recipes/" + url, {
       const newLabel = document.createElement("label");
       newLabel.setAttribute("class", "checklist");
       newLabel.setAttribute("for", "i");
-      newLabel.innerHTML = data.ingredients[i];
+      newLabel.innerHTML = data.ingredients[arrayIngredientsKeys[i]] + ' ' + arrayIngredientsKeys[i];
       const br = document.createElement("br");
       ingredientsBox.appendChild(newIngredient);
       ingredientsBox.appendChild(newLabel);
