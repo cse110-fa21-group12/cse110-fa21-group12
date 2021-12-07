@@ -66,7 +66,8 @@ fetch("/recipes/" + url, {
     for (let i = 0; i < arrayIngredientsKeys.length; i++) {
       const newIngredient = document.createElement("input");
       newIngredient.setAttribute("type", "checkbox");
-      newIngredient.setAttribute("id", data.ingredients[i]);
+      newIngredient.setAttribute("id", arrayIngredientsKeys[i]);
+      newIngredient.setAttribute("value", data.ingredients[arrayIngredientsKeys[i]]);
       newIngredient.setAttribute("name", "i");
       const newLabel = document.createElement("label");
       newLabel.setAttribute("class", "checklist");
@@ -101,17 +102,18 @@ fetch("/recipes/" + url, {
     console.error("Error:", error);
   });
 
-//Add ingredients to shopping list: Ready to go, comment out when backend has ingredient quantities
-/*
+//Add ingredients to shopping list
 const addButton = document.getElementById("add-button");
 addButton.addEventListener("click", function () {
-  let ingredientList = document.getElementById("ingredientsCheckboxes");
+  let ingredientList = document.getElementById("ingredientsBox");
   let ingredients = ingredientList.getElementsByTagName("input");
-  let len = ingredients.length;
-  let jsonToDelete;
-  for (let i = 0; i < len; i++) {
+  let jsonToAdd;
+  let updated = false;
+  console.log(ingredients);
+  for (let i = 0; i < ingredients.length; i++) {
     if (ingredients[i].type == "checkbox") {
       if (ingredients[i].checked) {
+        updated = true;
         jsonToAdd = {
           name: ingredients[i].id,
           quantity: ingredients[i].value,
@@ -133,5 +135,7 @@ addButton.addEventListener("click", function () {
         });
     }
   }
+  if(updated==true){
+    alert("Your shopping list has been updated!");
+  }
 });
-*/
