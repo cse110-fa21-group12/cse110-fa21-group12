@@ -1,13 +1,13 @@
 //Remove recipe cards
-function removeRecipes(){
+function removeRecipes() {
   const recipes = document.getElementsByClassName("recipe-list")[0];
-  while(recipes.hasChildNodes()){
+  while (recipes.hasChildNodes()) {
     recipes.removeChild(recipes.firstChild);
   }
 }
 
 //Display recipe cards
-function displayRecipes(data){
+function displayRecipes(data) {
   for (let i = 0; i < data.length; i++) {
     //Get list of recipes to append each recipe card to
     const list = document.getElementsByClassName("recipe-list")[0];
