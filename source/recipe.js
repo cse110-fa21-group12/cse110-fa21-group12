@@ -12,10 +12,14 @@ deleteButton.addEventListener("click", function () {
       "Access-Control-Allow-Headers": "Content-Type",
       "Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT,PATCH",
     },
-  }).catch((error) => {
+  })
+  .then((data) => {
+    console.log("Success: " , data);
+    window.location="recipe-list.html";
+  })
+  .catch((error) => {
     console.error("Error:", error);
   });
-  //location.href="recipe-list.html"
 });
 
 const editButton = document.getElementById("edit-button");

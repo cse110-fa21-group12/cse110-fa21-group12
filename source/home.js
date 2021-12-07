@@ -57,7 +57,6 @@ fetch("/recipes/", {
           window.location = "recipe.html";
         });
   
-
         //Create and add image to the recipe card
         const recipeImage = document.createElement("img");
         recipeImage.setAttribute("src", data[i].img);

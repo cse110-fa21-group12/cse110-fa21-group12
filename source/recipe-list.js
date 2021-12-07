@@ -1,3 +1,20 @@
+//const user;
+
+fetch("/user", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json"
+  },
+})
+.then((response) => response.json())
+.then((data) => {
+  console.log("Success:", data);
+})
+
+
+
+
+
 fetch("/recipes/", {
   method: "GET",
   headers: {

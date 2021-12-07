@@ -118,10 +118,11 @@ saveRecipeButton.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
       console.log("Success:", data);
+      localStorage.setItem("id", title);
+      window.location = "recipe.html";
     })
     .catch((error) => {
       console.error("Error:", error);
     });
   setTimeout(10000);
-  //location.href = "recipe-list.html";
 });
