@@ -7,7 +7,7 @@ deleteButton.addEventListener("click", function () {
   fetch("/recipes/" + id, {
     method: "DELETE",
     headers: {
-      //"Content-Type": "application/json",
+      "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "Content-Type",
       "Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT,PATCH",
@@ -41,6 +41,9 @@ fetch("/recipes/" + url, {
     console.log("Success:", data);
     const title = document.getElementsByClassName("recipe-title")[0];
     title.innerHTML = data.title;
+
+    const recipeImage = document.getElementsByClassName("thumbnail")[0];
+    recipeImage.setAttribute("src", data.img);
 
     const description = document.getElementsByClassName("description")[0];
     description.innerHTML = data.description;
