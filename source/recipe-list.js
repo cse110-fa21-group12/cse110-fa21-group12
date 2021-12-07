@@ -29,8 +29,7 @@ fetch("/recipes/", {
       const recipeImage = document.createElement("img");
       recipeImage.setAttribute(
         "src",
-        "https://images.squarespace-cdn.com/content/v1/57879a6cbebafb879f256735/1579721909133-R2KSZ8VGDGBI90DYATBK/header4.jpg"
-      );
+        data[i].img);
       initialDiv.appendChild(recipeImage);
 
       //Create and add recipe name to the recipe card
