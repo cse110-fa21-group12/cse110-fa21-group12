@@ -13,13 +13,13 @@ deleteButton.addEventListener("click", function () {
       "Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT,PATCH",
     },
   })
-  .then((data) => {
-    console.log("Success: " , data);
-    window.location="recipe-list.html";
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+    .then((data) => {
+      console.log("Success: ", data);
+      window.location = "recipe-list.html";
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 });
 
 const editButton = document.getElementById("edit-button");
