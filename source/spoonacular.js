@@ -1,7 +1,7 @@
 // let recipe = {};
 
 async function randomRecipe() {
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 50; i++) {
     try {
       let recipe = {};
       fetch(
