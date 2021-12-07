@@ -71,7 +71,10 @@ fetch("/recipes/" + url, {
       const newLabel = document.createElement("label");
       newLabel.setAttribute("class", "checklist");
       newLabel.setAttribute("for", "i");
-      newLabel.innerHTML = data.ingredients[arrayIngredientsKeys[i]] + ' ' + arrayIngredientsKeys[i];
+      newLabel.innerHTML =
+        data.ingredients[arrayIngredientsKeys[i]] +
+        " " +
+        arrayIngredientsKeys[i];
       const br = document.createElement("br");
       ingredientsBox.appendChild(newIngredient);
       ingredientsBox.appendChild(newLabel);

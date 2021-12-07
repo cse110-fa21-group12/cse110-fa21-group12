@@ -79,7 +79,7 @@ saveRecipeButton.addEventListener("click", () => {
     tagsArray[i] = tags[i].value;
   }
 
-  const ingredientsArray = {}; 
+  const ingredientsArray = {};
   for (let i = 0; i < ingredients.length; i++) {
     ingredientsArray[ingredients[i].value] = amounts[i].value;
   }
@@ -125,5 +125,4 @@ saveRecipeButton.addEventListener("click", () => {
     .catch((error) => {
       console.error("Error:", error);
     });
-  
 });
