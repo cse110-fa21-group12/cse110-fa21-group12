@@ -27,9 +27,7 @@ fetch("/recipes/", {
       //Temporary
       //Create and add image to the recipe card
       const recipeImage = document.createElement("img");
-      recipeImage.setAttribute(
-        "src",
-        data[i].img);
+      recipeImage.setAttribute("src", data[i].img);
       initialDiv.appendChild(recipeImage);
 
       //Create and add recipe name to the recipe card
