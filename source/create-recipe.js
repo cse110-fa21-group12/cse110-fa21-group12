@@ -1,5 +1,27 @@
 //const { json } = require("stream/consumers");
 
+const addCategoryButton = document.getElementById('add-category');
+const categoriesForm = document.getElementById('enter-categories');
+
+addCategoryButton.addEventListener("click", function() {
+   const newCategory = document.createElement("input");
+   newCategory.placeholder = "Category";
+   newCategory.classList.add('input-field', 'categories');
+   newCategory.setAttribute('id', 'categories');
+   categoriesForm.appendChild(newCategory);
+});
+
+const addTagButton = document.getElementById('add-tag');
+const tagsForm = document.getElementById('enter-tags');
+
+addTagButton.addEventListener("click", function() {
+  const newTag = document.createElement("input");
+  newTag.placeholder = "Tag";
+  newTag.classList.add('input-field', 'tags');
+  newTag.setAttribute('id', 'tags');
+  tagsForm.appendChild(newTag);
+});
+
 const addIngredientButton = document.getElementById("add-ingredient-button");
 const ingredientForm = document.getElementById("ingredients-form");
 
@@ -39,17 +61,27 @@ saveRecipeButton.addEventListener("click", () => {
   //Creating the JSON data to send
   const title = document.getElementById("title").value;
   const description = document.getElementById("description").value;
-  const categories = document.getElementById("categories").value;
-  const tags = document.getElementById("tags").value;
+  const categories = document.getElementsByClassName("categories");
+  const tags = document.getElementsByClassName("tags");
   const preparationTime = document.getElementById("prep-time").value;
   const cookingTime = document.getElementById("cook-time").value;
   const totalTime = document.getElementById("total-time").value;
   const ingredients = document.getElementsByClassName("ingredient");
   const amounts = document.getElementsByClassName("quantity");
 
-  const ingredientsArray = [];
+  const categoriesArray = [];
+  for (let i = 0; i < categories.length; i++) {
+    categoriesArray[i] = categories[i].value;
+  }
+
+  const tagsArray = [];
+  for (let i = 0; i < tags.length; i++) {
+    tagsArray[i] = tags[i].value;
+  }
+
+  const ingredientsArray = new Map();
   for (let i = 0; i < ingredients.length; i++) {
-    ingredientsArray[i] = [amounts[i].value, ingredients[i].value];
+    ingredientsArray.set(amounts[i].value, ingredients[i].value);
   }
   const directions = document.getElementsByClassName("directions");
 
@@ -62,8 +94,8 @@ saveRecipeButton.addEventListener("click", () => {
     id: title,
     title: title,
     description: description,
-    categories: categories,
-    tags: tags,
+    categories: categoriesArray,
+    tags: tagsArray,
     preparationTime: preparationTime,
     cookingTime: cookingTime,
     totalTime: totalTime,
@@ -91,5 +123,5 @@ saveRecipeButton.addEventListener("click", () => {
       console.error("Error:", error);
     });
   setTimeout(10000);
-  location.href = "recipe-list.html";
+  //location.href = "recipe-list.html";
 });
