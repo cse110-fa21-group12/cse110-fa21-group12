@@ -86,7 +86,6 @@ fetch("/recipes/" + url, {
         ingredientsBox.appendChild(newLabel);
         ingredientsBox.appendChild(br);
       }
-
     }
 
     //Populate ingredients for user recipes
@@ -168,7 +167,7 @@ addButton.addEventListener("click", function () {
         });
     }
   }
-  if(updated==true){
+  if (updated == true) {
     alert("Your shopping list has been updated!");
   }
 });
