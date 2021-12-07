@@ -1,24 +1,24 @@
 //const { json } = require("stream/consumers");
 
-const addCategoryButton = document.getElementById('add-category');
-const categoriesForm = document.getElementById('enter-categories');
+const addCategoryButton = document.getElementById("add-category");
+const categoriesForm = document.getElementById("enter-categories");
 
-addCategoryButton.addEventListener("click", function() {
-   const newCategory = document.createElement("input");
-   newCategory.placeholder = "Category";
-   newCategory.classList.add('input-field', 'categories');
-   newCategory.setAttribute('id', 'categories');
-   categoriesForm.appendChild(newCategory);
+addCategoryButton.addEventListener("click", function () {
+  const newCategory = document.createElement("input");
+  newCategory.placeholder = "Category";
+  newCategory.classList.add("input-field", "categories");
+  newCategory.setAttribute("id", "categories");
+  categoriesForm.appendChild(newCategory);
 });
 
-const addTagButton = document.getElementById('add-tag');
-const tagsForm = document.getElementById('enter-tags');
+const addTagButton = document.getElementById("add-tag");
+const tagsForm = document.getElementById("enter-tags");
 
-addTagButton.addEventListener("click", function() {
+addTagButton.addEventListener("click", function () {
   const newTag = document.createElement("input");
   newTag.placeholder = "Tag";
-  newTag.classList.add('input-field', 'tags');
-  newTag.setAttribute('id', 'tags');
+  newTag.classList.add("input-field", "tags");
+  newTag.setAttribute("id", "tags");
   tagsForm.appendChild(newTag);
 });
 
