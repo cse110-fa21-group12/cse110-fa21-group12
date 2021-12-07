@@ -64,8 +64,6 @@ async function randomRecipe() {
             img: image,
           };
 
-          console.log(JSON.stringify(recipe));
-
           const formData = new FormData();
           formData.append("json", JSON.stringify(recipe));
 
