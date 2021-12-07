@@ -83,7 +83,7 @@ searchButton.addEventListener("click", function () {
   search;
 });
 
-//Display recipe cards
+//Display recipe cards when page loads
 fetch("/recipes/", {
   method: "GET",
   headers: {
