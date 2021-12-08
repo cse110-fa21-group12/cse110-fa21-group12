@@ -49,7 +49,7 @@ function verifyToken(req, res, next) {
       }
       return next(err);
     }
-    req.user = decoded.userId;
+    req.user = decoded;
     next();
   });
 }

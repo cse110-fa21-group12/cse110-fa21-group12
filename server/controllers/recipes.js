@@ -77,7 +77,7 @@ async function addRecipe(req, res) {
 
     recipeRef.set({
       id: recipe.id,
-      creator: req.user,
+      creator: req.user.email,
       title: recipe.title,
       description: recipe.description,
       categories: recipe.categories,
@@ -158,7 +158,7 @@ async function editRecipe(req, res) {
     }
 
     const originalRecipe = doc.data();
-    if (originalRecipe.creator != user) {
+    if (originalRecipe.creator != user.email) {
       return res.json({ error: "Cannot delete recipe of another creator." });
     }
 
@@ -169,7 +169,7 @@ async function editRecipe(req, res) {
       await recipeRef.delete();
       recipeRef.set({
         id: recipe.id,
-        creator: req.user,
+        creator: user.email,
         title: recipe.title,
         description: recipe.description,
         categories: recipe.categories,
@@ -208,7 +208,7 @@ async function deleteRecipe(req, res) {
       .doc(req.params.id)
       .get();
     const recipe = recipeRef.data();
-    if (recipe.creator != user) {
+    if (recipe.creator != user.email) {
       return res.json({ error: "Cannot delete recipe of another creator." });
     }
 

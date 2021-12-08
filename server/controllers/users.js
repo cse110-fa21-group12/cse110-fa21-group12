@@ -25,7 +25,7 @@ async function signup(req, res) {
       shopping_list: [],
     });
 
-    const token = await auth.generateToken({ userId: newUserRef.id });
+    const token = await auth.generateToken({ userId: newUserRef.id, email: user.email });
     res.setHeader("Set-Cookie", `token=${token}; HttpOnly`);
     res.json({ token });
   } catch (error) {
@@ -45,8 +45,9 @@ async function signin(req, res) {
     }
 
     const user = userDataRef.docs[0];
-    if (await auth.verifyPassword(creds.password, user.data().password)) {
-      const token = await auth.generateToken({ userId: user.id });
+    const userData = user.data();
+    if (await auth.verifyPassword(creds.password, userData.password)) {
+      const token = await auth.generateToken({ userId: user.id,  email: userData.email});
       res.setHeader("Set-Cookie", `token=${token};path=/;HttpOnly`);
       res.json({ token });
     } else {
@@ -60,7 +61,7 @@ async function signin(req, res) {
 async function getUser(req, res) {
   try {
     const user = req.user;
-    const userRef = await firestore.collection("users").doc(user).get();
+    const userRef = await firestore.collection("users").doc(user.userId).get();
     if (!userRef.exists) {
       res.json({ error: `User does not exists` });
     }
@@ -74,7 +75,7 @@ async function getUser(req, res) {
 async function remove(req, res) {
   try {
     const user = req.user;
-    const userRef = await firestore.collection("users").doc(user).get();
+    const userRef = await firestore.collection("users").doc(user.userId).get();
     userRef.ref.delete();
     res.json(true);
   } catch (error) {

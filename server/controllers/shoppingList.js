@@ -20,7 +20,7 @@ async function addItem(req, res) {
 
     firestore
       .collection("users")
-      .doc(user)
+      .doc(user.userId)
       .set(
         {
           shopping_list: FieldValue.arrayUnion(item),
@@ -47,7 +47,7 @@ async function removeItem(req, res) {
 
     firestore
       .collection("users")
-      .doc(user)
+      .doc(user.userId)
       .update({
         shopping_list: FieldValue.arrayRemove(item),
       });
@@ -61,7 +61,7 @@ async function removeItem(req, res) {
 async function getList(req, res) {
   try {
     const user = req.user;
-    const userData = await firestore.collection("users").doc(user).get();
+    const userData = await firestore.collection("users").doc(user.userId).get();
     res.json(userData.data()["shopping_list"]);
   } catch (error) {
     res.json({ error: error.message });
