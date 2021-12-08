@@ -543,7 +543,7 @@ h1.shoppingListTitle {
 .homeBar {
     position: relative;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 50% 50%;
     column-gap: 5%;
     width: 50%;
     height: 2em;
@@ -556,7 +556,8 @@ h1.shoppingListTitle {
     background-color: white;
     position: relative;
     display: inline;
-    width: 75%;
+    margin: auto;
+    width: 10em;
     height: 2em;
     padding: 0.2em 0.6em 0.2em 0.2em;
     background-color: white;
@@ -588,9 +589,10 @@ h1.shoppingListTitle {
 }
 
 #sort-select {
+    margin: auto;
     position: relative;
     display: inline;
-    width: 75%;
+    width: 10em;
     height: 2.25em;
     box-shadow: 0 5px 1px #00b4cc;
     border-radius: 5px;
@@ -889,7 +891,8 @@ h1.shoppingListTitle {
 
 /*shopping list*/
 
-.shoppingListTitle {
+
+/*.shoppingListTitle {
     position: relative;
     text-align: center;
     width: 300px;
@@ -898,9 +901,10 @@ h1.shoppingListTitle {
     top: 100px;
     color: white;
     font-size: 40px;
-}
+}*/
 
-#cart {
+
+/*#cart {
     position: relative;
     color: white;
     display: inline;
@@ -938,13 +942,13 @@ h1.shoppingListTitle {
     border-color: white;
     font-size: 25px;
     font-weight: bold;
-}
+}*/
 
 .shopping-qty {
     text-align: left;
     width: 25%;
     display: inline;
-    height: 30px;
+    height: 2em;
     border-radius: 2px;
     background-color: white;
     border-width: 3px;
@@ -952,17 +956,18 @@ h1.shoppingListTitle {
     border-color: lightblue;
     backdrop-filter: blur(4px);
     padding: 5px 5px 5px 15px;
-    margin-bottom: 25px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
     color: black;
-    font-size: 20px;
+    font-size: 1em;
 }
 
-.shopping-itpx {
+.shopping-item {
     text-align: left;
     width: 55%;
     margin-left: 10%;
     display: inline;
-    height: 30px;
+    height: 2em;
     border-radius: 2px;
     background-color: white;
     border-width: 3px;
@@ -970,13 +975,14 @@ h1.shoppingListTitle {
     border-color: lightblue;
     backdrop-filter: blur(4px);
     padding: 5px 5px 5px 15px;
-    margin-bottom: 25px;
+    margin-top: 1em;
+    margin-bottom: 1.5px;
     color: black;
-    font-size: 20px;
+    font-size: 1em;
 }
 
 .shopping-list {
-    width: 600px;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -986,10 +992,10 @@ h1.shoppingListTitle {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 2em;
     background-color: lightblue;
     border-radius: 5px;
-    padding: 10px;
+    padding: 1.5em;
     width: 90%;
     height: auto;
 }
@@ -999,20 +1005,21 @@ h1.shoppingListTitle {
 }
 
 #shopping-form>label {
-    font-size: 25px;
+    font-size: 1.5em;
+    line-height: 1.75m;
     color: black;
-    margin-left: 10px;
+    margin-left: .5em;
 }
 
 input[type="checkbox"] {
-    margin-right: 25px;
+    margin-right: 1.5em;
     transform: scale(1.5);
 }
 
 #done-button {
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 1em;
+    margin-bottom: 3em;
     width: auto;
     padding-left: 5px;
     padding-right: 5px;
