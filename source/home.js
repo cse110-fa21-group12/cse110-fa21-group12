@@ -80,7 +80,7 @@ searchText.addEventListener("keypress", function (e) {
 });
 
 searchButton.addEventListener("click", function () {
-  search;
+  search();
 });
 
 //Display recipe cards when page loads
