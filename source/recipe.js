@@ -12,10 +12,14 @@ deleteButton.addEventListener("click", function () {
       "Access-Control-Allow-Headers": "Content-Type",
       "Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT,PATCH",
     },
-  }).catch((error) => {
-    console.error("Error:", error);
-  });
-  //location.href="recipe-list.html"
+  })
+    .then((data) => {
+      console.log("Success: ", data);
+      window.location = "recipe-list.html";
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 });
 
 const editButton = document.getElementById("edit-button");
@@ -42,6 +46,9 @@ fetch("/recipes/" + url, {
     const title = document.getElementsByClassName("recipe-title")[0];
     title.innerHTML = data.title;
 
+    const recipeImage = document.getElementsByClassName("thumbnail")[0];
+    recipeImage.setAttribute("src", data.img);
+
     const description = document.getElementsByClassName("description")[0];
     description.innerHTML = data.description;
 
@@ -54,20 +61,59 @@ fetch("/recipes/" + url, {
     const totalTime = document.getElementById("total-time");
     totalTime.innerHTML = "Total Time: " + data.totalTime;
 
-    const ingredientsBox = document.getElementById("ingredientsBox");
-    for (let i = 0; i < data.ingredients.length; i++) {
-      const newIngredient = document.createElement("input");
-      newIngredient.setAttribute("type", "checkbox");
-      newIngredient.setAttribute("id", data.ingredients[i]);
-      newIngredient.setAttribute("name", "i");
-      const newLabel = document.createElement("label");
-      newLabel.setAttribute("class", "checklist");
-      newLabel.setAttribute("for", "i");
-      newLabel.innerHTML = data.ingredients[i];
-      const br = document.createElement("br");
-      ingredientsBox.appendChild(newIngredient);
-      ingredientsBox.appendChild(newLabel);
-      ingredientsBox.appendChild(br);
+    //Populate ingredients for spoonacular recipes since format is different
+    if (data.creator == "spoonacular") {
+      const ingredientsArray = data.ingredients;
+      for (let i = 0; i < ingredientsArray.length; i++) {
+        //const ingredient = ingredientsArray[i].split(" ", 1);
+        const quantity = ingredientsArray[i].substr(
+          0,
+          ingredientsArray[i].indexOf(" ")
+        );
+        const name = ingredientsArray[i].substr(
+          ingredientsArray[i].indexOf(" ") + 1
+        );
+        const newIngredient = document.createElement("input");
+        newIngredient.setAttribute("type", "checkbox");
+        newIngredient.setAttribute("id", name);
+        newIngredient.setAttribute("value", quantity);
+        newIngredient.setAttribute("name", "i");
+        const newLabel = document.createElement("label");
+        newLabel.setAttribute("class", "checklist");
+        newLabel.setAttribute("for", "i");
+        newLabel.innerHTML = quantity + " " + name;
+        const br = document.createElement("br");
+        ingredientsBox.appendChild(newIngredient);
+        ingredientsBox.appendChild(newLabel);
+        ingredientsBox.appendChild(br);
+      }
+    }
+
+    //Populate ingredients for user recipes
+    else {
+      const arrayIngredientsKeys = Object.keys(data.ingredients);
+      const ingredientsBox = document.getElementById("ingredientsBox");
+      for (let i = 0; i < arrayIngredientsKeys.length; i++) {
+        const newIngredient = document.createElement("input");
+        newIngredient.setAttribute("type", "checkbox");
+        newIngredient.setAttribute("id", arrayIngredientsKeys[i]);
+        newIngredient.setAttribute(
+          "value",
+          data.ingredients[arrayIngredientsKeys[i]]
+        );
+        newIngredient.setAttribute("name", "i");
+        const newLabel = document.createElement("label");
+        newLabel.setAttribute("class", "checklist");
+        newLabel.setAttribute("for", "i");
+        newLabel.innerHTML =
+          data.ingredients[arrayIngredientsKeys[i]] +
+          " " +
+          arrayIngredientsKeys[i];
+        const br = document.createElement("br");
+        ingredientsBox.appendChild(newIngredient);
+        ingredientsBox.appendChild(newLabel);
+        ingredientsBox.appendChild(br);
+      }
     }
 
     const directions = document.getElementById("directions");
@@ -90,17 +136,18 @@ fetch("/recipes/" + url, {
     console.error("Error:", error);
   });
 
-//Add ingredients to shopping list: Ready to go, comment out when backend has ingredient quantities
-/*
+//Add ingredients to shopping list
 const addButton = document.getElementById("add-button");
 addButton.addEventListener("click", function () {
-  let ingredientList = document.getElementById("ingredientsCheckboxes");
+  let ingredientList = document.getElementById("ingredientsBox");
   let ingredients = ingredientList.getElementsByTagName("input");
-  let len = ingredients.length;
-  let jsonToDelete;
-  for (let i = 0; i < len; i++) {
+  let jsonToAdd;
+  let updated = false;
+  console.log(ingredients);
+  for (let i = 0; i < ingredients.length; i++) {
     if (ingredients[i].type == "checkbox") {
       if (ingredients[i].checked) {
+        updated = true;
         jsonToAdd = {
           name: ingredients[i].id,
           quantity: ingredients[i].value,
@@ -122,5 +169,7 @@ addButton.addEventListener("click", function () {
         });
     }
   }
+  if (updated == true) {
+    alert("Your shopping list has been updated!");
+  }
 });
-*/

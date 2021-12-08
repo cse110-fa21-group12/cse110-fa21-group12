@@ -3,7 +3,6 @@ const id = localStorage.getItem("id");
 fetch("/recipes/" + id, {
   method: "GET",
   headers: {
-    "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers": "Content-Type",
     "Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT,PATCH",
@@ -33,17 +32,17 @@ fetch("/recipes/" + id, {
     const totalTime = document.getElementById("total-time");
     totalTime.defaultValue = data.totalTime;
 
-    const ingredientsForm = document.getElementById("ingredients-form");
+    const ingredientForm = document.getElementById("ingredients-form");
     for (let i = 0; i < data.ingredients.length; i++) {
-      const newIngredient = document.createElement("input");
-      const newIngredientAmount = document.createElement("input");
-      newIngredient.defaultValue = data.ingredients[i];
-      newIngredient.setAttribute("class", "ingredient");
-      newIngredientAmount.setAttribute("id", "quantity");
-      newIngredientAmount.placeholder = "Amount";
-      ingredientsForm.appendChild(newIngredientAmount);
-      ingredientsForm.appendChild(newIngredient);
-      ingredientsForm.appendChild(document.createElement("br"));
+      const newIngredients = document.createElement("input");
+      const newIngredientAmounts = document.createElement("input");
+      newIngredients.defaultValue = data.ingredients[i];
+      newIngredients.setAttribute("class", "ingredient");
+      newIngredientAmounts.setAttribute("class", "quantity");
+      newIngredientAmounts.placeholder = "Amount";
+      ingredientForm.appendChild(newIngredientAmounts);
+      ingredientForm.appendChild(newIngredients);
+      //ingredientForm.appendChild(document.createElement("br"));
     }
 
     const directionsForm = document.getElementById("enter-directions");
@@ -119,18 +118,22 @@ saveRecipeButton.addEventListener("click", () => {
     tags: tags,
     preparationTime: preparationTime,
     cookingTime: cookingTime,
+    totalTime: totalTime,
     ingredients: ingredientsArray,
     directions: directionsArray,
   };
+
+  const stringJson = JSON.stringify(jsonRecipe);
+
+  const image = document.getElementById("file-ip-1");
+
+  const formDataRecipe = new FormData();
+  formDataRecipe.append("json", stringJson);
+  formDataRecipe.append("img", image.value);
+
   fetch("/recipes/edit", {
     method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT,PATCH",
-    },
-    body: JSON.stringify(jsonRecipe),
+    body: formDataRecipe,
   })
     .then((response) => response.json())
     .then((data) => {

@@ -1,3 +1,16 @@
+//const user;
+
+fetch("/user", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("Success:", data);
+  });
+
 fetch("/recipes/", {
   method: "GET",
   headers: {
@@ -27,10 +40,7 @@ fetch("/recipes/", {
       //Temporary
       //Create and add image to the recipe card
       const recipeImage = document.createElement("img");
-      recipeImage.setAttribute(
-        "src",
-        "https://images.squarespace-cdn.com/content/v1/57879a6cbebafb879f256735/1579721909133-R2KSZ8VGDGBI90DYATBK/header4.jpg"
-      );
+      recipeImage.setAttribute("src", data[i].img);
       initialDiv.appendChild(recipeImage);
 
       //Create and add recipe name to the recipe card

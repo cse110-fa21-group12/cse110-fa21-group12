@@ -36,8 +36,6 @@ function populateList() {
 addIngredientButton.addEventListener("click", function () {
   const newIngredient = document.getElementById("ingredient");
   const newIngredientAmount = document.getElementById("ingredient-quantity");
-  newIngredient.setAttribute("id", "ingredient");
-  newIngredientAmount.setAttribute("id", "ingredient-quantity");
   const ingred = newIngredient.value;
   const amount = newIngredientAmount.value;
   const jsonIngredient = {

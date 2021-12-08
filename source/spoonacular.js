@@ -58,23 +58,18 @@ async function randomRecipe() {
             tags: tags,
             preparationTime: readyInMinutes,
             cookingTime: readyInMinutes,
+            totalTime: readyInMinutes,
             ingredients: ingredients,
             directions: directions,
             img: image,
           };
-          console.log(recipe);
-          console.log(JSON.stringify(recipe));
+
+          const formData = new FormData();
+          formData.append("json", JSON.stringify(recipe));
 
           fetch("/recipes/create", {
             method: "PUT",
-            headers: {
-              "Content-Type": "application/json",
-              "Access-Control-Allow-Origin": "*",
-              "Access-Control-Allow-Headers": "Content-Type",
-              "Access-Control-Allow-Methods":
-                "GET,POST,OPTIONS,DELETE,PUT,PATCH",
-            },
-            body: JSON.stringify(recipe),
+            body: formData,
           })
             .then((response) => response.json())
             .then((data) => {
@@ -85,7 +80,7 @@ async function randomRecipe() {
             });
         });
     } catch (error) {
-      console.error(error);
+      console.error("Error: ", error);
     }
   }
 }
@@ -94,3 +89,5 @@ const button = document.querySelector("button");
 button.addEventListener("click", () => {
   randomRecipe();
 });
+
+// await randomRecipe();

@@ -188,7 +188,7 @@ label {
 }
 
 .login-inputs {
-    color: rgb(184, 167, 167);
+    color: black;
     position: relative;
     vertical-align: middle;
     width: 90%;
@@ -429,6 +429,7 @@ a[href="forgot-password.html"] {
 }
 
 .searchBar {
+    min-width: 15em;
     width: 100%;
     height: auto;
     display: grid;
@@ -437,25 +438,27 @@ a[href="forgot-password.html"] {
 }
 
 .toggleDiv #createRecipe {
-    width: 25%;
+    width: 10em;
     margin: 0 auto 2%;
 }
 
 .filter-button {
     grid-column-start: 1;
     grid-column-end: 2;
-    margin-left: 2.2em;
+    right: 0%;
+    margin-left: auto;
 }
 
 button[type="filter"] {
     width: 2em;
+    min-width: 2em;
     height: 100%;
     border: 3px solid #00b4cc;
     background-color: white;
     color: black;
     border-radius: 10px 0 0 10px;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 2em;
     text-align: center;
     border-right: hidden;
 }
@@ -501,9 +504,9 @@ button[type="button"] {
     width: 100%;
     height: 50px;
     border: 3px solid #00b4cc;
-    padding: 0;
+    padding: 0 0 0 0.5em;
     outline: none;
-    color: #9dbfaf;
+    color: black;
     font-size: 20px;
 }
 
@@ -543,12 +546,13 @@ h1.shoppingListTitle {
 .homeBar {
     position: relative;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 50% 50%;
     column-gap: 5%;
     width: 50%;
     height: 2em;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5em;
 }
 
 .homeBar>button {
@@ -556,7 +560,8 @@ h1.shoppingListTitle {
     background-color: white;
     position: relative;
     display: inline;
-    width: 75%;
+    margin: auto;
+    width: 10em;
     height: 2em;
     padding: 0.2em 0.6em 0.2em 0.2em;
     background-color: white;
@@ -569,7 +574,8 @@ h1.shoppingListTitle {
     font-weight: bold;
 }
 
-.homebtn {
+
+/*.homebtn {
     color: black;
     background-color: white;
     position: relative;
@@ -585,12 +591,13 @@ h1.shoppingListTitle {
     border-color: white;
     font-size: 1.5em;
     font-weight: bold;
-}
+}*/
 
 #sort-select {
+    margin: auto;
     position: relative;
     display: inline;
-    width: 75%;
+    width: 10em;
     height: 2.25em;
     box-shadow: 0 5px 1px #00b4cc;
     border-radius: 5px;
@@ -687,7 +694,7 @@ h1.shoppingListTitle {
 
 .createRecipe {
     position: relative;
-    width: 600px;
+    width: 35%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -696,15 +703,15 @@ h1.shoppingListTitle {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .createRecipeTitle img {
     position: relative;
     display: inline;
-    width: 100px;
-    top: 20px;
+    width: 6em;
+    top: 1.25em;
     margin-left: 10%;
 }
 
@@ -712,13 +719,13 @@ h1.shoppingListTitle {
     color: white;
     display: inline;
     position: relative;
-    font-size: 60px;
+    font-size: 3.5em;
 }
 
 .input-field {
     text-align: left;
     width: 100%;
-    height: 40px;
+    height: 1.75em;
     border-radius: 2px;
     background-color: white;
     border-width: 3px;
@@ -726,9 +733,9 @@ h1.shoppingListTitle {
     border-color: lightblue;
     backdrop-filter: blur(4px);
     padding: 5px 5px 5px 15px;
-    margin-bottom: 25px;
+    margin-bottom: 1.5em;
     color: black;
-    font-size: 25px;
+    font-size: 1.5em;
 }
 
 .center {
@@ -742,8 +749,8 @@ h1.shoppingListTitle {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 400px;
-    padding: 20px;
+    width: 70%;
+    padding: 1em;
     background: #323c4b;
 }
 
@@ -753,14 +760,14 @@ h1.shoppingListTitle {
 
 .form-input label {
     display: block;
-    width: 200px;
-    height: 45px;
+    width: 40%;
+    height: 3em;
     margin-left: auto;
     margin-right: auto;
-    line-height: 50px;
     text-align: center;
     color: #fff;
-    font-size: 15px;
+    font-size: 1em;
+    line-height: 3em;
     text-transform: Uppercase;
     font-weight: 600;
     cursor: pointer;
@@ -776,31 +783,37 @@ h1.shoppingListTitle {
 .form-input img {
     width: 100%;
     display: none;
-    margin-bottom: 30px;
+    margin-bottom: 2em;
 }
 
 #ingredients {
-    margin-top: 20px;
+    margin-top: 1.5em;
 }
 
 #ingredients h2 {
     color: white;
     position: relative;
-    font-size: 30px;
+    font-size: 2em;
 }
 
-#quantity {
+#ingredients-form {
+    position: relative;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    column-gap: 1em;
+}
+
+.quantity {
     position: relative;
     text-align: left;
-    width: 20%;
-    height: 40px;
+    height: 2.5em;
     border-radius: 2px;
     background-color: white;
     border-width: 3px;
     border-style: solid;
     border-color: lightblue;
     padding: auto;
-    margin-bottom: 10px;
+    margin-bottom: 0.8em;
     color: black;
     font-size: 20px;
 }
@@ -808,8 +821,7 @@ h1.shoppingListTitle {
 .ingredient {
     position: relative;
     text-align: left;
-    width: 70%;
-    height: 40px;
+    height: 2.5em;
     border-radius: 2px;
     background-color: white;
     border-width: 3px;
@@ -819,7 +831,7 @@ h1.shoppingListTitle {
     color: black;
     font-size: 20px;
     margin-left: 5%;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
 }
 
 #directions h2 {
@@ -831,7 +843,7 @@ h1.shoppingListTitle {
 .directions {
     text-align: left;
     width: 100%;
-    height: 40px;
+    height: 2.5em;
     border-radius: 2px;
     background-color: white;
     border-width: 3px;
@@ -847,11 +859,12 @@ h1.shoppingListTitle {
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2em;
     position: relative;
     display: block;
-    width: 50px;
-    height: 40px;
-    padding: 10px;
+    width: 3em;
+    height: 2.5em;
+    padding: 0.5em;
     background-color: white;
     color: rgb(58, 58, 71);
     text-align: center;
@@ -889,7 +902,8 @@ h1.shoppingListTitle {
 
 /*shopping list*/
 
-.shoppingListTitle {
+
+/*.shoppingListTitle {
     position: relative;
     text-align: center;
     width: 300px;
@@ -898,9 +912,10 @@ h1.shoppingListTitle {
     top: 100px;
     color: white;
     font-size: 40px;
-}
+}*/
 
-#cart {
+
+/*#cart {
     position: relative;
     color: white;
     display: inline;
@@ -938,13 +953,13 @@ h1.shoppingListTitle {
     border-color: white;
     font-size: 25px;
     font-weight: bold;
-}
+}*/
 
 .shopping-qty {
     text-align: left;
     width: 25%;
     display: inline;
-    height: 30px;
+    height: 2em;
     border-radius: 2px;
     background-color: white;
     border-width: 3px;
@@ -952,17 +967,18 @@ h1.shoppingListTitle {
     border-color: lightblue;
     backdrop-filter: blur(4px);
     padding: 5px 5px 5px 15px;
-    margin-bottom: 25px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
     color: black;
-    font-size: 20px;
+    font-size: 1em;
 }
 
-.shopping-itpx {
+.shopping-item {
     text-align: left;
     width: 55%;
     margin-left: 10%;
     display: inline;
-    height: 30px;
+    height: 2em;
     border-radius: 2px;
     background-color: white;
     border-width: 3px;
@@ -970,13 +986,14 @@ h1.shoppingListTitle {
     border-color: lightblue;
     backdrop-filter: blur(4px);
     padding: 5px 5px 5px 15px;
-    margin-bottom: 25px;
+    margin-top: 1em;
+    margin-bottom: 1.5px;
     color: black;
-    font-size: 20px;
+    font-size: 1em;
 }
 
 .shopping-list {
-    width: 600px;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -986,10 +1003,10 @@ h1.shoppingListTitle {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 2em;
     background-color: lightblue;
     border-radius: 5px;
-    padding: 10px;
+    padding: 1.5em;
     width: 90%;
     height: auto;
 }
@@ -999,20 +1016,21 @@ h1.shoppingListTitle {
 }
 
 #shopping-form>label {
-    font-size: 25px;
+    font-size: 1.5em;
+    line-height: 1.75m;
     color: black;
-    margin-left: 10px;
+    margin-left: .5em;
 }
 
 input[type="checkbox"] {
-    margin-right: 25px;
+    margin-right: 1.5em;
     transform: scale(1.5);
 }
 
 #done-button {
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 1em;
+    margin-bottom: 3em;
     width: auto;
     padding-left: 5px;
     padding-right: 5px;

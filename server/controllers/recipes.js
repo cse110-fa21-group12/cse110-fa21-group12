@@ -63,7 +63,19 @@ async function uploadImage(file) {
 async function addRecipe(req, res) {
   try {
     const recipe = req.body;
-    validateJSON(RECIPE_PROPS, recipe);
+
+    if (recipe.img) {
+      validateJSON(["img", ...RECIPE_PROPS], recipe);
+    } else {
+      validateJSON(RECIPE_PROPS, recipe);
+    }
+
+    const img = req.files ? req.files.img : null;
+    const imgUrl = img
+      ? await uploadImage(img)
+      : recipe.img
+      ? recipe.img
+      : DEFAULT_IMG;
 
     const recipeRef = firestore.collection("recipes").doc(String(recipe.id));
     const doc = await recipeRef.get();
@@ -71,9 +83,6 @@ async function addRecipe(req, res) {
       res.json({ error: `Recipe '${recipe.id}' already exists` });
       return;
     }
-
-    const img = req.files ? req.files.img : null;
-    const imgUrl = img ? await uploadImage(img) : DEFAULT_IMG;
 
     recipeRef.set({
       id: recipe.id,
