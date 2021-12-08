@@ -429,6 +429,7 @@ a[href="forgot-password.html"] {
 }
 
 .searchBar {
+    min-width: 15em;
     width: 100%;
     height: auto;
     display: grid;
@@ -437,25 +438,27 @@ a[href="forgot-password.html"] {
 }
 
 .toggleDiv #createRecipe {
-    width: 25%;
+    width: 10em;
     margin: 0 auto 2%;
 }
 
 .filter-button {
     grid-column-start: 1;
     grid-column-end: 2;
+    right: 0%;
     margin-left: auto;
 }
 
 button[type="filter"] {
     width: 2em;
+    min-width: 2em;
     height: 100%;
     border: 3px solid #00b4cc;
     background-color: white;
     color: black;
     border-radius: 10px 0 0 10px;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 2em;
     text-align: center;
     border-right: hidden;
 }
@@ -571,7 +574,8 @@ h1.shoppingListTitle {
     font-weight: bold;
 }
 
-.homebtn {
+
+/*.homebtn {
     color: black;
     background-color: white;
     position: relative;
@@ -587,7 +591,7 @@ h1.shoppingListTitle {
     border-color: white;
     font-size: 1.5em;
     font-weight: bold;
-}
+}*/
 
 #sort-select {
     margin: auto;
