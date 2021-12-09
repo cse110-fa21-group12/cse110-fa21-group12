@@ -40,7 +40,8 @@ fetch("/recipes/" + id, {
       newIngredients.defaultValue = arrayIngredientsKeys[i];
       newIngredients.setAttribute("class", "ingredient");
       newIngredientAmounts.setAttribute("class", "quantity");
-      newIngredientAmounts.defaultValue = data.ingredients[arrayIngredientsKeys[i]];
+      newIngredientAmounts.defaultValue =
+        data.ingredients[arrayIngredientsKeys[i]];
       ingredientForm.appendChild(newIngredientAmounts);
       ingredientForm.appendChild(newIngredients);
       //ingredientForm.appendChild(document.createElement("br"));
