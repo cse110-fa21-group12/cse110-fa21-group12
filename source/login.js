@@ -19,7 +19,7 @@ loginButton.addEventListener("click", function () {
     .then((data) => {
       console.log("Success:", data);
       if (data.error == "Invalid email") {
-        location.reload();
+        alert("Invalid email or password");
       } else {
         location.href = "home.html";
       }
