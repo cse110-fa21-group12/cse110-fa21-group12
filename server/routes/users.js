@@ -1,5 +1,11 @@
 const Server = require("../server/server");
-const { signin, signup, remove, getUser, singout } = require("../controllers/users");
+const {
+  signin,
+  signup,
+  remove,
+  getUser,
+  singout,
+} = require("../controllers/users");
 const auth = require("../auth/auth");
 
 const router = new Server.Router();

@@ -103,5 +103,5 @@ module.exports = {
   signin,
   remove,
   getUser,
-  singout
+  singout,
 };
