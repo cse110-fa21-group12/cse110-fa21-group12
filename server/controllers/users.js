@@ -83,9 +83,19 @@ async function remove(req, res) {
   }
 }
 
+async function singout(req, res) {
+  try {
+    res.setHeader("Set-Cookie", `token=0;path=/;Max-Age=0;HttpOnly`);
+    res.json(true);
+  } catch (error) {
+    res.json({ error: error.message });
+  }
+}
+
 module.exports = {
   signup,
   signin,
   remove,
   getUser,
+  singout
 };

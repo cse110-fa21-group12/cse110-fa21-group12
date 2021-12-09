@@ -14,9 +14,6 @@ const app = new Server();
 app.use(Server.JsonParser);
 app.use(Server.CookiesParser);
 
-// authenticate
-// app.use(auth.verifyToken);
-
 // Use the recipes router for routing for base path
 app.use("/", recipeRoutes);
 app.use("/", shoppingListRoutes);
@@ -24,24 +21,6 @@ app.use("/", usersRoutes);
 
 // serve static
 app.use("/", staticRoutes);
-
-// // home page redirect
-// app.get("/", (req, res) => {
-//   const token = req.cookies.token || req.headers["x-access-token"];
-//   if (token) {
-//     try {
-//       auth.verifyToken(req,res, ()=>{});
-//     }
-//     catch(err) {}
-//   }
-
-//   if (req.user) {
-//     res.sendFile("/source/home.html");
-//   }
-//   else {
-//     res.sendFile("/source.login.html");
-//   }
-// });
 
 // start the server
 app.listen(process.env.PORT || config.port, () => {
