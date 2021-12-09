@@ -2,20 +2,21 @@ let user;
 
 //Display only recipes that user created
 function displayRecipes(data) {
-
-  const sortBy = document.getElementById('sort-select').value; 
-      if(sortBy == "short-time") {
-        data.sort(function(a,b) {return (a.totalTime - b.totalTime)});
-      }
-      else if(sortBy == "long-time") {
-        data.sort(function(a,b) {return (b.totalTime - a.totalTime)});
-      }
-      else if(sortBy == "alphabet") {
-        data.sort(function(a,b) {return a.title.localeCompare(b.title)});
-      }
-      else {
-    
-      }
+  const sortBy = document.getElementById("sort-select").value;
+  if (sortBy == "short-time") {
+    data.sort(function (a, b) {
+      return a.totalTime - b.totalTime;
+    });
+  } else if (sortBy == "long-time") {
+    data.sort(function (a, b) {
+      return b.totalTime - a.totalTime;
+    });
+  } else if (sortBy == "alphabet") {
+    data.sort(function (a, b) {
+      return a.title.localeCompare(b.title);
+    });
+  } else {
+  }
 
   for (let i = 0; i < data.length; i++) {
     if (data[i].creator == user) {
@@ -136,8 +137,10 @@ fetch("/recipes/", {
     console.error("Error:", error);
   });
 
-const selectSort = document.getElementById('sort-select');
-selectSort.onchange = function(){sortRecipes()};
+const selectSort = document.getElementById("sort-select");
+selectSort.onchange = function () {
+  sortRecipes();
+};
 
 function sortRecipes() {
   removeRecipes();
@@ -159,4 +162,3 @@ function sortRecipes() {
       console.error("Error:", error);
     });
 }
-

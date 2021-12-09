@@ -20,9 +20,9 @@ loginButton.addEventListener("click", function () {
       console.log("Success:", data);
       if (data.error == "Invalid email") {
         alert("Invalid email");
-      if (data.error == "Invalid password") {
-        alert("Invalid password");
-      }
+        if (data.error == "Invalid password") {
+          alert("Invalid password");
+        }
       } else {
         location.href = "home.html";
       }
