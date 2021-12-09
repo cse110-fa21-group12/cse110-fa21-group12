@@ -465,7 +465,7 @@ button[type="filter"] {
     background-color: white;
     width: 40%;
     height: auto;
-    margin: 1% 30% auto 30%;
+    margin: 1% 30% auto;
     border-radius: 5px;
     border-color: #00b4cc;
     border-width: 0.2em;
