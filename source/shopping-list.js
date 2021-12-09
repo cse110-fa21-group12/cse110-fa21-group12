@@ -52,12 +52,12 @@ addIngredientButton.addEventListener("click", function () {
     .then((response) => response.json())
     .then((data) => {
       console.log("Success:", data);
+      location.href = "shopping-list.html";
+      populateList(); //Update display of shopping list
     })
     .catch((error) => {
       console.error("Error:", error);
     });
-  location.href = "shopping-list.html";
-  populateList(); //Update display of shopping list
 });
 
 const doneButton = document.getElementById("done-button");

@@ -25,7 +25,10 @@ async function signup(req, res) {
       shopping_list: [],
     });
 
-    const token = await auth.generateToken({ userId: newUserRef.id, email: user.email });
+    const token = await auth.generateToken({
+      userId: newUserRef.id,
+      email: user.email,
+    });
     res.setHeader("Set-Cookie", `token=${token}; HttpOnly`);
     res.json({ token });
   } catch (error) {
@@ -47,7 +50,10 @@ async function signin(req, res) {
     const user = userDataRef.docs[0];
     const userData = user.data();
     if (await auth.verifyPassword(creds.password, userData.password)) {
-      const token = await auth.generateToken({ userId: user.id,  email: userData.email});
+      const token = await auth.generateToken({
+        userId: user.id,
+        email: userData.email,
+      });
       res.setHeader("Set-Cookie", `token=${token};path=/;HttpOnly`);
       res.json({ token });
     } else {

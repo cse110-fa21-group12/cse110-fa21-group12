@@ -106,6 +106,7 @@ saveRecipeButton.addEventListener("click", () => {
   const stringJson = JSON.stringify(jsonRecipe);
 
   const image = document.getElementById("file-ip-1");
+  console.log(image.value);
 
   const formDataRecipe = new FormData();
   formDataRecipe.append("json", stringJson);
@@ -120,7 +121,7 @@ saveRecipeButton.addEventListener("click", () => {
       console.log("Success:", data);
       localStorage.setItem("id", title);
       setTimeout(1000);
-      window.location = "recipe.html";
+      //window.location = "recipe.html";
     })
     .catch((error) => {
       console.error("Error:", error);

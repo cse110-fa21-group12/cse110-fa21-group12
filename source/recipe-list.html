@@ -86,6 +86,7 @@
                 }
             }
         </script>
+
         <div class="myRecipes">
             <h1>My Recipes</h1><i id="book" class="fas fa-book"></i>
         </div>
@@ -111,9 +112,11 @@
                 <!--label for="recipe-search">Search for recipe</label>
                 <input type="search" id="recipe-search" name="q" aria-label="Search through recipes" /-->
                 <div class="filter-button">
-                    <button type="filter"><i class="fas fa-filter"></i></button>
+                    <button class="filterbtn" type="filter" onclick="myFunction3()"><i class="fas fa-filter"></i></button>
+
 
                 </div>
+
                 <div class="search-bar">
                     <input class="search" type="text" placeholder="  Search for Recipe" name="search">
 
@@ -121,12 +124,23 @@
                 <div class="search-button">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </div>
-                </form>
 
-                <!--button>Search</button-->
+
+
             </div>
 
+
+
         </div>
+        <!--div class="filterClass" id="advancedFilter">
+            <p>This is a placeholder for the advanced filter</p>
+
+        </div>
+        <script>
+            function myFunction3() {
+                document.getElementById("advancedFilter").classList.toggle("show");
+            }
+        </script-->
         <div class="recipe-list">
         </div>
 

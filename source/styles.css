@@ -417,10 +417,6 @@ a[href="forgot-password.html"] {
     background-color: rgb(187, 188, 199);
 }
 
-.show {
-    display: inline-block;
-}
-
 .toggleDiv {
     position: relative;
     display: block;
@@ -461,6 +457,25 @@ button[type="filter"] {
     font-size: 2em;
     text-align: center;
     border-right: hidden;
+}
+
+.filterClass {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 40%;
+    height: auto;
+    margin: 1% 30% auto 30%;
+    border-radius: 5px;
+    border-color: #00b4cc;
+    border-width: 0.2em;
+    border-style: solid;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.show {
+    display: inline-block;
 }
 
 .search-bar {

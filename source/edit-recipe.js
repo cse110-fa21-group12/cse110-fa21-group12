@@ -33,13 +33,15 @@ fetch("/recipes/" + id, {
     totalTime.defaultValue = data.totalTime;
 
     const ingredientForm = document.getElementById("ingredients-form");
-    for (let i = 0; i < data.ingredients.length; i++) {
+    const arrayIngredientsKeys = Object.keys(data.ingredients);
+    for (let i = 0; i < arrayIngredientsKeys.length; i++) {
       const newIngredients = document.createElement("input");
       const newIngredientAmounts = document.createElement("input");
-      newIngredients.defaultValue = data.ingredients[i];
+      newIngredients.defaultValue = arrayIngredientsKeys[i];
       newIngredients.setAttribute("class", "ingredient");
       newIngredientAmounts.setAttribute("class", "quantity");
-      newIngredientAmounts.placeholder = "Amount";
+      newIngredientAmounts.defaultValue =
+        data.ingredients[arrayIngredientsKeys[i]];
       ingredientForm.appendChild(newIngredientAmounts);
       ingredientForm.appendChild(newIngredients);
       //ingredientForm.appendChild(document.createElement("br"));
@@ -65,7 +67,7 @@ addIngredientButton.addEventListener("click", function () {
   const newIngredientAmount = document.createElement("input");
   newIngredient.placeholder = "Ingredient Name";
   newIngredient.setAttribute("class", "ingredient");
-  newIngredientAmount.setAttribute("id", "quantity");
+  newIngredientAmount.setAttribute("class", "quantity");
   newIngredientAmount.placeholder = "Amount";
   ingredientsForm.appendChild(newIngredientAmount);
   ingredientsForm.appendChild(newIngredient);
@@ -99,9 +101,10 @@ saveRecipeButton.addEventListener("click", () => {
   const cookingTime = document.getElementById("cook-time").value;
   const totalTime = document.getElementById("total-time").value;
   const ingredients = document.getElementsByClassName("ingredient");
-  const ingredientsArray = [];
+  const amounts = document.getElementsByClassName("quantity");
+  const ingredientsArray = {};
   for (let i = 0; i < ingredients.length; i++) {
-    ingredientsArray[i] = ingredients[i].value;
+    ingredientsArray[ingredients[i].value] = amounts[i].value;
   }
   const directions = document.getElementsByClassName("directions");
 
