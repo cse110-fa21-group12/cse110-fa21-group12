@@ -58,7 +58,6 @@ addIngredientButton.addEventListener("click", function () {
     .catch((error) => {
       console.error("Error:", error);
     });
-
 });
 
 const doneButton = document.getElementById("done-button");
