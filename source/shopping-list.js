@@ -1,8 +1,9 @@
-const addIngredientButton = document.getElementById("add-shopping-button");
-const ingredientForm = document.getElementById("shopping-form");
 populateList();
 
-//Display shopping list
+/**
+ * Retreives ingredients from database and creates checklist of them
+ * @return {void} Nothing
+ */
 function populateList() {
   fetch("/shopping-list", {
     method: "GET",
@@ -33,6 +34,15 @@ function populateList() {
     });
 }
 
+const addIngredientButton = document.getElementById("add-shopping-button");
+const ingredientForm = document.getElementById("shopping-form");
+
+/**
+ * Listen for click on addIngredientButton and adds it to the database
+ *
+ * @type {button}
+ * @listens document#click
+ */
 addIngredientButton.addEventListener("click", function () {
   const newIngredient = document.getElementById("ingredient");
   const newIngredientAmount = document.getElementById("ingredient-quantity");
@@ -61,6 +71,13 @@ addIngredientButton.addEventListener("click", function () {
 });
 
 const doneButton = document.getElementById("done-button");
+
+/**
+ * Listen for click on doneButton and removes checked ingredients from database
+ *
+ * @type {button}
+ * @listens document#click
+ */
 doneButton.addEventListener("click", function () {
   let ingredientList = document.getElementById("shopping-form");
   let ingredients = ingredientList.getElementsByTagName("input");

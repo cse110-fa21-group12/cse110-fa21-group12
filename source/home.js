@@ -1,6 +1,6 @@
 /**
  * Removes recipe cards from the list
- * 
+ *
  */
 function removeRecipes() {
   const recipes = document.getElementsByClassName("recipe-list")[0];
@@ -9,11 +9,10 @@ function removeRecipes() {
   }
 }
 
-
 /**
  * Displays recipe cards
- * 
- * @param {*} data 
+ *
+ * @param {*} data
  */
 
 function displayRecipes(data) {
@@ -67,7 +66,6 @@ function displayRecipes(data) {
     list.appendChild(initialDiv);
   }
 }
-
 
 /**
  * Search functionality
