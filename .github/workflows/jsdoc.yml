@@ -1,4 +1,4 @@
-name: GitHub pages
+name: JSDoc
 on: ["push"]
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
         run: npm i --save-dev@latest better-docs
       - name: Building JSDoc
         run: npm run docs
-      - name: Deploying to Github Page
+      - name: Deploying to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.DOCS_TOKEN }}
