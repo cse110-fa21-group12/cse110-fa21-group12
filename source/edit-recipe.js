@@ -18,7 +18,7 @@ fetch("/recipes/" + id, {
     description.defaultValue = data.description;
 
     const categoriesForm = document.getElementById("enter-categories");
-    for(let i = 0; i < data.categories.length; i++) {
+    for (let i = 0; i < data.categories.length; i++) {
       const newCategory = document.createElement("input");
       newCategory.defaultValue = data.categories[i];
       newCategory.classList.add("input-field", "categories");
@@ -29,7 +29,7 @@ fetch("/recipes/" + id, {
     }
 
     const tagsForm = document.getElementById("enter-tags");
-    for(let i = 0; i < data.tags.length; i++) {
+    for (let i = 0; i < data.tags.length; i++) {
       const newTag = document.createElement("input");
       newTag.defaultValue = data.tags[i];
       newTag.classList.add("input-field", "tags");
