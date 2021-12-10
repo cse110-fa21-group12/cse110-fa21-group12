@@ -61,7 +61,7 @@ fetch("/recipes/" + url, {
         const totalTime = document.getElementById("total-time");
         totalTime.innerHTML = "Total Time: " + data.totalTime;
 
-<<<<<<< HEAD
+
         //Populate ingredients for spoonacular recipes since format is different
         if (data.creator == "spoonacular") {
             const ingredientsArray = data.ingredients;
@@ -89,7 +89,7 @@ fetch("/recipes/" + url, {
                 ingredientsBox.appendChild(br);
             }
         }
-=======
+
     //Populate ingredients for spoonacular recipes since format is different
     if (data.creator == "spoonacular") {
       const ingredientsArray = data.ingredients;
@@ -117,7 +117,7 @@ fetch("/recipes/" + url, {
         ingredientsBox.appendChild(br);
       }
     }
->>>>>>> 547b07b4bcd79bc5e4e49a61c793c187c53e1144
+
 
         //Populate ingredients for user recipes
         else {
