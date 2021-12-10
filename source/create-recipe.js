@@ -1,4 +1,4 @@
-//const { json } = require("stream/consumers");
+
 
 const addCategoryButton = document.getElementById("add-category");
 const categoriesForm = document.getElementById("enter-categories");
