@@ -19,10 +19,8 @@ jobs:
           path: docs       
         
       - name: Build
-        uses: andstor/jsdoc-action@v1.2.0
+        uses: codevise/documentation-js-action@v1
         with:
-          source_dir: ./source
-          recurse: true
-          output_dir: docs
-          front_page: README.md
+          input: ./src
+          output: ./docs
         
