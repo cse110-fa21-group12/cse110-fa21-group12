@@ -1,22 +1,15 @@
+name: JSDoc
 
-
-name: jsdoc
-on:
- push:
-   branches:
-     - dev
+on: ["push"]
 
 jobs:
-  publish:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v1
-
-    - name: Build
-      uses: codevise/documentation-js-action@v1
-      with:
-        input: source/
-        output: source/
-
-  
+  JSDoc:
+    name: JSDoc Action
+    uses: andstor/jsdoc-action@v1.2.1
+    
+    name: Build
+    uses: andstor/jsdoc-action@v1
+    with:
+      source_dir: ./src
+      recurse: true
+      output_dir: ./out
