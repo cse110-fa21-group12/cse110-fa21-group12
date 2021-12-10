@@ -31,7 +31,6 @@ function displayRecipes(data) {
         window.location = "recipe.html";
       });
 
-      //Temporary
       //Create and add image to the recipe card
       const recipeImage = document.createElement("img");
       recipeImage.setAttribute("src", data[i].img);
