@@ -122,7 +122,6 @@ searchText.addEventListener("keypress", function (e) {
   }
 });
 
-
 /**
  * Listen for click on searchButton and calls search function
  *
