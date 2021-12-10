@@ -15,4 +15,3 @@ jobs:
           source_dir: ./
           recurse: true
           output_dir: ./JSDocs
-          front_page: README.md
