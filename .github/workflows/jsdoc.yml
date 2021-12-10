@@ -1,26 +1,25 @@
-name: jsdoc
+name: JSDoc
 on: [push]
-# push:
- #  branches:
-   #  - master
 
 jobs:
-  publish:
+  docs:
+    name: docs-job
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          ref: main
 
-    - name: Build
-      uses: codevise/documentation-js-action@v1
-      with:
-        input: ./src
-        output: ./docs
+      - name: Run automatic doc generation
+        uses: andstor/jsdoc-action@v1
+        with:
+         source_dir: ./source
+         recurse: true
+         output_dir: ./docs
 
-    # For example:
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2
-      env:
-        PERSONAL_TOKEN: ${{ secrets.DOCS_TOKEN }}
-        PUBLISH_BRANCH: github_workflows
-        PUBLISH_DIR: ./docs
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          PERSONAL_TOKEN: ${{ secrets.DOCS_TOKEN }}
+          PUBLISH_DIR: ./docs
+          PUBLISH_BRANCH: github_workflows
