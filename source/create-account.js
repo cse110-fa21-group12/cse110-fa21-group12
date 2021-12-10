@@ -7,6 +7,12 @@ const jsonUserData = {
   password: password,
 };
 
+/**
+ * Listen for click on login button to create account
+ * 
+ * @type {button} 
+ * @listens document#mousedown
+ */
 loginButton.addEventListener("click", function () {
   fetch("/user/sign-up", {
     method: "POST",
