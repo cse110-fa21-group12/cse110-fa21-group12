@@ -14,9 +14,6 @@ jobs:
 
       - name: Checkout docs
         uses: actions/checkout@v2
-        with:
-          repository: cse110-fa21-group12/cse110-fa21-group12/
-          path: docs       
         
       - name: Build
         uses: codevise/documentation-js-action@v1
