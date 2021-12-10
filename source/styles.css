@@ -1,18 +1,36 @@
+/*imported fonts for styling*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Aleo:wght@700&family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/*setting background colour for html*/
+
 html {
     background-color: #323c4b;
 }
 
+
+/*setting background colour for body element*/
+
 body {
-    background-color: /* white;*/
-    #323c4b;
+    background-color: #323c4b;
 }
+
+
+/*setting font style for any text in the document*/
 
 * {
     font-family: "Roboto", sans-serif;
 }
+
+
+/*                                                                              *
+ *below is the styling for all css elements on the login and create account page*
+ *                                                                              */
+
+
+/*styling for main logo on login page*/
 
 #create-logo {
     display: block;
@@ -25,6 +43,9 @@ body {
     object-fit: cover;
 }
 
+
+/*division for introduction text as well as login*/
+
 .starting-page {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -33,6 +54,9 @@ body {
     margin: 1% 1% 5%;
 }
 
+
+/*division for information*/
+
 .info {
     height: auto;
     padding: 3em 7.5em;
@@ -40,11 +64,17 @@ body {
     background-color: white;
 }
 
+
+/*division for login box*/
+
 .login-section {
     position: relative;
     margin: 2em 10em 0 1em;
     height: auto;
 }
+
+
+/*title element for info section*/
 
 .info-heading {
     font-family: 'Aleo', sans-serif;
@@ -58,6 +88,9 @@ body {
     position: relative;
 }
 
+
+/*p element for infor section*/
+
 .info-content {
     font-family: 'Varela Round', sans-serif;
     position: relative;
@@ -67,6 +100,9 @@ body {
     font-weight: 100;
     color: hsl(357, 12%, 42%);
 }
+
+
+/*text element for login above login-box*/
 
 .login-text {
     position: relative;
@@ -84,6 +120,9 @@ body {
     color: #ffffff;
 }
 
+
+/*container for login element*/
+
 .login-box {
     background-color: white;
     /*position: relative;*/
@@ -98,12 +137,18 @@ body {
     padding: 5% 1%;
 }
 
+
+/*action to do when login box element is hovered over*/
+
 .login-box:hover {
     cursor: pointer;
     filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.9));
     transition: all 0.2s ease;
     transform: scale(1.01);
 }
+
+
+/*styling for modified view of app such as mobile*/
 
 @media (max-width:1000px) {
     .starting-page {
@@ -124,57 +169,9 @@ body {
 }
 
 
-/*
-.google-img {
-    position: relative;
-    z-index: 1;
-    display: block;
-    margin-left: 15%;
-    width: 2rem;
-    top: 3rem;
-}
-
-.google-signin-btn {
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    width: 90%;
-    height: 4rem;
-    background: #ffffff;
-    border: 0.1rem solid #d2c7c7;
-    box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
-    border-radius: 2.5rem;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    /* identical to box height 
-
-color: #4d4c4c;
-
-}
-.google-signin-btn:hover {
-    box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0);
-}
-.or-line {
-    position: relative;
-    margin-top: 5%;
-    margin-left: auto;
-    height: 2.5%;
-    text-align: center;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.2rem;
-    color: rgb(112, 103, 103);
-}
-*/
+/*styling for all elements inside of the login box such as text-entry box and login-button*/
 
 fieldset {
-    /*position: relative;*/
     border-style: hidden;
 }
 
@@ -229,6 +226,9 @@ label {
     line-height: 1.5rem;
 }
 
+
+/*text below login box for creating new accout*/
+
 .new-account {
     position: relative;
     margin-top: 2%;
@@ -243,11 +243,7 @@ label {
 }
 
 
-/*
-.forgot-password {
-    position: relative;
-    text-align: center;
-}*/
+/*navigation page links*/
 
 a[href="create-account.html"] {
     color: white;
@@ -258,18 +254,19 @@ a[href="login.html"] {
 }
 
 
-/*
-a[href="forgot-password.html"] {
-    color: black;
-}
-*/
+/*hover atcion for login button*/
 
 .login-button:hover {
     background-color: black;
 }
 
 
-/*home page*/
+/*                                                                              *
+ *below is the styling for all css elements on the header bar and the home page *
+ *                                                                              */
+
+
+/*this is the main header bar element present on most pages in the application containing the menu and profile button*/
 
 .headerBar {
     display: grid;
@@ -278,6 +275,7 @@ a[href="forgot-password.html"] {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2%;
+    margin-bottom: 1%;
     grid-template-columns: 30% 40% 30%;
     background-color: #323c4b;
     border-style: hidden;
@@ -286,6 +284,9 @@ a[href="forgot-password.html"] {
     border-width: 0.2px;
 }
 
+
+/*this is the division for the options menu that contains all the major navigation elements*/
+
 .optionsMenu {
     margin: auto auto auto 10%;
     grid-column-start: 1;
@@ -293,6 +294,9 @@ a[href="forgot-password.html"] {
     position: relative;
     display: inline-block;
 }
+
+
+/*this is the styling for the button of the division above*/
 
 .optionsbtn {
     width: auto;
@@ -308,6 +312,9 @@ a[href="forgot-password.html"] {
     font-weight: bold;
 }
 
+
+/*this is the logo of the application section of the header*/
+
 .logoHeader {
     margin: 2% auto auto;
     height: 10em;
@@ -318,6 +325,9 @@ a[href="forgot-password.html"] {
     grid-column-start: 2;
     grid-column-end: 3;
 }
+
+
+/*this is the styling for the image which defines how the image will be positioned and strected in its container*/
 
 .logoHeader>img {
     display: block;
@@ -330,6 +340,9 @@ a[href="forgot-password.html"] {
     border: hidden;
 }
 
+
+/*this is the profile menu division*/
+
 .dropDownMenu {
     margin: auto 20% auto auto;
     grid-column-start: 3;
@@ -337,6 +350,9 @@ a[href="forgot-password.html"] {
     position: relative;
     display: inline-block;
 }
+
+
+/*this is the styling for the list before when it is hidden*/
 
 .dropDownList {
     display: none;
@@ -351,6 +367,9 @@ a[href="forgot-password.html"] {
     right: -4em;
 }
 
+
+/*styling for each division of the dropdown list*/
+
 .dropDownList a {
     color: rgb(0, 0, 0);
     background-color: white;
@@ -364,13 +383,15 @@ a[href="forgot-password.html"] {
     display: block;
 }
 
+
+/*action when each division of the menu is hovered over*/
+
 .dropDownMenu a:hover {
     background-color: rgb(187, 188, 199);
 }
 
-.show {
-    display: inline-block;
-}
+
+/*division for main menu list*/
 
 .menuList {
     display: none;
@@ -384,16 +405,10 @@ a[href="forgot-password.html"] {
     top: 4em;
 }
 
+
+/*division for each element of the dropdown list*/
+
 .menuList a {
-    /*color: rgb(0, 0, 0);
-    background-color: white;
-    padding: 12px 16px 12px 16px;
-    border-radius: 3px;
-    margin-bottom: 0.2em;
-    line-height: 2em;
-    font-size: 20px;
-    text-decoration: none;
-    display: block;*/
     display: block;
     text-decoration: none;
     margin-bottom: 1em;
@@ -409,84 +424,64 @@ a[href="forgot-password.html"] {
     font-weight: bold;
 }
 
+
+/*remove box shadow for last element of the list*/
+
 .menuList a:last-of-type {
     margin-bottom: 5px;
 }
+
+
+/*changes the background for menu when hovered over*/
 
 .optionsMenu a:hover {
     background-color: rgb(187, 188, 199);
 }
 
+
+/*changed display of menus when classlist element for .show is toggled*/
+
+.show {
+    display: inline-block;
+}
+
+
+/*division for the search bar and search button*/
+
 .toggleDiv {
     position: relative;
     display: block;
-    margin: 1% auto auto;
+    margin: auto;
     width: 50%;
 }
+
+
+/*search bar division*/
 
 .searchBar {
     min-width: 15em;
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 10% 80% 10%;
-    margin: 0 auto;
+    grid-template-columns: 90% 10%;
+    margin: auto;
 }
 
-.toggleDiv #createRecipe {
-    width: 10em;
-    margin: 0 auto 2%;
-}
 
-.filter-button {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    right: 0%;
-    margin-left: auto;
-}
-
-button[type="filter"] {
-    width: 2em;
-    min-width: 2em;
-    height: 100%;
-    border: 3px solid #00b4cc;
-    background-color: white;
-    color: black;
-    border-radius: 10px 0 0 10px;
-    cursor: pointer;
-    font-size: 2em;
-    text-align: center;
-    border-right: hidden;
-}
-
-.filterClass {
-    display: none;
-    position: absolute;
-    background-color: white;
-    width: 40%;
-    height: auto;
-    margin: 1% 30% auto 30%;
-    border-radius: 5px;
-    border-color: #00b4cc;
-    border-width: 0.2em;
-    border-style: solid;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.show {
-    display: inline-block;
-}
+/*grid position for search bar*/
 
 .search-bar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.search-button {
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
-.search-button {
-    grid-column-start: 3;
-    grid-column-end: 4;
-}
+
+/*button styling for search button*/
 
 button[type="submit"] {
     width: 2em;
@@ -499,6 +494,9 @@ button[type="submit"] {
     cursor: pointer;
     font-size: 30px;
 }
+
+
+/*button styling for regular button*/
 
 button[type="button"] {
     display: block;
@@ -515,10 +513,15 @@ button[type="button"] {
     font-weight: bold;
 }
 
+
+/*search text entry*/
+
 .search {
     width: 100%;
     height: 50px;
     border: 3px solid #00b4cc;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     padding: 0 0 0 0.5em;
     outline: none;
     color: black;
@@ -530,12 +533,20 @@ button[type="button"] {
     font-size: 35px;
 }
 
+
+/*shopping list title heading*/
+
 h1.shoppingListTitle {
     text-align: center;
 }
 
 
-/*recipe-list*/
+/*                                                                              *
+ *below is the styling for all css elements on the my recipe page               *
+ *                                                                              */
+
+
+/*my Recipes title container*/
 
 .myRecipes {
     position: relative;
@@ -544,6 +555,9 @@ h1.shoppingListTitle {
     text-align: center;
 }
 
+
+/*my recipes title*/
+
 .myRecipes>h1 {
     font-size: 50px;
     color: white;
@@ -551,12 +565,18 @@ h1.shoppingListTitle {
     margin-right: 1em;
 }
 
+
+/*book icon colour made white*/
+
 #book {
     position: relative;
     color: white;
     display: inline;
     font-size: 50px;
 }
+
+
+/*container for create recipe button and sort*/
 
 .homeBar {
     position: relative;
@@ -569,6 +589,9 @@ h1.shoppingListTitle {
     margin-right: auto;
     margin-bottom: 5em;
 }
+
+
+/*create recipe button styling*/
 
 .homeBar>button {
     color: black;
@@ -590,23 +613,7 @@ h1.shoppingListTitle {
 }
 
 
-/*.homebtn {
-    color: black;
-    background-color: white;
-    position: relative;
-    display: inline;
-    width: auto;
-    height: 2em;
-    padding: 0.2em 0.6em 0.2em 0.2em;
-    background-color: white;
-    color: rgb(58, 58, 71);
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 5px 1px #00b4cc;
-    border-color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-}*/
+/*sort dropdown styling*/
 
 #sort-select {
     margin: auto;
@@ -622,38 +629,42 @@ h1.shoppingListTitle {
 }
 
 
-/*can modify sorting dropdown*/
+/*entire recipe list container. Allows for scrolling and adjusts number of elements per list based on screen width*/
 
 .recipe-list {
     position: relative;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: auto;
     width: 80%;
-    column-gap: 5%;
-    display: flex;
-    flex-wrap: wrap;
+    left: 5%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
     height: auto;
-    margin-top: 5%;
-    /*max-width: 100%;*/
+    margin-top: 3%;
     row-gap: 2em;
     padding: 1em;
     overflow: visible;
     overflow-y: scroll;
 }
 
+
+/*recipe card element. Structured as  grid with picture title and time*/
+
 .recipe {
     align-items: center;
     border-radius: 1px;
     display: grid;
-    grid-template-rows: 17.5em 5em 1.5em 1.5em;
+    grid-template-rows: 17.5em 6em 1.5em;
     height: auto;
     row-gap: 0.5em;
     padding-bottom: 1em;
-    width: 23em;
+    width: 25em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: white;
     transition: all 0.2s ease;
 }
+
+
+/*animation when card is hovered over*/
 
 .recipe:hover {
     border-radius: 4px;
@@ -664,10 +675,12 @@ h1.shoppingListTitle {
     background-color: aqua;
 }
 
+
+/*recipe title styling*/
+
 .recipes-title {
-    /*background: rgba(143, 135, 135, 0.29);*/
     padding-left: 10px;
-    font-size: 40px;
+    font-size: 38px;
     color: black;
     font-family: 'Aleo', sans-serif;
     max-height: 100px;
@@ -705,6 +718,24 @@ h1.shoppingListTitle {
 }
 
 
+/*change recipe view to 2 recipes per row*/
+
+@media (max-width:1500px) {
+    .recipe-list {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+
+/*change recipe view to 1 recipe per row*/
+
+@media (max-width:875px) {
+    .recipe-list {
+        grid-template-columns: 100%;
+    }
+}
+
+
 /* Create Recipe Style */
 
 .createRecipe {
@@ -714,28 +745,44 @@ h1.shoppingListTitle {
     margin-right: auto;
 }
 
-.createRecipeTitle {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3em;
-    margin-bottom: 3em;
+@media (max-width:1500px) {
+    .createRecipe {
+        width: 50%;
+    }
 }
 
-.createRecipeTitle img {
-    position: relative;
-    display: inline;
-    width: 6em;
-    top: 1.25em;
-    margin-left: 10%;
+@media (max-width:875px) {
+    .createRecipe {
+        width: 90%;
+    }
 }
+
+
+/*recipe title container*/
+
+.createRecipeTitle {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+
+/*recipe title*/
 
 .createRecipeTitle h1 {
     color: white;
-    display: inline;
+    display: block;
     position: relative;
     font-size: 3.5em;
+    text-align: center;
 }
+
+
+/*text-entry field*/
 
 .input-field {
     text-align: left;
@@ -753,12 +800,18 @@ h1.shoppingListTitle {
     font-size: 1.5em;
 }
 
+
+/*picture container*/
+
 .center {
     height: 100%;
     display: block;
     align-items: center;
     justify-content: center;
 }
+
+
+/*image upload button container*/
 
 .form-input {
     margin-left: auto;
@@ -772,6 +825,9 @@ h1.shoppingListTitle {
 .form-input input {
     display: none;
 }
+
+
+/*upload image text box*/
 
 .form-input label {
     display: block;
@@ -801,15 +857,24 @@ h1.shoppingListTitle {
     margin-bottom: 2em;
 }
 
+
+/*ingredients container*/
+
 #ingredients {
     margin-top: 1.5em;
 }
+
+
+/*ingrdients title*/
 
 #ingredients h2 {
     color: white;
     position: relative;
     font-size: 2em;
 }
+
+
+/*ingredients form with quality and ingredient*/
 
 #ingredients-form {
     position: relative;
@@ -849,6 +914,9 @@ h1.shoppingListTitle {
     margin-bottom: 1em;
 }
 
+
+/*same as ingredients*/
+
 #directions h2 {
     color: white;
     position: relative;
@@ -870,6 +938,9 @@ h1.shoppingListTitle {
     margin-bottom: 10px;
 }
 
+
+/*add ingr/dir/cat/tags button*/
+
 .createRecipebtn {
     margin-top: 0;
     margin-left: auto;
@@ -889,6 +960,9 @@ h1.shoppingListTitle {
     font-size: 15px;
     font-weight: bold;
 }
+
+
+/*save recipe button*/
 
 #save-recipe {
     margin-top: 10%;
@@ -916,59 +990,6 @@ h1.shoppingListTitle {
 
 
 /*shopping list*/
-
-
-/*.shoppingListTitle {
-    position: relative;
-    text-align: center;
-    width: 300px;
-    left: 100px;
-    display: inline;
-    top: 100px;
-    color: white;
-    font-size: 40px;
-}*/
-
-
-/*#cart {
-    position: relative;
-    color: white;
-    display: inline;
-    left: 150px;
-    top: 100px;
-    font-size: 60px;
-}
-
-.vertical-center {
-    position: relative;
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    top: 0;
-}
-
-.homebtn2 {
-    color: black;
-    background-color: white;
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    width: auto;
-    height: 45px;
-    padding-right: 10px;
-    background-color: white;
-    color: rgb(58, 58, 71);
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 5px 1px #00b4cc;
-    border-color: white;
-    font-size: 25px;
-    font-weight: bold;
-}*/
 
 .shopping-qty {
     text-align: left;
@@ -1037,10 +1058,16 @@ h1.shoppingListTitle {
     margin-left: .5em;
 }
 
+
+/*shopping list checklist button*/
+
 input[type="checkbox"] {
     margin-right: 1.5em;
     transform: scale(1.5);
 }
+
+
+/*mark as done*/
 
 #done-button {
     position: relative;
@@ -1055,6 +1082,9 @@ input[type="checkbox"] {
 
 
 /*recipe-expand*/
+
+
+/*this is the recipe view page*/
 
 .recipe-expand {
     position: relative;
@@ -1101,10 +1131,6 @@ input[type="checkbox"] {
     display: inline;
 }
 
-.ratings {
-    color: white;
-}
-
 .description {
     background-color: rgb(227, 240, 245);
     border-radius: 5px;
@@ -1120,8 +1146,6 @@ input[type="checkbox"] {
     position: relative;
     margin-left: 300px;
     aspect-ratio: auto;
-    /*object-fit: cover;
-    overflow: hidden;*/
     width: 400px;
     padding: 20px;
     vertical-align: middle;
@@ -1138,23 +1162,6 @@ input[type="checkbox"] {
     font-weight: 550;
 }
 
-.adjust {
-    position: relative;
-    float: right;
-    background: rgba(67, 87, 114, 0.79);
-    border: none;
-    color: black;
-    padding: 10px;
-    font-size: 30px;
-    cursor: pointer;
-    border-radius: 100%;
-    bottom: 60px;
-}
-
-.adjust:hover {
-    color: white;
-}
-
 .ingredients {
     background-color: rgb(227, 240, 245);
     border-radius: 5px;
@@ -1198,109 +1205,6 @@ legend {
     box-sizing: border-box;
     backdrop-filter: blur(4px);
     border-radius: 2px;
-    /*text properties*/
-    color: #ffffff;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 15px;
-}
-
-.ingrd-to-list:hover {
-    background-color: black;
-}
-
-.directions-text {
-    margin-bottom: 2%;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.step {
-    background-color: white;
-    border-radius: 2px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: lightblue;
-    backdrop-filter: blur(4px);
-    padding-left: 10px;
-    padding: 2px;
-    margin-bottom: 15px;
-}
-
-.summary {
-    background-color: rgb(227, 240, 245);
-    border-radius: 5px;
-    padding: 15px;
-}
-
-.summary>p {
-    font-size: 20px;
-    font-weight: 550;
-}
-
-.adjust {
-    position: relative;
-    float: right;
-    background: rgba(67, 87, 114, 0.79);
-    border: none;
-    color: black;
-    padding: 10px;
-    font-size: 30px;
-    cursor: pointer;
-    border-radius: 100%;
-    bottom: 60px;
-}
-
-.adjust:hover {
-    color: white;
-}
-
-.ingredients {
-    background-color: rgb(227, 240, 245);
-    border-radius: 5px;
-    padding: 15px;
-}
-
-HR {
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-legend {
-    margin-bottom: 2%;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.checklist {
-    display: inline-block;
-    font-size: 15px;
-    font-weight: 200;
-    color: black;
-    padding: 10px 5px;
-    height: 37px;
-    position: relative;
-}
-
-.ingrd-to-list {
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 225px;
-    height: 50px;
-    top: 0;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 1px;
-    background: rgba(67, 87, 114, 0.79);
-    border: 1px solid #627b9f;
-    box-sizing: border-box;
-    backdrop-filter: blur(4px);
-    border-radius: 2px;
-    /*text properties*/
     color: #ffffff;
     font-style: normal;
     font-weight: bold;

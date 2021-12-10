@@ -11,20 +11,17 @@
 </head>
 
 <body>
-    <!--h1>Home</h1-->
     <div class="headerBar">
         <div class="optionsMenu">
             <button onclick="myFunction2()" class="optionsbtn"><i class="fas fa-bars"></i></button>
             <div id="menuDropdown" class="menuList">
+                <a href="home.html"> Home     <i class="fas fa-home"></i></a>
                 <a href="recipe-list.html">My Recipes   <i id = "options" class="fas fa-book"></i></a>
                 <a href="shopping-list.html">Shopping List        <i class="fas fa-shopping-cart"></i></a>
                 <a href="create-recipe.html">Add Recipe     <i class="fas fa-plus"></i></a>
-                <a href="home.html"> Home     <i class="fas fa-home"></i></a>
-
-
             </div>
         </div>
-
+        <div class="logoHeader"></div>
         <div class="dropDownMenu">
             <button onclick="myFunction()" class="optionsbtn"><i class="far fa-user"></i></i></button>
             <div id="myDropdown" class="dropDownList">
@@ -33,9 +30,6 @@
             </div>
         </div>
     </div>
-
-
-
 
     <script>
         /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
@@ -76,30 +70,26 @@
         }
     </script>
 
-  
+    <div class="homeBar">
+        <button type="button" onclick="location.href='create-recipe.html'" id="createRecipe">Create Recipe <i class="fas fa-utensils"></i></button>
+        <select name="sort" id="sort-select">
+            <option value="select" disabled selected>Sort By:</option>
+            <option value="short-time">Cooking Time (Shortest to Longest)</option>
+            <option value="long-time">Cooking Time (Longest to Shortest)</option>
+            <option value="alphabet">Alphabetically</option>
+        </select>
+    </div>
     <div class="toggleDiv">
-        <div>
-            <button type="button" onclick="location.href='create-recipe.html'" id="createRecipe">Create Recipe  <i class="fas fa-utensils"></i></button>
-            <select name="sort" id="sort-select">
-                <option value="select" disabled selected>Sort By:</option>
-                <option value="short-time">Cooking Time (Shortest to Longest)</option>
-                <option value="long-time">Cooking Time (Longest to Shortest)</option>
-                <option value="alphabet">Alphabetically</option>
-            </select>
-        </div>
         <div class="searchBar">
             <div class="search-bar">
                 <input class="search" type="text" placeholder="  Search for Recipe" name="search">
-
             </div>
             <div class="search-button">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </div>
             </form>
 
-            <!--button>Search</button-->
         </div>
-
     </div>
 
     <!--button type="button" onclick="location.href='recipe-list.html'">My Recipes   <i id = "options" class="fas fa-book"></i></button>
