@@ -1,0 +1,2 @@
+Hex for logo: #323c4b 
+RGB for logo: (50,60,75)
