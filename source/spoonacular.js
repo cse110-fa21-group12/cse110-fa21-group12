@@ -1,4 +1,4 @@
-// let recipe = {};
+
 
 async function randomRecipe() {
   for (let i = 0; i < 50; i++) {
@@ -90,4 +90,3 @@ button.addEventListener("click", () => {
   randomRecipe();
 });
 
-// await randomRecipe();
