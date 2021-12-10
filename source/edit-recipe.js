@@ -193,12 +193,13 @@ saveRecipeButton.addEventListener("click", () => {
     .then((data) => {
       console.log("Success:", data);
       console.log("Success:", data);
-      if(data.error) {
-        if(data.error.includes("Function DocumentReference.set() called with")) {
+      if (data.error) {
+        if (
+          data.error.includes("Function DocumentReference.set() called with")
+        ) {
           alert("Please fill in all elements");
         }
-      }
-      else {
+      } else {
         setTimeout(1000);
         location.href = "recipe.html";
       }
