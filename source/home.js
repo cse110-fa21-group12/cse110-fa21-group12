@@ -104,9 +104,8 @@ fetch("/recipes/", {
     console.error("Error:", error);
   });
 
-
-const logoutButton = document.getElementById('logout-button');
-logoutButton.addEventListener('click', function() {
+const logoutButton = document.getElementById("logout-button");
+logoutButton.addEventListener("click", function () {
   fetch("/user/sign-out", {
     method: "GET",
     headers: {
@@ -122,13 +121,13 @@ logoutButton.addEventListener('click', function() {
     });
 });
 
-const deleteAccountButton = document.getElementById('delete-account');
-deleteAccountButton.addEventListener('click', function() {
+const deleteAccountButton = document.getElementById("delete-account");
+deleteAccountButton.addEventListener("click", function () {
   fetch("/user", {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
-    }
+    },
   })
     .then((response) => response.json())
     .then((data) => {
