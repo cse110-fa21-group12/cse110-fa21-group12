@@ -48,14 +48,8 @@ function displayRecipes(data) {
       //Create and add cooking time to the recipe card
       const timeTaken = document.createElement("p");
       timeTaken.setAttribute("class", "recipe-time");
-      timeTaken.innerHTML = '<i class="fas fa-clock">  ' + data[i].totalTime;
+      timeTaken.innerHTML = '<i class="fas fa-clock">  ' + data[i].totalTime + ' minutes';
       initialDiv.appendChild(timeTaken);
-
-      //Create and add rating to the recipe card
-      const recipeRating = document.createElement("p");
-      recipeRating.setAttribute("class", "recipe-time");
-      recipeRating.innerHTML = "5"; //change to totalTime
-      initialDiv.appendChild(recipeRating);
 
       list.appendChild(initialDiv);
     }
