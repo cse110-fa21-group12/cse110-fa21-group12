@@ -15,7 +15,6 @@ function displayRecipes(data) {
     });
   }
 
-  
   for (let i = 0; i < data.length; i++) {
     if (data[i].creator == user) {
       //Get list of recipes to append each recipe card to
