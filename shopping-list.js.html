@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>shopping-list.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#displayRecipes">displayRecipes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#populateList">populateList</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#removeRecipes">removeRecipes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#search">search</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#sortRecipes">sortRecipes</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">shopping-list.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>populateList();
+
+/**
+ * Retreives ingredients from database and creates checklist of them
+ * @return {void} Nothing
+ */
+function populateList() {
+  fetch("/shopping-list", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+      while (ingredientForm.hasChildNodes()) {
+        ingredientForm.removeChild(ingredientForm.lastChild);
+      }
+      let box, shoppingIngredient;
+      for (let i = 0; i &lt; data.length; i++) {
+        shoppingIngredient = document.createElement("label");
+        box = document.createElement("input");
+        box.setAttribute("type", "checkbox");
+        box.setAttribute("id", data[i].name);
+        box.setAttribute("value", data[i].quantity);
+        shoppingIngredient.appendChild(box);
+        shoppingIngredient.appendChild(
+          document.createTextNode(data[i].quantity + " " + data[i].name)
+        );
+        ingredientForm.appendChild(shoppingIngredient);
+        ingredientForm.append(document.createElement("br"));
+      }
+    });
+}
+
+const addIngredientButton = document.getElementById("add-shopping-button");
+const ingredientForm = document.getElementById("shopping-form");
+
+/**
+ * Listen for click on addIngredientButton and adds it to the database
+ *
+ * @type {button}
+ * @listens document#click
+ */
+addIngredientButton.addEventListener("click", function () {
+  const newIngredient = document.getElementById("ingredient");
+  const newIngredientAmount = document.getElementById("ingredient-quantity");
+  const ingred = newIngredient.value;
+  const amount = newIngredientAmount.value;
+  const jsonIngredient = {
+    name: ingred,
+    quantity: amount,
+  };
+  fetch("/shopping-list", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(jsonIngredient),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+      location.href = "shopping-list.html";
+      populateList(); //Update display of shopping list
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+});
+
+const doneButton = document.getElementById("done-button");
+
+/**
+ * Listen for click on doneButton and removes checked ingredients from database
+ *
+ * @type {button}
+ * @listens document#click
+ */
+doneButton.addEventListener("click", function () {
+  let ingredientList = document.getElementById("shopping-form");
+  let ingredients = ingredientList.getElementsByTagName("input");
+  console.log(ingredients);
+  let len = ingredients.length;
+  let jsonToDelete;
+  for (let i = 0; i &lt; len; i++) {
+    if (ingredients[i].type == "checkbox") {
+      if (ingredients[i].checked) {
+        console.log("in");
+        jsonToDelete = {
+          name: ingredients[i].id,
+          quantity: ingredients[i].value,
+        };
+      }
+      fetch("/shopping-list", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(jsonToDelete),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+      location.href = "shopping-list.html";
+    }
+  }
+  populateList();
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Dec 10 2021 08:36:18 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
