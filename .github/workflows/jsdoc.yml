@@ -4,6 +4,9 @@ on: ["push"]
 
 jobs:
   JSDoc:
+  name: JSDoc
+  runs-on: ubuntu-latest
+  steps:
    - name: JSDoc Action
      uses: andstor/jsdoc-action@v1.2.1
     
