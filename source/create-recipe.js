@@ -59,7 +59,7 @@ addIngredientButton.click();
 
 const addDirectionsButton = document.getElementById("add-directions-button");
 const directionsForm = document.getElementById("enter-directions");
-var i = 1;
+let i = 1;
 
 /**
  * Listen for click on addDirectionsButton and adds another box

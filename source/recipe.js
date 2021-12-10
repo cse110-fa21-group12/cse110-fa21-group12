@@ -65,7 +65,6 @@ fetch("/recipes/" + url, {
     if (data.creator == "spoonacular") {
       const ingredientsArray = data.ingredients;
       for (let i = 0; i < ingredientsArray.length; i++) {
-        //const ingredient = ingredientsArray[i].split(" ", 1);
         const quantity = ingredientsArray[i].substr(
           0,
           ingredientsArray[i].indexOf(" ")
@@ -74,6 +73,7 @@ fetch("/recipes/" + url, {
           ingredientsArray[i].indexOf(" ") + 1
         );
         const newIngredient = document.createElement("input");
+        const ingredientsBox = document.getElementById("ingredientsBox");
         newIngredient.setAttribute("type", "checkbox");
         newIngredient.setAttribute("id", name);
         newIngredient.setAttribute("value", quantity);
