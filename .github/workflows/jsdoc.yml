@@ -3,7 +3,7 @@ name: JSDoc
 on: ["push"]
 
 jobs:
-  JSDoc:
+  jsdoc:
   name: JSDoc
   runs-on: ubuntu-latest
   steps:
