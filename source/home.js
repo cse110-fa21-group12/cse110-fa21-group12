@@ -103,3 +103,38 @@ fetch("/recipes/", {
   .catch((error) => {
     console.error("Error:", error);
   });
+
+
+const logoutButton = document.getElementById('logout-button');
+logoutButton.addEventListener('click', function() {
+  fetch("/user/sign-out", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+});
+
+const deleteAccountButton = document.getElementById('delete-account');
+deleteAccountButton.addEventListener('click', function() {
+  fetch("/user", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+});
