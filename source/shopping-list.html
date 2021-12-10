@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="../admin/branding/create_logo_icon.png" type="image/png" />
+    <script src="shopping-list.js" type="module"></script>
+    <!-- Add icon library -->
+    <script src="https://kit.fontawesome.com/b1e4be6678.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="headerBar">
+        <div class="optionsMenu">
+            <button onclick="myFunction2()" class="optionsbtn"><i class="fas fa-bars"></i></button>
+            <div id="menuDropdown" class="menuList">
+                <a href="home.html"> Home     <i class="fas fa-home"></i></a>
+                <a href="recipe-list.html">My Recipes   <i id = "options" class="fas fa-book"></i></a>
+                <a href="shopping-list.html">Shopping List        <i class="fas fa-shopping-cart"></i></a>
+                <a href="create-recipe.html">Add Recipe     <i class="fas fa-plus"></i></a>
+            </div>
+        </div>
+        <div class="logoHeader"></div>
+        <div class="dropDownMenu">
+            <button onclick="myFunction()" class="optionsbtn"><i class="far fa-user"></i></i></button>
+            <div id="myDropdown" class="dropDownList">
+                <a href="login.html"> Logout </a>
+                <a href="login.html"> Delete Account </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.optionsbtn')) {
+                var dropdowns = document.getElementsByClassName("dropDownList");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        function myFunction2() {
+            document.getElementById("menuDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.optionsbtn')) {
+                var dropdowns = document.getElementsByClassName("menuList");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+    <div class="myRecipes">
+        <h1>My Shopping List</h1><i id="book" , class="fas fa-shopping-cart"></i>
+
+    </div>
+
+
+    <div class="shopping-list">
+        <form id="enter-ingredient">
+            <input type="text" , class="shopping-qty" , id="ingredient-quantity" , placeholder="Quantity" />
+            <input type="text" , class="shopping-item" , id="ingredient" , placeholder="Ingredient" />
+            <button class="createRecipebtn" , id="add-shopping-button"><i class="fas fa-plus"></i></button>
+        </form>
+        <form id="shopping-form">
+            <fieldset>
+            </fieldset>
+
+        </form>
+        <button id="done-button" type="button">Mark as Done</button>
+
+    </div>
+</body>
+
+</html>
