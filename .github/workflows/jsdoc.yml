@@ -13,7 +13,7 @@ jobs:
       - name: Run automatic doc generation
         uses: andstor/jsdoc-action@v1
         with:
-         source_dir: 
+         source_dir: ./source
          recurse: true
          output_dir: ./docs
          template: minami
