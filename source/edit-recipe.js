@@ -1,5 +1,9 @@
 //Get the original recipe
 const id = localStorage.getItem("id");
+
+/**
+ * Loads the edit recipe page with the correct recipe data
+ */
 fetch("/recipes/" + id, {
   method: "GET",
   headers: {
@@ -79,6 +83,12 @@ fetch("/recipes/" + id, {
 const addCategoryButton = document.getElementById("add-category");
 const categoriesForm = document.getElementById("enter-categories");
 
+/**
+ * Listen for click on the addCategoryButton and adds a box
+ *
+ * @type {button}
+ * @listens document#click
+ */
 addCategoryButton.addEventListener("click", function () {
   const newCategory = document.createElement("input");
   newCategory.placeholder = "Category";
@@ -90,6 +100,12 @@ addCategoryButton.addEventListener("click", function () {
 const addTagButton = document.getElementById("add-tag");
 const tagsForm = document.getElementById("enter-tags");
 
+/**
+ * Listen for click on the addTagButton and adds a box
+ *
+ * @type {button}
+ * @listens document#click
+ */
 addTagButton.addEventListener("click", function () {
   const newTag = document.createElement("input");
   newTag.placeholder = "Tag";
@@ -102,6 +118,12 @@ addTagButton.addEventListener("click", function () {
 const addIngredientButton = document.getElementById("add-ingredient-button");
 const ingredientsForm = document.getElementById("ingredients-form");
 
+/**
+ * Listen for click on the addIngredient Button and adds a box
+ *
+ * @type {button}
+ * @listens document#click
+ */
 addIngredientButton.addEventListener("click", function () {
   const newIngredient = document.createElement("input");
   const newIngredientAmount = document.createElement("input");
@@ -118,6 +140,13 @@ addIngredientButton.addEventListener("click", function () {
 const addDirectionsButton = document.getElementById("add-directions-button");
 const directionsForm = document.getElementById("enter-directions");
 let j = 0;
+
+/**
+ * Listen for click on the addDirectionsButton and adds a box
+ *
+ * @type {button}
+ * @listens document#click
+ */
 addDirectionsButton.addEventListener("click", function () {
   const newDirection = document.createElement("input");
   newDirection.placeholder = "New Step";
@@ -131,6 +160,13 @@ addDirectionsButton.addEventListener("click", function () {
 //Save recipe
 const saveRecipeButton = document.getElementById("save-recipe");
 
+/**
+ * Listen for click on saveRecipeButton and sends the recipe data
+ * to the database
+ *
+ * @type {button}
+ * @listens document#click
+ */
 saveRecipeButton.addEventListener("click", () => {
   //Creating the JSON data to send
   const title = document.getElementById("title").value;

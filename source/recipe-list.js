@@ -1,4 +1,8 @@
-//Display only recipes that user created
+/**
+ * Displays recipe cards created by the logged in user
+ * @param {json} data
+ * @return {void} Nothing
+ */
 function displayRecipes(data) {
   const sortBy = document.getElementById("sort-select").value;
   if (sortBy == "short-time") {
@@ -53,6 +57,7 @@ function displayRecipes(data) {
   }
 }
 
+//Get email of user currently logged in and assign it to variable user
 let user;
 fetch("/user", {
   method: "GET",
@@ -66,7 +71,10 @@ fetch("/user", {
     user = data.email;
   });
 
-//Remove recipe cards
+/**
+ * Removes recipe cards from page
+ * @return {void} Nothing
+ */
 function removeRecipes() {
   const recipes = document.getElementsByClassName("recipe-list")[0];
   while (recipes.hasChildNodes()) {
@@ -74,7 +82,10 @@ function removeRecipes() {
   }
 }
 
-//Search functionality
+/**
+ * Retrieves recipes from database based on user's search and displays them
+ * @return {void} Nothing
+ */
 function search() {
   const searchWord = document.querySelector(".search").value;
 
@@ -96,16 +107,27 @@ function search() {
   } else alert("Please enter a recipe to search!");
 }
 
-//Search if the search button is clicked or if user hits enter
 const searchButton = document.getElementsByClassName("fa fa-search")[0];
 const searchText = document.getElementsByClassName("search")[0];
 
+/**
+ * Listen for keypress on 'Enter' on searchText and calls search function
+ *
+ * @type {text}
+ * @listens document#keypress
+ */
 searchText.addEventListener("keypress", function (e) {
   if (e.key == "Enter") {
     search();
   }
 });
 
+/**
+ * Listen for click on searchButton and calls search function
+ *
+ * @type {button}
+ * @listens document#click
+ */
 searchButton.addEventListener("click", function () {
   search();
 });
@@ -134,6 +156,10 @@ selectSort.onchange = function () {
   sortRecipes();
 };
 
+/**
+ * Sorts recipes by retrieving recipes from database
+ * @return {void} Nothing
+ */
 function sortRecipes() {
   removeRecipes();
   fetch("/recipes/", {
