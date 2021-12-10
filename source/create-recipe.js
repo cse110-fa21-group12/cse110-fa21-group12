@@ -120,7 +120,7 @@ saveRecipeButton.addEventListener("click", () => {
       console.log("Success:", data);
       localStorage.setItem("id", title);
       setTimeout(1000);
-      //window.location = "recipe.html";
+      window.location = "recipe.html";
     })
     .catch((error) => {
       console.error("Error:", error);
