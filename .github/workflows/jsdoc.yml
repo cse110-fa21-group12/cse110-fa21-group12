@@ -1,7 +1,5 @@
 name: JSDoc
-on:
-  push:
-    branches: [ master ]
+on: [push]
 
 jobs:
   build:
@@ -13,7 +11,7 @@ jobs:
       - name: Checkout docs
         uses: actions/checkout@v2
         with:
-          repository: cse110-fa21-group12/cse110-fa21-group12
+          repository: cse110-fa21-group12.github.io/cse110-fa21-group12
           path: docs
           token: ${{ secrets.DOCS_TOKEN }}
           
