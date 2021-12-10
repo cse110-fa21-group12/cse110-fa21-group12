@@ -13,3 +13,6 @@
 ### Deployed app: https://cre-ate-recipe.herokuapp.com/source/login.html
 
 ### JSDocs: https://cse110-fa21-group12.github.io/cse110-fa21-group12/
+
+### Video: https://youtu.be/REiREoIrc80
+
