@@ -7,9 +7,9 @@ jobs:
     name: JSDoc Action
     uses: andstor/jsdoc-action@v1.2.1
     
-    name: Build
-    uses: andstor/jsdoc-action@v1
-    with:
-      source_dir: ./src
-      recurse: true
-      output_dir: ./out
+    - name: Build
+      uses: andstor/jsdoc-action@v1
+      with:
+        source_dir: ./src
+        recurse: true
+        output_dir: ./out
