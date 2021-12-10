@@ -1,26 +1,22 @@
-name: JSDoc
+name: GitHub pages
 on: ["push"]
 
-#on:
- # push:
-   # branches: [ master ]
-
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    steps: 
-      - name: Checkout source
+    steps:
+      - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Checkout docs
-        uses: actions/checkout@v2
+      - name: install node v12
+        uses: actions/setup-node@v1
         with:
-          repository: cse110-fa21-group12/cse110-fa21-group12
-          path: docs       
-        
-      - name: Build
-        uses: codevise/documentation-js-action@v1
+          node-version: 12
+      - name: Installing better-docs
+        run: npm i --save-dev@latest better-docs
+      - name: Building JSDoc
+        run: npm run docs
+      - name: Deploying to Github Page
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          input: ./source
-          output: ./docs
-        
+          github_token: ${{ secrets.DOCS_TOKEN }}
+          publish_dir: ./docs
