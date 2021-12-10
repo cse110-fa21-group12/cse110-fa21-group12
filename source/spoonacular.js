@@ -1,5 +1,3 @@
-
-
 async function randomRecipe() {
   for (let i = 0; i < 50; i++) {
     try {
@@ -89,4 +87,3 @@ const button = document.querySelector("button");
 button.addEventListener("click", () => {
   randomRecipe();
 });
-
