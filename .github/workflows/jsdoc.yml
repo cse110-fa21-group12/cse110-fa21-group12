@@ -24,10 +24,10 @@ jobs:
       - name: Build
         uses: andstor/jsdoc-action@v1.2.0
         with:
-          source_dir: ./source/assets
+          source_dir: ./source/
           recurse: true
-          output_dir: docs/docs
-          front_page: docs/README.md
+          output_dir: docs/
+          front_page: README.md
         
 #      - name: Commit and push documentation
 #        run: |
