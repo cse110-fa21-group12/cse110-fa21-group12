@@ -1,4 +1,7 @@
-//Remove recipe cards
+/**
+ * Removes recipe cards from the list
+ *
+ */
 function removeRecipes() {
   const recipes = document.getElementsByClassName("recipe-list")[0];
   while (recipes.hasChildNodes()) {
@@ -6,7 +9,12 @@ function removeRecipes() {
   }
 }
 
-//Display recipe cards
+/**
+ * Displays recipe cards
+ *
+ * @param {*} data
+ */
+
 function displayRecipes(data) {
   const sortBy = document.getElementById("sort-select").value;
   if (sortBy == "short-time") {
@@ -59,7 +67,9 @@ function displayRecipes(data) {
   }
 }
 
-//Search functionality
+/**
+ * Search functionality
+ */
 function search() {
   const searchWord = document.querySelector(".search").value;
 

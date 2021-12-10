@@ -7,6 +7,12 @@ const jsonUserData = {
   password: password,
 };
 
+/**
+ * Listen for click on login button to sign in
+ *
+ * @type {button}
+ * @listens document#click
+ */
 loginButton.addEventListener("click", function () {
   fetch("/user/sign-in", {
     method: "POST",

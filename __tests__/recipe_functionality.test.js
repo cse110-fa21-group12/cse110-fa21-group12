@@ -1,9 +1,8 @@
 const puppeteer = require("puppeteer");
-const URL_HOMEPAGE = "https://cre-ate-recipe.herokuapp.com/source/home.html";
+const URL_HOMEPAGE = "http://127.0.0.1:5500/source/home.html";
 const URL_MY_RECIPE =
   "https://cre-ate-recipe.herokuapp.com/source/recipe-list.html";
-const URL_CREATE_RECIPE =
-  "https://cre-ate-recipe.herokuapp.com/source/create-recipe.html";
+const URL_CREATE_RECIPE = "http://127.0.0.1:5500/source/create-recipe.html";
 
 // Recipe
 const title = "Matcha Mille Crepe Cake";
@@ -11,9 +10,9 @@ const description =
   "Matcha Mille Crepe Cake is made of thin layers of green tea crepes stacked together with fresh whipped cream in-between. This elegant and decadent cake will wow your guests when they see the rich green layers!";
 const category = "Dessert";
 const tags = "Delicious";
-const prep_time = "1 hour";
-const cook_time = "3 hours";
-const total_time = "4 hours";
+const prep_time = "20 minutes";
+const cook_time = "40 minutes";
+const total_time = "4 hours (with 3 hours resting and chilling)";
 
 describe("My Recipe", () => {
   beforeAll(async () => {
@@ -49,5 +48,22 @@ describe("My Recipe", () => {
     await page.type("#prep-time", prep_time);
     await page.type("#cook-time", cook_time);
     await page.type("#total-time", total_time);
+    await page.type("#quantity", "2");
+    // await page.type("#ingredient", "whole milk");
+    await page.click("#add-ingredient-button");
+  });
+
+  // it("filter by rating", async () => {
+
+  // });
+
+  // it("delete recipe", async () => {
+
+  // });
+
+  it("search with query", async () => {
+    await page.goto(URL_HOMEPAGE);
+    await page.type("#recipe-search", "pasta");
+    await page.click("#search-button");
   });
 });
