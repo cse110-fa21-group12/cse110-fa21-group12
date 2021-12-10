@@ -17,11 +17,27 @@ fetch("/recipes/" + id, {
     const description = document.getElementById("description");
     description.defaultValue = data.description;
 
-    const categories = document.getElementById("categories");
-    categories.defaultValue = data.categories;
+    const categoriesForm = document.getElementById("enter-categories");
+    for(let i = 0; i < data.categories.length; i++) {
+      const newCategory = document.createElement("input");
+      newCategory.defaultValue = data.categories[i];
+      newCategory.classList.add("input-field", "categories");
+      newCategory.setAttribute("id", "categories");
+      categoriesForm.appendChild(document.createElement("br"));
+      categoriesForm.appendChild(newCategory);
+      categoriesForm.appendChild(document.createElement("br"));
+    }
 
-    const tags = document.getElementById("tags");
-    tags.defaultValue = data.tags;
+    const tagsForm = document.getElementById("enter-tags");
+    for(let i = 0; i < data.tags.length; i++) {
+      const newTag = document.createElement("input");
+      newTag.defaultValue = data.tags[i];
+      newTag.classList.add("input-field", "tags");
+      newTag.setAttribute("id", "tags");
+      tagsForm.appendChild(document.createElement("br"));
+      tagsForm.appendChild(newTag);
+      tagsForm.appendChild(document.createElement("br"));
+    }
 
     const prepTime = document.getElementById("prep-time");
     prepTime.defaultValue = data.preparationTime;
@@ -31,6 +47,9 @@ fetch("/recipes/" + id, {
 
     const totalTime = document.getElementById("total-time");
     totalTime.defaultValue = data.totalTime;
+
+    const image = document.getElementById("file-ip-1");
+    image.defaultValue = data.img;
 
     const ingredientForm = document.getElementById("ingredients-form");
     const arrayIngredientsKeys = Object.keys(data.ingredients);
@@ -44,7 +63,6 @@ fetch("/recipes/" + id, {
         data.ingredients[arrayIngredientsKeys[i]];
       ingredientForm.appendChild(newIngredientAmounts);
       ingredientForm.appendChild(newIngredients);
-      //ingredientForm.appendChild(document.createElement("br"));
     }
 
     const directionsForm = document.getElementById("enter-directions");
@@ -57,6 +75,28 @@ fetch("/recipes/" + id, {
       directionsForm.appendChild(document.createElement("br"));
     }
   });
+
+const addCategoryButton = document.getElementById("add-category");
+const categoriesForm = document.getElementById("enter-categories");
+
+addCategoryButton.addEventListener("click", function () {
+  const newCategory = document.createElement("input");
+  newCategory.placeholder = "Category";
+  newCategory.classList.add("input-field", "categories");
+  newCategory.setAttribute("id", "categories");
+  categoriesForm.appendChild(newCategory);
+});
+
+const addTagButton = document.getElementById("add-tag");
+const tagsForm = document.getElementById("enter-tags");
+
+addTagButton.addEventListener("click", function () {
+  const newTag = document.createElement("input");
+  newTag.placeholder = "Tag";
+  newTag.classList.add("input-field", "tags");
+  newTag.setAttribute("id", "tags");
+  tagsForm.appendChild(newTag);
+});
 
 //Ingredients Button
 const addIngredientButton = document.getElementById("add-ingredient-button");
@@ -95,14 +135,25 @@ saveRecipeButton.addEventListener("click", () => {
   //Creating the JSON data to send
   const title = document.getElementById("title").value;
   const description = document.getElementById("description").value;
-  const categories = document.getElementById("categories").value;
-  const tags = document.getElementById("tags").value;
+  const categories = document.getElementsByClassName("categories");
+  const tags = document.getElementsByClassName("tags");
   const preparationTime = document.getElementById("prep-time").value;
   const cookingTime = document.getElementById("cook-time").value;
   const totalTime = document.getElementById("total-time").value;
   const ingredients = document.getElementsByClassName("ingredient");
   const amounts = document.getElementsByClassName("quantity");
   const ingredientsArray = {};
+
+  const categoriesArray = [];
+  for (let i = 0; i < categories.length; i++) {
+    categoriesArray[i] = categories[i].value;
+  }
+
+  const tagsArray = [];
+  for (let i = 0; i < tags.length; i++) {
+    tagsArray[i] = tags[i].value;
+  }
+
   for (let i = 0; i < ingredients.length; i++) {
     ingredientsArray[ingredients[i].value] = amounts[i].value;
   }
@@ -117,8 +168,8 @@ saveRecipeButton.addEventListener("click", () => {
     id: title,
     title: title,
     description: description,
-    categories: categories,
-    tags: tags,
+    categories: categoriesArray,
+    tags: tagsArray,
     preparationTime: preparationTime,
     cookingTime: cookingTime,
     totalTime: totalTime,
@@ -132,7 +183,7 @@ saveRecipeButton.addEventListener("click", () => {
 
   const formDataRecipe = new FormData();
   formDataRecipe.append("json", stringJson);
-  formDataRecipe.append("img", image.value);
+  formDataRecipe.append("img", image.files[0]);
 
   fetch("/recipes/edit", {
     method: "PUT",
