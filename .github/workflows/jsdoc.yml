@@ -1,29 +1,3 @@
-name: JSDoc
-on: ["push"]
-
-#on:
- # push:
-   # branches: [ master ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Checkout source
-        uses: actions/checkout@v2
-
-      - name: Checkout docs
-        uses: actions/checkout@v2
-        with:
-          repository: cse110-fa21-group12/cse110-fa21-group12
-          path: docs       
-        
-      - name: Build
-        uses: codevise/documentation-js-action@v1
-        with:
-          input: ./source
-          output: docs
-
 name: jsdoc
 on:
  push:
