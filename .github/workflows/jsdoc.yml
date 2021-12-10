@@ -1,10 +1,8 @@
-
-
 name: jsdoc
-on:
- push:
-   branches:
-     - dev
+on: [push]
+# push:
+ #  branches:
+   #  - master
 
 jobs:
   publish:
@@ -16,7 +14,13 @@ jobs:
     - name: Build
       uses: codevise/documentation-js-action@v1
       with:
-        input: source/
-        output: source/
+        input: ./src
+        output: ./docs
 
-  
+    # For example:
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        PERSONAL_TOKEN: ${{ secrets.DOCS_TOKEN }}
+        PUBLISH_BRANCH: r_main
+        PUBLISH_DIR: ./docs
