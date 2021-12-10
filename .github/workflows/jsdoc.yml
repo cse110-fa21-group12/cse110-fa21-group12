@@ -16,13 +16,29 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: cse110-fa21-group12/cse110-fa21-group12
-          path: docs       
+          path: docs
+          token: ${{ secrets.PUSH_TOKEN }}
+          
+      # Runs a single command using the runners shell
+      - name: npm version
+        run: npm -v
         
       - name: Build
         uses: andstor/jsdoc-action@v1.2.0
         with:
-          source_dir: ./source
+          source_dir: ./source/assets
           recurse: true
-          output_dir: docs
-          front_page: README.md
+          output_dir: docs/docs
+          front_page: docs/README.md
         
+      - name: Commit and push documentation
+        run: |
+          cd docs
+          git add -A
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Added documentation for app."
+          git push https://$USERNAME:$REPO_KEY@github.com/cse110-fa21-group12/cse110-fa21-group12 main
+        env:
+          REPO_KEY: ${{ secrets.DOCS_TOKEN }}
+          USERNAME: github-actions[bot]
