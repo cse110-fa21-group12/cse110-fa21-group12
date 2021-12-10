@@ -75,9 +75,17 @@
             }
         }
     </script>
+
+  
     <div class="toggleDiv">
         <div>
             <button type="button" onclick="location.href='create-recipe.html'" id="createRecipe">Create Recipe  <i class="fas fa-utensils"></i></button>
+            <select name="sort" id="sort-select">
+                <option value="select" disabled selected>Sort By:</option>
+                <option value="short-time">Cooking Time (Shortest to Longest)</option>
+                <option value="long-time">Cooking Time (Longest to Shortest)</option>
+                <option value="alphabet">Alphabetically</option>
+            </select>
         </div>
         <div class="searchBar">
             <div class="search-bar">
