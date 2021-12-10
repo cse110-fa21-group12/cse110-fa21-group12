@@ -9,8 +9,8 @@ const jsonUserData = {
 
 /**
  * Listen for click on login button to create account
- * 
- * @type {button} 
+ *
+ * @type {button}
  * @listens document#mousedown
  */
 loginButton.addEventListener("click", function () {
