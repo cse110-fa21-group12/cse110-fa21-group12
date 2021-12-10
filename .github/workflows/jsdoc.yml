@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: main
- 
+
       - name: Run automatic doc generation
         uses: andstor/jsdoc-action@v1
         with:
