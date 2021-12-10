@@ -11,7 +11,7 @@ const jsonUserData = {
  * Listen for click on login button to create account
  *
  * @type {button}
- * @listens document#mousedown
+ * @listens document#click
  */
 loginButton.addEventListener("click", function () {
   fetch("/user/sign-up", {

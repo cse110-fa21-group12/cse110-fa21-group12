@@ -61,6 +61,7 @@ fetch("/recipes/" + url, {
         const totalTime = document.getElementById("total-time");
         totalTime.innerHTML = "Total Time: " + data.totalTime;
 
+<<<<<<< HEAD
         //Populate ingredients for spoonacular recipes since format is different
         if (data.creator == "spoonacular") {
             const ingredientsArray = data.ingredients;
@@ -88,6 +89,35 @@ fetch("/recipes/" + url, {
                 ingredientsBox.appendChild(br);
             }
         }
+=======
+    //Populate ingredients for spoonacular recipes since format is different
+    if (data.creator == "spoonacular") {
+      const ingredientsArray = data.ingredients;
+      for (let i = 0; i < ingredientsArray.length; i++) {
+        const quantity = ingredientsArray[i].substr(
+          0,
+          ingredientsArray[i].indexOf(" ")
+        );
+        const name = ingredientsArray[i].substr(
+          ingredientsArray[i].indexOf(" ") + 1
+        );
+        const newIngredient = document.createElement("input");
+        const ingredientsBox = document.getElementById("ingredientsBox");
+        newIngredient.setAttribute("type", "checkbox");
+        newIngredient.setAttribute("id", name);
+        newIngredient.setAttribute("value", quantity);
+        newIngredient.setAttribute("name", "i");
+        const newLabel = document.createElement("label");
+        newLabel.setAttribute("class", "checklist");
+        newLabel.setAttribute("for", "i");
+        newLabel.innerHTML = quantity + " " + name;
+        const br = document.createElement("br");
+        ingredientsBox.appendChild(newIngredient);
+        ingredientsBox.appendChild(newLabel);
+        ingredientsBox.appendChild(br);
+      }
+    }
+>>>>>>> 547b07b4bcd79bc5e4e49a61c793c187c53e1144
 
         //Populate ingredients for user recipes
         else {

@@ -21,7 +21,6 @@ function displayRecipes(data) {
     data.sort(function (a, b) {
       return a.title.localeCompare(b.title);
     });
-  } else {
   }
 
   for (let i = 0; i < data.length; i++) {
@@ -33,7 +32,7 @@ function displayRecipes(data) {
     initialDiv.setAttribute("class", "recipe");
     initialDiv.setAttribute("id", data[i].title);
     initialDiv.href = "recipe.html";
-    initialDiv.addEventListener("click", function (event) {
+    initialDiv.addEventListener("click", function () {
       localStorage.setItem("id", data[i].title);
       window.location = "recipe.html";
     });
