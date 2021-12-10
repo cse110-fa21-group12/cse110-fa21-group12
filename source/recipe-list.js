@@ -48,7 +48,8 @@ function displayRecipes(data) {
       //Create and add cooking time to the recipe card
       const timeTaken = document.createElement("p");
       timeTaken.setAttribute("class", "recipe-time");
-      timeTaken.innerHTML = '<i class="fas fa-clock">  ' + data[i].totalTime + ' minutes';
+      timeTaken.innerHTML =
+        '<i class="fas fa-clock">  ' + data[i].totalTime + " minutes";
       initialDiv.appendChild(timeTaken);
 
       list.appendChild(initialDiv);
