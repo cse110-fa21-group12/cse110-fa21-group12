@@ -2,8 +2,7 @@ const puppeteer = require("puppeteer");
 const URL_HOMEPAGE = "http://127.0.0.1:5500/source/home.html";
 const URL_MY_RECIPE =
   "https://cre-ate-recipe.herokuapp.com/source/recipe-list.html";
-const URL_CREATE_RECIPE =
-  "http://127.0.0.1:5500/source/create-recipe.html";
+const URL_CREATE_RECIPE = "http://127.0.0.1:5500/source/create-recipe.html";
 
 // Recipe
 const title = "Matcha Mille Crepe Cake";
@@ -66,5 +65,5 @@ describe("My Recipe", () => {
     await page.goto(URL_HOMEPAGE);
     await page.type("#recipe-search", "pasta");
     await page.click("#search-button");
-  })
+  });
 });
