@@ -1,5 +1,3 @@
-let user;
-
 //Display only recipes that user created
 function displayRecipes(data) {
   const sortBy = document.getElementById("sort-select").value;
@@ -15,9 +13,9 @@ function displayRecipes(data) {
     data.sort(function (a, b) {
       return a.title.localeCompare(b.title);
     });
-  } else {
   }
 
+  let user;
   for (let i = 0; i < data.length; i++) {
     if (data[i].creator == user) {
       //Get list of recipes to append each recipe card to

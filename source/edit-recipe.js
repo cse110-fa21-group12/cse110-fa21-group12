@@ -117,6 +117,7 @@ addIngredientButton.addEventListener("click", function () {
 //Directions Button
 const addDirectionsButton = document.getElementById("add-directions-button");
 const directionsForm = document.getElementById("enter-directions");
+let j = 0;
 addDirectionsButton.addEventListener("click", function () {
   const newDirection = document.createElement("input");
   newDirection.placeholder = "New Step";
