@@ -15,7 +15,6 @@ jobs:
       uses: andstor/jsdoc-action@v1
       with:
         output_dir: ./out
-        config_file: config.js
         front_page: README.md
 
     # For example:
