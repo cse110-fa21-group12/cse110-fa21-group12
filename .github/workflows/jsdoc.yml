@@ -24,4 +24,3 @@ jobs:
         PERSONAL_TOKEN: ${{ PERSONAL_TOKEN.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}}
         PUBLISH_BRANCH: main
         PUBLISH_DIR: ./docs
-        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
