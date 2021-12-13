@@ -2,7 +2,7 @@
 const id = localStorage.getItem("id");
 
 /**
- * Loads the edit recipe page with the correct recipe data
+ * Loads the edit recipe page with correct recipe data
  */
 fetch("/recipes/" + id, {
   method: "GET",
